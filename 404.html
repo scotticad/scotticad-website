@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — ScottiCAD</title>
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .lost { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 32px 16px; }
+    .lost img { margin: 0 auto 24px; }
+    .lost h1 { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 800; }
+    .lost p { color: var(--muted); max-width: 460px; margin: 0 auto 28px; }
+  </style>
+</head>
+<body>
+  <main class="lost hero">
+    <div style="position:relative">
+      <img src="/assets/img/logo.svg" alt="" width="88" height="88">
+      <h1>This shape fell off the build plate.</h1>
+      <p>The page you're looking for doesn't exist. Press <kbd>D</kbd> to drop back down, or use the button below.</p>
+      <a class="btn btn--primary btn--lg" href="/">Back to ScottiCAD</a>
+    </div>
+  </main>
+  <script>
+    document.addEventListener("keydown", function (e) { if (e.key === "d" || e.key === "D") location.href = "/"; });
+  </script>
+</body>
+</html>

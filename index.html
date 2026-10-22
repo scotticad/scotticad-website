@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScottiCAD — 3D modelling for makers, on your own computer</title>
+  <meta name="description" content="ScottiCAD is a free, open-source 3D modeller for Windows. Drag shapes onto the build plate, cut holes, group them with real boolean operations and export watertight 3MF or STL files for your 3D printer. No account, no browser, no cloud.">
+  <link rel="canonical" href="https://scotticad.com/">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#3a2f24">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scotticad.com/">
+  <meta property="og:title" content="ScottiCAD — 3D modelling for makers">
+  <meta property="og:description" content="Design 3D-printable parts on your own computer. Free, open source, runs locally — no cloud required.">
+  <meta property="og:image" content="https://scotticad.com/assets/img/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ScottiCAD",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "DesignApplication",
+    "softwareVersion": "0.1.0",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://scotticad.com/",
+    "downloadUrl": "https://github.com/scotticad/scotticad/releases/latest"
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="ScottiCAD home">
+      <img src="assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#automation">Automation</a>
+      <a href="#shortcuts">Shortcuts</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero__copy">
+    <p class="eyebrow"><span class="dot"></span> Free &amp; open source · Version 0.1.0 for Windows</p>
+    <h1>Design 3D-printable parts<br><span class="grad">on your own computer.</span></h1>
+    <p class="lede">
+      ScottiCAD is a friendly, hands-on 3D modeller for makers. Drag shapes onto the build plate,
+      pull handles to size them, turn some into holes, and group them into a finished part.
+      When you're done, export a clean, watertight 3MF or STL for your slicer. It's one small Windows
+      program: no account, no browser, and no cloud.
+    </p>
+    <div class="cta">
+      <a class="btn btn--primary btn--lg" href="#download">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for Windows
+      </a>
+      <a class="btn btn--ghost btn--lg" href="https://github.com/scotticad/scotticad">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        View the source
+      </a>
+    </div>
+    <ul class="ticks">
+      <li>No sign-up</li>
+      <li>Works offline</li>
+      <li>Your files stay on your disk</li>
+      <li>Apache-2.0 licensed</li>
+    </ul>
+  </div>
+
+  <div class="wrap hero__media">
+    <figure class="window window--hero">
+      <div class="window__bar" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <em>ScottiCAD</em>
+      </div>
+      <img src="assets/img/scotticad-demo.gif" width="960" height="622"
+           alt="ScottiCAD in action: shapes are dragged onto the build plate, resized with handles, turned into holes, grouped, recoloured, measured with the ruler, rotated, and finished with 3D text.">
+    </figure>
+    <p class="caption">Real-time, unedited: building a part in ScottiCAD from first shape to finished design.</p>
+  </div>
+</section>
+
+<!-- ============ VALUE STRIP ============ -->
+<section class="strip" aria-label="Highlights">
+  <div class="wrap strip__grid">
+    <div class="stat"><b>60+</b><span>built-in shapes and parametric parts</span></div>
+    <div class="stat"><b>1</b><span>file to run: no installer, no runtime</span></div>
+    <div class="stat"><b>0</b><span>accounts, logins, uploads or subscriptions</span></div>
+    <div class="stat"><b>5</b><span>export formats: 3MF, STL, OBJ, GLB and SVG</span></div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section" id="why">
+  <div class="wrap narrow">
+    <p class="kicker">Why ScottiCAD</p>
+    <h2>The easiest way to make a printable part, without handing your work to a website.</h2>
+    <p>
+      Most people who own a 3D printer don't need a full engineering CAD package. They need a bracket
+      that fits, a box for a circuit board, a replacement knob, a name tag for a niece's bike, or a spacer
+      that's exactly 4.2&nbsp;mm thick. The fastest way to make those things is the "building blocks"
+      approach: put simple shapes together, cut holes where you need them, and let the computer work out
+      the geometry.
+    </p>
+    <p>
+      That approach usually lives in a web browser, behind an account, with your designs stored on someone
+      else's server. ScottiCAD brings it home. It's a native Windows application that starts in a moment,
+      uses your graphics card directly, keeps working when the internet doesn't, and saves your designs as
+      ordinary files in folders you choose. Back them up, put them in version control, email them to a friend.
+      They're yours.
+    </p>
+    <div class="pillars">
+      <article>
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4" /></svg>
+        </div>
+        <h3>Runs locally</h3>
+        <p>Everything happens on your PC. No upload step, no waiting on a server, no "service unavailable" the
+          night before a print.</p>
+      </article>
+      <article>
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V7z" /><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Private by design</h3>
+        <p>No telemetry, no sign-in, no cloud library. Your designs never leave your machine unless you send them.</p>
+      </article>
+      <article>
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+        </div>
+        <h3>Open source</h3>
+        <p>Apache-2.0 licensed and written in Go. Read the code, build it yourself, fix what bugs you and send it back.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section section--tint" id="features">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="kicker">Features</p>
+      <h2>Everything you need to go from idea to print.</h2>
+      <p class="sub">If you can stack blocks, you can use ScottiCAD. Here's what's in the box.</p>
+    </div>
+
+    <!-- Feature: shapes -->
+    <div class="feature">
+      <div class="feature__text">
+        <h3>A big shape library, ready to drag</h3>
+        <p>
+          Pick a shape from the panel on the right and drag it onto the build plate. As you drag, a ghost of the
+          shape follows the mouse and lands on whatever surface is under the cursor, so stacking a cone on top of
+          a box is a single gesture. Hold <kbd>C</kbd> to ignore other shapes and put it on the build plate instead.
+        </p>
+        <p>
+          The basics are all here: box, cylinder, sphere, cone, pyramid, roof, round roof, wedge, half sphere,
+          torus, tube, ring, polygon, paraboloid, icosahedron, star, heart, diamond, dice and more. Every shape
+          has sensible defaults and its own parameters: rounded corners on a box, sides on a cylinder, points on
+          a star, wall thickness on a tube.
+        </p>
+        <ul class="checks">
+          <li>Solid and hole versions of the common shapes</li>
+          <li>Parameters update the shape live as you slide them</li>
+          <li>Search the library by name</li>
+        </ul>
+      </div>
+      <figure class="feature__media window">
+        <img src="assets/img/library.webp" width="1200" height="750" loading="lazy"
+             alt="Two dozen colourful shapes arranged on the ScottiCAD build plate: cubes, cylinders, a torus, a spring, a gear, a star and more.">
+      </figure>
+    </div>
+
+    <!-- Feature: holes and booleans -->
+    <div class="feature feature--flip">
+      <div class="feature__text">
+        <h3>Holes that really cut, and booleans that really work</h3>
+        <p>
+          Any shape can be a <strong>Solid</strong> or a <strong>Hole</strong>. Holes are drawn see-through so you can
+          line them up. Select the lot, press <kbd>Ctrl</kbd>+<kbd>G</kbd>, and ScottiCAD performs a true boolean mesh
+          operation: the holes are carved out and the solids are merged into one part.
+        </p>
+        <p>
+          The result is a closed, watertight mesh that slicers accept without complaint. ScottiCAD repairs the seams
+          that boolean operations tend to leave behind, and heavy groups are computed in the background on all your
+          CPU cores, so the view never freezes while you work.
+        </p>
+        <p>
+          Grouping is non-destructive. Ungroup with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> and you get your
+          original shapes back, even after saving and reopening the file. Need to keep parts together without merging them?
+          A <strong>Bundle group</strong> (<kbd>Ctrl</kbd>+<kbd>B</kbd>) moves them as one but keeps them separate.
+        </p>
+        <p class="hint">Drag the slider to compare the parts before and after grouping.</p>
+      </div>
+      <figure class="feature__media">
+        <div class="compare window" style="--pos: 50%">
+          <img src="assets/img/booleans-after.webp" width="700" height="490" loading="lazy"
+               alt="After grouping: a blue mounting plate with four countersunk screw holes, a rounded pocket and a hole straight through the middle.">
+          <img class="compare__top" src="assets/img/booleans-before.webp" width="700" height="490" loading="lazy"
+               alt="Before grouping: a blue plate with translucent hole shapes placed where the pocket and screw holes will go.">
+          <span class="compare__label compare__label--l">Before</span>
+          <span class="compare__label compare__label--r">After</span>
+          <span class="compare__line" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after grouping">
+        </div>
+      </figure>
+    </div>
+
+    <!-- Feature: text -->
+    <div class="feature">
+      <div class="feature__text">
+        <h3>3D text in any font on your PC</h3>
+        <p>
+          Drop a Text shape, type your words, and pick a font. ScottiCAD reads the TrueType and OpenType fonts already
+          installed in Windows, so the font list is as long as yours. Letters are turned into proper solid geometry,
+          with adjustable height and optional bevel.
+        </p>
+        <p>
+          Raise text for embossed labels, or switch it to a hole for engraved serial numbers, logos, and the name on the
+          bottom of a part so you remember which version it was.
+        </p>
+        <ul class="checks">
+          <li>Every installed font, plus built-in Sans, Serif, Mono and Script</li>
+          <li>Text is editable at any time: it's a shape, not a frozen mesh</li>
+          <li>Works as a solid or a hole, like any other shape</li>
+        </ul>
+      </div>
+      <figure class="feature__media window">
+        <img src="assets/img/text.webp" width="1150" height="719" loading="lazy"
+             alt="Yellow 3D text reading ScottiCAD sitting on a navy rounded plate, with the Text properties panel showing font, height and bevel.">
+      </figure>
+    </div>
+
+    <!-- Feature: precision -->
+    <div class="feature feature--flip">
+      <div class="feature__text">
+        <h3>Freehand when you want it, exact when you need it</h3>
+        <p>
+          Every handle shows its dimension while you drag. Click any number to type an exact value, and press
+          <kbd>Tab</kbd> to move between fields. Black corner handles resize, the white ones stretch a single side,
+          the cone on top lifts the part off the build plate, and the curved arrows rotate it with a protractor that
+          snaps to 22.5° on the ring, 1° inside it, or 45° with <kbd>Shift</kbd>.
+        </p>
+        <p>
+          Drop the <strong>Ruler</strong> anywhere to see a shape's distance from it and its full size in every direction,
+          then type the numbers you want. The <strong>Measure</strong> tool reads the distance between any two points.
+          Work in millimetres or inches, with a snap grid from fine to coarse.
+        </p>
+        <ul class="checks">
+          <li>Type exact position, size and rotation for any shape</li>
+          <li>Metric and imperial units, adjustable snap grid</li>
+          <li>Ruler, measure pins and a construction plane on any face</li>
+        </ul>
+      </div>
+      <figure class="feature__media window">
+        <img src="assets/img/ruler.webp" width="810" height="506" loading="lazy"
+             alt="An orange tube selected next to the Ruler tool, with dimension labels reading 40.00, 25.00, 20.00 and 30.00 millimetres.">
+      </figure>
+    </div>
+
+    <!-- Feature: align -->
+    <div class="feature">
+      <div class="feature__text">
+        <h3>Line things up without a calculator</h3>
+        <p>
+          Select a few shapes and press <kbd>L</kbd> to <strong>Align</strong>. Dots appear along each axis; hover one to
+          preview the result as a ghost, click to apply. Centring a hole in a box takes two clicks. <strong>Mirror</strong>
+          (<kbd>M</kbd>) flips a shape across any axis the same way.
+        </p>
+        <p>
+          <strong>Place on surface</strong> (<kbd>C</kbd>) lets shapes slide over the surfaces of other shapes as you
+          move them. <strong>Drop down</strong> (<kbd>D</kbd>) settles anything floating back down, and
+          <strong>Lay flat</strong> (<kbd>Shift</kbd>+<kbd>D</kbd>) turns a part so the face you click sits on the
+          build plate. The <strong>Construction plane</strong> tool (<kbd>W</kbd>) puts a working plane on the face of
+          any shape, even a rotated one, so you can build at an angle as easily as on the flat.
+        </p>
+      </div>
+      <figure class="feature__media window">
+        <img src="assets/img/align.webp" width="770" height="481" loading="lazy"
+             alt="Align mode in ScottiCAD: a box, cylinder and sphere selected inside a dashed bounding box, with black alignment dots along each edge.">
+      </figure>
+    </div>
+
+    <!-- Feature: parts -->
+    <div class="feature feature--flip">
+      <div class="feature__text">
+        <h3>Parametric parts for real projects</h3>
+        <p>
+          Beyond the basic shapes, ScottiCAD ships with a set of practical, adjustable parts for people who build
+          things. Set a few numbers and get a correct part, instead of modelling it from scratch every time.
+        </p>
+        <ul class="partlist">
+          <li><b>Project box</b> with lid, wall thickness and rounded corners</li>
+          <li><b>PCB standoffs</b> with flange and screw hole</li>
+          <li><b>ISO metric threads</b>, <b>hex bolts</b> and <b>hex nuts</b></li>
+          <li><b>Nut traps</b>, <b>countersunk</b> and <b>counterbored</b> holes</li>
+          <li><b>Spur gears</b> and matching <b>gear racks</b></li>
+          <li><b>Print-in-place hinges</b> with clearance control</li>
+          <li><b>Knurled knobs</b> with round or D-shaft bores</li>
+          <li><b>Springs</b>, <b>pipe elbows</b>, <b>vent grilles</b>, <b>rounded plates</b></li>
+        </ul>
+        <p>
+          And for diagrams and dioramas, a set of tech icons: laptop, monitor, keyboard, server, rack, router, switch,
+          cloud, database, Wi-Fi, laser printer and 3D printer.
+        </p>
+      </div>
+      <figure class="feature__media window">
+        <img src="assets/img/parts.webp" width="1030" height="644" loading="lazy"
+             alt="Parametric parts on the build plate: a yellow project box with its lid, a vent grille, PCB standoffs, two meshing spur gears, a threaded rod, bolt and nut, a green hinge, a black knurled knob, a spring and a purple pipe elbow.">
+      </figure>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="grid">
+      <article class="card">
+        <h4>Import STL, OBJ and SVG</h4>
+        <p>Bring in meshes from anywhere, or drag a file straight onto the window. SVG outlines are extruded into
+          solid shapes, which makes logos and laser-cut drawings easy to reuse.</p>
+      </article>
+      <article class="card">
+        <h4>Export 3MF, STL, OBJ, GLB and SVG</h4>
+        <p>Export everything or just the selection. 3MF (with colours), STL and OBJ for printing, binary glTF for the
+          web and game engines, and an SVG outline for laser cutters.</p>
+      </article>
+      <article class="card">
+        <h4>500 steps of undo</h4>
+        <p>Every step can be undone and redone, and undo puts your selection back the way it was. Experiment freely.</p>
+      </article>
+      <article class="card">
+        <h4>Colours and transparency</h4>
+        <p>A full colour picker with presets and hex entry, multicolour groups that keep each part's colour, and
+          see-through shapes for checking what's inside.</p>
+      </article>
+      <article class="card">
+        <h4>Hide, lock and annotate</h4>
+        <p>Hide shapes to get them out of the way, lock finished parts so they can't be bumped, and pin notes to
+          shapes to remind yourself why that hole is 3.4&nbsp;mm.</p>
+      </article>
+      <article class="card">
+        <h4>Copy, paste, duplicate</h4>
+        <p>Paste in place, or duplicate and move: ScottiCAD remembers the step and repeats it, which makes rows of
+          holes and arrays of pegs quick.</p>
+      </article>
+      <article class="card">
+        <h4>View cube and orthographic view</h4>
+        <p>Orbit with the right mouse button, pan with the middle, zoom to the cursor. Click the view cube for a
+          straight-on view, or switch to orthographic for true proportions.</p>
+      </article>
+      <article class="card">
+        <h4>Printer bed presets</h4>
+        <p>Set the build plate to the size of your printer's bed so you can see at a glance whether the part fits.</p>
+      </article>
+      <article class="card">
+        <h4>Plain, open file format</h4>
+        <p>Designs are saved as readable JSON <code>.scotticad</code> files that keep the full group tree, so nothing
+          is flattened and every step stays editable.</p>
+      </article>
+      <article class="card">
+        <h4>Split, section and lay flat</h4>
+        <p>Cut a part in two with a plane (<kbd>K</kbd>) to print it in pieces, look inside with section view, and
+          lay any face flat on the build plate with one click.</p>
+      </article>
+      <article class="card">
+        <h4>Filament estimate</h4>
+        <p>See how many grams and metres of filament a design needs, and what it will cost, from your own slicer
+          settings, before you ever open the slicer.</p>
+      </article>
+      <article class="card">
+        <h4>Built-in scripting</h4>
+        <p>A console and editor inside the app run Python-style scripts: rings of pegs, rows of holes, shapes from
+          a list of points. A whole script undoes with one <kbd>Ctrl</kbd>+<kbd>Z</kbd>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="kicker">How it works</p>
+      <h2>Four steps from empty build plate to finished print.</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <div class="steps__art" aria-hidden="true">
+          <svg viewBox="0 0 120 80">
+            <path d="M10 60 L60 72 L110 60 L60 48 Z" class="plane"/>
+            <path d="M44 40 L60 44 L76 40 L60 36 Z" fill="#ef4a5b"/>
+            <path d="M44 40 L60 44 L60 60 L44 56 Z" fill="#c8102e"/>
+            <path d="M60 44 L76 40 L76 56 L60 60 Z" fill="#9b0c24"/>
+            <path d="M86 18 l8 8 l-3 0 l3 6 l-2 1 l-3 -6 l-3 2 z" fill="#3a2f24"/>
+            <path d="M82 24 Q72 30 70 38" class="dash"/>
+          </svg>
+        </div>
+        <h3>Drag in shapes</h3>
+        <p>Pick boxes, cylinders, text and parts from the library and drop them on the build plate.</p>
+      </li>
+      <li>
+        <div class="steps__art" aria-hidden="true">
+          <svg viewBox="0 0 120 80">
+            <path d="M10 60 L60 72 L110 60 L60 48 Z" class="plane"/>
+            <path d="M34 38 L60 44 L86 38 L60 32 Z" fill="#ef4a5b"/>
+            <path d="M34 38 L60 44 L60 60 L34 54 Z" fill="#c8102e"/>
+            <path d="M60 44 L86 38 L86 54 L60 60 Z" fill="#9b0c24"/>
+            <rect x="31" y="51" width="6" height="6" fill="#111"/><rect x="83" y="51" width="6" height="6" fill="#111"/>
+            <rect x="57" y="57" width="6" height="6" fill="#fff" stroke="#111"/>
+            <rect x="92" y="38" width="22" height="11" rx="2" fill="#fff" stroke="#9aa"/>
+            <text x="103" y="46" font-size="7" text-anchor="middle" fill="#123">52.00</text>
+          </svg>
+        </div>
+        <h3>Size and place</h3>
+        <p>Pull handles or type exact numbers. Rotate, lift, align and mirror until it's right.</p>
+      </li>
+      <li>
+        <div class="steps__art" aria-hidden="true">
+          <svg viewBox="0 0 120 80">
+            <defs>
+              <pattern id="stripes" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="4" height="4" fill="#cfd6dd"/><rect width="2" height="4" fill="#9aa5b1"/>
+              </pattern>
+            </defs>
+            <path d="M10 60 L60 72 L110 60 L60 48 Z" class="plane"/>
+            <path d="M30 38 L60 45 L90 38 L60 31 Z" fill="#6cc4f0"/>
+            <path d="M30 38 L60 45 L60 58 L30 51 Z" fill="#2e86c8"/>
+            <path d="M60 45 L90 38 L90 51 L60 58 Z" fill="#1b558c"/>
+            <ellipse cx="60" cy="30" rx="10" ry="4" fill="url(#stripes)" opacity=".9"/>
+            <rect x="50" y="18" width="20" height="12" fill="url(#stripes)" opacity=".9"/>
+            <ellipse cx="60" cy="18" rx="10" ry="4" fill="#dfe5ea" stroke="#9aa5b1"/>
+          </svg>
+        </div>
+        <h3>Cut holes and group</h3>
+        <p>Turn shapes into holes, select everything and group. ScottiCAD does the boolean maths.</p>
+      </li>
+      <li>
+        <div class="steps__art" aria-hidden="true">
+          <svg viewBox="0 0 120 80">
+            <rect x="34" y="8" width="52" height="58" rx="4" fill="#fff" stroke="#3a2f24" stroke-width="2"/>
+            <path d="M40 16 h40 v6 h-40z" fill="#f2ebdf"/>
+            <path d="M48 46 L60 50 L72 46 L60 42 Z" fill="#6cc4f0"/>
+            <path d="M48 46 L60 50 L60 58 L48 54 Z" fill="#2e86c8"/>
+            <path d="M60 50 L72 46 L72 54 L60 58 Z" fill="#1b558c"/>
+            <text x="60" y="34" font-size="10" font-weight="700" text-anchor="middle" fill="#3a2f24">.STL</text>
+            <path d="M44 72 h32" stroke="#2ecc71" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Export and print</h3>
+        <p>Save a watertight STL, open it in your slicer, and print. That's it.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ AUTOMATION ============ -->
+<section class="section section--dark" id="automation">
+  <div class="wrap split">
+    <div>
+      <p class="kicker kicker--light">For makers who code</p>
+      <h2>Everything you can click, you can script.</h2>
+      <p>
+        Click <strong>Scripting</strong> and a console opens under the 3D view. Type at the prompt, or write longer
+        scripts in the built-in editor, in Starlark, a dialect of Python. Loops, lists and functions work as you'd
+        expect, and scripts can build shapes from your own lists of points: outlines extruded straight up, or lofts
+        that join one outline to the next.
+      </p>
+      <p>
+        The same commands are available from outside. Start ScottiCAD with <code>--api</code> and it listens for
+        JSON-RPC on a local port; every action in the interface is available, from adding a shape to clicking a
+        toolbar button. A small Python client comes with the source. Use it to generate families of parts from a spreadsheet, batch-export
+        a folder of designs, build test fixtures, or drive the app headless and take screenshots. In fact, every still image
+        on this page was rendered that way.
+      </p>
+      <ul class="checks checks--light">
+        <li>Create, move, resize, rotate, align, group, export</li>
+        <li>Query the document, bounding boxes and mesh statistics</li>
+        <li>Headless mode with PNG screenshots for automated tests</li>
+        <li>Simulated mouse and keyboard input for end-to-end testing</li>
+      </ul>
+    </div>
+    <div class="code">
+      <div class="code__bar">
+        <span>make_plate.py</span>
+        <button class="copy" type="button" data-copy="#code-sample">Copy</button>
+      </div>
+<pre id="code-sample"><code><span class="c"># A mounting plate with a centred hole, scripted.</span>
+<span class="k">from</span> scotticad <span class="k">import</span> launch
+
+<span class="k">with</span> launch(headless=<span class="n">True</span>) <span class="k">as</span> cad:
+    plate = cad.add_shape(<span class="s">"box"</span>)
+    cad.select([plate])
+    cad.set_size(<span class="n">80</span>, <span class="n">50</span>, <span class="n">4</span>)
+
+    hole = cad.add_shape(<span class="s">"cylinder"</span>, hole=<span class="n">True</span>)
+    cad.select([plate, hole])
+    cad.align(<span class="s">"x"</span>, <span class="s">"center"</span>)
+    cad.align(<span class="s">"y"</span>, <span class="s">"center"</span>)
+
+    cad.group(<span class="s">"union"</span>)
+    cad.export(<span class="s">"plate.stl"</span>)
+    cad.screenshot(<span class="s">"plate.png"</span>)</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNDER THE HOOD ============ -->
+<section class="section" id="tech">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="kicker">Under the hood</p>
+      <h2>Small, fast, and built to stay out of your way.</h2>
+      <p class="sub">ScottiCAD is written from scratch in Go, with no browser engine and no heavyweight framework underneath.</p>
+    </div>
+    <div class="grid grid--tech">
+      <article class="card card--line">
+        <h4>Hardware-accelerated graphics</h4>
+        <p>The 3D view and the entire interface are drawn with OpenGL 3.3 on your GPU, with multi-sample anti-aliasing,
+          soft shadows and pixel-exact picking of shapes and handles.</p>
+      </article>
+      <article class="card card--line">
+        <h4>Idle means idle</h4>
+        <p>The screen only redraws when something changes. When you're thinking, ScottiCAD isn't using your CPU or
+          spinning your fans.</p>
+      </article>
+      <article class="card card--line">
+        <h4>Parallel boolean engine</h4>
+        <p>BSP-tree constructive solid geometry with seam repair, result caching and multi-core evaluation. Large designs
+          open in seconds, and the view stays responsive while groups are computed.</p>
+      </article>
+      <article class="card card--line">
+        <h4>A single executable</h4>
+        <p>No installer, no runtime to install, no DLLs to chase. Put <code>scotticad.exe</code> in a folder, or on a USB
+          stick, and run it.</p>
+      </article>
+      <article class="card card--line">
+        <h4>Crisp on any display</h4>
+        <p>Per-monitor DPI awareness keeps text and icons sharp on high-resolution laptops and when you drag the
+          window between screens.</p>
+      </article>
+      <article class="card card--line">
+        <h4>Tested end to end</h4>
+        <p>A Go test suite covers the geometry and document model, and Python tests drive the real application through
+          its API, checking that exported parts are closed and correct.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHORTCUTS ============ -->
+<section class="section section--tint" id="shortcuts">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="kicker">Keyboard shortcuts</p>
+      <h2>Fast hands, fewer clicks.</h2>
+      <p class="sub">Every tool has a key. Here are the ones you'll reach for most. Press <kbd>?</kbd> in the app for the full list.</p>
+    </div>
+    <div class="keys">
+      <div class="keys__col">
+        <h4>Editing</h4>
+        <dl>
+          <dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>Undo</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>Y</kbd></dt><dd>Redo</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd></dt><dd>Copy, cut, paste</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></dt><dd>Paste in place</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>D</kbd></dt><dd>Duplicate</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>A</kbd></dt><dd>Select all</dd>
+          <dt><kbd>Delete</kbd></dt><dd>Delete selection</dd>
+        </dl>
+      </div>
+      <div class="keys__col">
+        <h4>Shapes and groups</h4>
+        <dl>
+          <dt><kbd>H</kbd></dt><dd>Make hole</dd>
+          <dt><kbd>S</kbd></dt><dd>Make solid</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>G</kbd></dt><dd>Union group</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>B</kbd></dt><dd>Bundle group</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></dt><dd>Ungroup</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>L</kbd></dt><dd>Lock / unlock</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>T</kbd></dt><dd>Transparent</dd>
+        </dl>
+      </div>
+      <div class="keys__col">
+        <h4>Tools</h4>
+        <dl>
+          <dt><kbd>L</kbd></dt><dd>Align</dd>
+          <dt><kbd>M</kbd></dt><dd>Mirror</dd>
+          <dt><kbd>C</kbd></dt><dd>Place on surface</dd>
+          <dt><kbd>D</kbd></dt><dd>Drop down</dd>
+          <dt><kbd>Shift</kbd>+<kbd>D</kbd></dt><dd>Lay flat</dd>
+          <dt><kbd>K</kbd></dt><dd>Split with a plane</dd>
+          <dt><kbd>Shift</kbd>+<kbd>K</kbd></dt><dd>Section view</dd>
+          <dt><kbd>W</kbd></dt><dd>Construction plane</dd>
+          <dt><kbd>R</kbd></dt><dd>Ruler</dd>
+          <dt><kbd>N</kbd></dt><dd>Notes</dd>
+        </dl>
+      </div>
+      <div class="keys__col">
+        <h4>View and files</h4>
+        <dl>
+          <dt><kbd>F</kbd></dt><dd>Fit all in view</dd>
+          <dt><kbd>+</kbd> / <kbd>−</kbd></dt><dd>Zoom in / out</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>H</kbd></dt><dd>Hide selected</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></dt><dd>Show all</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>S</kbd> / <kbd>O</kbd></dt><dd>Save, open</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>I</kbd></dt><dd>Import</dd>
+          <dt><kbd>Ctrl</kbd>+<kbd>E</kbd></dt><dd>Export</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section class="section" id="download">
+  <div class="wrap">
+    <div class="download">
+      <div class="download__main">
+        <img src="assets/img/logo.svg" alt="" width="72" height="72">
+        <h2>Get ScottiCAD</h2>
+        <p>Free and open source under the Apache 2.0 licence. Version 0.1.0.</p>
+        <a class="btn btn--primary btn--lg" href="https://github.com/scotticad/scotticad/releases/latest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Download for Windows<span class="hide-sm"> (64-bit)</span></span>
+        </a>
+        <p class="small">From GitHub Releases. A 2&nbsp;MB zip file.</p>
+      </div>
+      <div class="download__side">
+        <h3>Getting started</h3>
+        <ol>
+          <li>Download the zip file from the latest release.</li>
+          <li>Extract it to any folder you like (right-click, <em>Extract All</em>), then double-click
+            <code>scotticad.exe</code>. There's nothing to install.</li>
+          <li>Windows SmartScreen may ask you to confirm the first time, because the program is new. Choose
+            <em>More info</em>, then <em>Run anyway</em>.</li>
+          <li>Drag a shape onto the build plate and start building.</li>
+        </ol>
+        <h3>Build it from source</h3>
+        <p>With Go installed:</p>
+        <div class="code code--inline">
+          <pre id="install-cmd"><code>go install github.com/scotticad/scotticad/cmd/scotticad@latest</code></pre>
+          <button class="copy" type="button" data-copy="#install-cmd">Copy</button>
+        </div>
+        <h3>System requirements</h3>
+        <ul>
+          <li>Windows 10 or Windows 11, 64-bit</li>
+          <li>A graphics card or integrated GPU with OpenGL 3.3 (almost any PC from the last decade)</li>
+          <li>A mouse with a right button and scroll wheel is recommended</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--tint" id="faq">
+  <div class="wrap narrow">
+    <div class="section__head">
+      <p class="kicker">FAQ</p>
+      <h2>Questions, answered.</h2>
+    </div>
+    <details>
+      <summary>Is ScottiCAD really free?</summary>
+      <p>Yes. ScottiCAD is open-source software under the Apache License 2.0. You can use it for personal or
+        commercial projects, read the code, modify it and share it. There's no paid tier, no trial period and no
+        ads.</p>
+    </details>
+    <details>
+      <summary>Does it need an internet connection?</summary>
+      <p>No. Once you've downloaded it, ScottiCAD runs entirely on your computer. It doesn't sign you in, sync anything
+        or phone home. Use it on a plane, in a workshop with no Wi-Fi, or on a machine that's never been online.</p>
+    </details>
+    <details>
+      <summary>Where are my designs saved?</summary>
+      <p>Wherever you choose. Designs are ordinary <code>.scotticad</code> files on your disk, stored as readable JSON that
+        keeps every shape, group and setting. Because they're plain files, you can back them up, keep them in Git or
+        share them however you like.</p>
+    </details>
+    <details>
+      <summary>Will the STL files work with my slicer?</summary>
+      <p>They should. ScottiCAD's boolean engine checks and repairs its output so that exported meshes are closed and
+        watertight, which is what slicers such as PrusaSlicer, Cura, OrcaSlicer and Bambu Studio expect. If you find a
+        design that doesn't export cleanly, please open an issue on GitHub with the file attached.</p>
+    </details>
+    <details>
+      <summary>Is it for beginners or experts?</summary>
+      <p>Both. If you've never used 3D software, the drag-and-drop approach is the gentlest place to start: there are no
+        sketches, constraints or feature trees to learn. If you're experienced, you'll appreciate typed dimensions,
+        keyboard shortcuts, parametric parts and a scripting API for repetitive jobs.</p>
+    </details>
+    <details>
+      <summary>Can I open files from other programs?</summary>
+      <p>You can import STL and OBJ meshes and SVG drawings, and combine them with ScottiCAD shapes, including cutting
+        holes into imported meshes. Imported meshes become shapes you can move, scale, colour and group like any other.</p>
+    </details>
+    <details>
+      <summary>Does it run on macOS or Linux?</summary>
+      <p>Not yet. ScottiCAD is a native Windows application. It's written in Go and draws with OpenGL, so other platforms
+        are possible in the future, but Windows is the focus for now.</p>
+    </details>
+    <details>
+      <summary>Is this a mature product?</summary>
+      <p>ScottiCAD is young: version 0.1.0 is its first public release, and it's under active development. Expect rough edges, and please report the ones you find.</p>
+    </details>
+    <details>
+      <summary>How can I help?</summary>
+      <p>Use it, tell people about it, and report bugs and ideas on the
+        <a href="https://github.com/scotticad/scotticad/issues">GitHub issue tracker</a>. Pull requests are welcome too:
+        new parametric parts are a great first contribution.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2>Your next part starts with a single shape.</h2>
+    <p>Download ScottiCAD and put something on the build plate.</p>
+    <div class="cta cta--center">
+      <a class="btn btn--primary btn--lg" href="#download">Download for Windows</a>
+      <a class="btn btn--ghost-light btn--lg" href="https://github.com/scotticad/scotticad">Star on GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
