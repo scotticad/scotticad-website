@@ -1,0 +1,15 @@
+# Private notes (not published)
+NOTES.md
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local status script
+check-site.sh
