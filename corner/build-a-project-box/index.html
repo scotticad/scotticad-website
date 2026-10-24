@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How I build a project box — Scotti&#x27;s Corner</title>
+  <meta name="description" content="Step-by-step ScottiCAD tutorial: a 3D-printable project box with 3 mm walls, posts for M3 screws and a countersunk lid. Design file included.">
+  <link rel="canonical" href="https://scotticad.com/corner/build-a-project-box/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/build-a-project-box/">
+  <meta property="og:title" content="How I build a project box — Scotti&#x27;s Corner">
+  <meta property="og:description" content="Step-by-step ScottiCAD tutorial: a 3D-printable project box with 3 mm walls, posts for M3 screws and a countersunk lid. Design file included.">
+  <meta property="og:image" content="https://scotticad.com/corner/build-a-project-box/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-24">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How I build a project box",
+    "description": "Step-by-step ScottiCAD tutorial: a 3D-printable project box with 3 mm walls, posts for M3 screws and a countersunk lid. Design file included.",
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/build-a-project-box/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/build-a-project-box/",
+    "wordCount": 714,
+    "keywords": "ScottiCAD tutorial, project box, enclosure, 3D printing, M3 screws",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How I build a project box",
+        "item": "https://scotticad.com/corner/build-a-project-box/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>How I build a project box</h1>
+      <p class="post__lede">The project box from my first post, step by step: a box, a hole, a lid, four screw posts, and countersunk holes for M3 screws.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-24">24 October 2026</time> · 3 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>In <a href="../why-i-wrote-scotticad/">my first post</a> I said a project box is just one box with a slightly smaller box taken out of it. I've made a fair number of these, so here's how I go about it, step by step.</p>
+<p>The one we're building is 60 × 40 × 30 mm, with 3 mm walls and a lid that screws down with four M3 countersunk screws. Change the numbers to suit whatever you're putting in it.</p>
+<h2 id="1-start-with-the-outside">1. Start with the outside</h2>
+<p>Drag a <strong>Box</strong> from the shape panel onto the build plate. Click it, and type the outside size into the panel on the right: length 60, width 40, height 30.</p>
+<figure class="post-fig"><img src="s1-box.webp" width="1054" height="738" alt="A 60 by 40 by 30 mm box selected on the build plate, with its size in the properties panel." loading="lazy"><figcaption>The outside of the box: 60 × 40 × 30 mm.</figcaption></figure>
+<h2 id="2-take-the-inside-out">2. Take the inside out</h2>
+<p>Drag in a second box and press <strong>H</strong> to make it a hole. This is the inside of the box.</p>
+<p>I like my walls to be 3 mm, so the hole is 3 mm smaller on every side. That makes it 6 mm smaller each way: 54 × 34 mm. Raise it 3 mm off the build plate, which leaves a 3 mm floor, and make it taller than the box (40 mm is fine) so it cuts right through the top.</p>
+<figure class="post-fig"><img src="s2-hole-selected.webp" width="1054" height="738" alt="The see-through hole box sitting inside the outer box, selected, with its size in the panel: 54 by 34 by 40 mm." loading="lazy"><figcaption>The hole: 54 × 34 mm, raised 3 mm, and taller than the box.</figcaption></figure>
+<p>To center it, select both and press <strong>L</strong> for the Align tool, then click the middle dots. With both still selected, press <strong>Ctrl+G</strong> to group them. The hole is cut away and you have a box.</p>
+<h2 id="3-make-the-lid">3. Make the lid</h2>
+<p>The lid is just a flat piece: another box, 60 × 40 × 3 mm. Park it next to the box for now.</p>
+<figure class="post-fig"><img src="s3-lid.webp" width="1104" height="773" alt="The hollowed-out box, and a flat 60 by 40 by 3 mm lid selected beside it." loading="lazy"><figcaption>The lid: 60 × 40 × 3 mm, parked beside the box.</figcaption></figure>
+<h2 id="4-add-posts-for-the-screws">4. Add posts for the screws</h2>
+<p>The screws need something to bite into, so I put a post in each corner. Drag a <strong>Cylinder</strong> into the box. It lands on the floor. Make it 9 mm across and 27 mm tall, so it comes up level with the top of the box.</p>
+<p>To get it into a corner, select the box and the post, press <strong>L</strong>, and click the corner dots along each side.</p>
+<figure class="post-fig"><img src="s4-align.webp" width="860" height="602" alt="The Align tool on the box and one post, with alignment dots along each side of the box." loading="lazy"><figcaption>The Align tool: click the dots for the corner you want.</figcaption></figure>
+<p>The post lines up with the corner and merges into the walls. Then press <strong>Ctrl+D</strong> to duplicate it, align the copy to the next corner, and do the same for the other two.</p>
+<figure class="post-fig"><img src="s4-posts.webp" width="860" height="602" alt="Four posts, one in each corner of the box, merged into the walls, with the lid beside the box." loading="lazy"><figcaption>Four posts, one in each corner.</figcaption></figure>
+<h2 id="5-cut-the-pilot-holes">5. Cut the pilot holes</h2>
+<p>Now the screw holes in the posts. These are hole cylinders, a little undersized so the screw threads its own way into the plastic. For M3 screws I use 2.5 mm, 15 mm deep. Align one to the middle of each post.</p>
+<figure class="post-fig"><img src="s5-pilots.webp" width="860" height="602" alt="A 2.5 mm pilot hole selected in the middle of each of the four posts." loading="lazy"><figcaption>A 2.5 mm pilot hole in each post.</figcaption></figure>
+<p><strong>Don't group anything yet.</strong> We need those holes for the next step.</p>
+<h2 id="6-put-matching-holes-in-the-lid">6. Put matching holes in the lid</h2>
+<p>Here's my trick for getting the lid holes in exactly the right places. Move the lid so it's straight above the box. Its height doesn't matter, as long as it's clear of the box: what counts is that it lines up front to back and side to side.</p>
+<p>Now select the four pilot holes and press <strong>Ctrl+D</strong>. That's a second set of holes, already lined up with the posts. Lift the copies straight up until they go right through the lid, and make them a little bigger, 3.4 mm, so the screw slides loosely through the lid instead of threading into it.</p>
+<figure class="post-fig"><img src="s6-lid-holes.webp" width="900" height="630" alt="The lid lifted straight above the box, with four 3.4 mm holes through it, lined up over the posts below." loading="lazy"><figcaption>The lid above the box, with holes copied from the posts.</figcaption></figure>
+<h2 id="7-add-the-countersinks">7. Add the countersinks</h2>
+<p>Last, countersinks, so countersunk screws sit flush with the lid. ScottiCAD has a <strong>Countersunk Hole</strong> shape for this (search for <em>countersink</em>), and its size is already M3. Put one over each lid hole and align its top with the top of the lid.</p>
+<figure class="post-fig"><img src="s7-countersinks.webp" width="900" height="630" alt="Four M3 countersunk-hole shapes in the lid, still lifted above the box." loading="lazy"><figcaption>An M3 countersunk hole over each lid hole.</figcaption></figure>
+<h2 id="8-group-the-parts-and-you-re-done">8. Group the parts, and you're done</h2>
+<p>Select the lid with its holes and countersinks and press <strong>Ctrl+G</strong>. Then select the box with its posts and pilot holes and press <strong>Ctrl+G</strong> again. Move the lid back beside the box and press <strong>D</strong> to drop it onto the build plate.</p>
+<figure class="post-fig"><img src="s8-done.webp" width="860" height="602" alt="The finished box with four screw posts, and the lid beside it with four countersunk holes." loading="lazy"><figcaption>Two parts, ready to print.</figcaption></figure>
+<p>Both parts print the way they sit: the box open side up, and the lid with its countersinks on top, so there's nothing to support. Export them with <em>File → Export</em> as 3MF or STL, and slice as usual.</p>
+<p>Want to skip ahead? Here's the finished design: <a href="project-box.scotticad">project-box.scotticad</a>. Open it in ScottiCAD and change the sizes to fit your project.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../why-i-wrote-scotticad/">Why I wrote ScottiCAD</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

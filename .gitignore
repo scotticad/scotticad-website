@@ -13,3 +13,6 @@ desktop.ini
 
 # Local status script
 check-site.sh
+
+# Scotti's Corner sources: original and edited Markdown, post images, build script (private)
+drafts/

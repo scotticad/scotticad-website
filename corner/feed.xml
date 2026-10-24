@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scotti&#x27;s Corner</title>
+    <link>https://scotticad.com/corner/</link>
+    <atom:link href="https://scotticad.com/corner/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Notes from Scotti, who builds ScottiCAD.</description>
+    <language>en</language>
+    <item>
+      <title>How I build a project box</title>
+      <link>https://scotticad.com/corner/build-a-project-box/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/build-a-project-box/</guid>
+      <pubDate>Sat, 24 Oct 2026 16:00:00 +0000</pubDate>
+      <description>The project box from my first post, step by step: a box, a hole, a lid, four screw posts, and countersunk holes for M3 screws.</description>
+    </item>
+    <item>
+      <title>Why I wrote ScottiCAD</title>
+      <link>https://scotticad.com/corner/why-i-wrote-scotticad/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/why-i-wrote-scotticad/</guid>
+      <pubDate>Sat, 24 Oct 2026 12:00:00 +0000</pubDate>
+      <description>My designs lived in somebody else&#x27;s cloud, until an update broke half a dozen of them. So I built a CAD program that runs on my own computer.</description>
+    </item>
+  </channel>
+</rss>

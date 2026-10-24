@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why I wrote ScottiCAD — Scotti&#x27;s Corner</title>
+  <meta name="description" content="My designs lived in somebody else&#x27;s cloud until an update broke six of them. So I built ScottiCAD, free CAD for 3D printing that runs on your own computer.">
+  <link rel="canonical" href="https://scotticad.com/corner/why-i-wrote-scotticad/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/why-i-wrote-scotticad/">
+  <meta property="og:title" content="Why I wrote ScottiCAD — Scotti&#x27;s Corner">
+  <meta property="og:description" content="My designs lived in somebody else&#x27;s cloud until an update broke six of them. So I built ScottiCAD, free CAD for 3D printing that runs on your own computer.">
+  <meta property="og:image" content="https://scotticad.com/corner/why-i-wrote-scotticad/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-24">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why I wrote ScottiCAD",
+    "description": "My designs lived in somebody else's cloud until an update broke six of them. So I built ScottiCAD, free CAD for 3D printing that runs on your own computer.",
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/why-i-wrote-scotticad/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/why-i-wrote-scotticad/",
+    "wordCount": 757,
+    "keywords": "ScottiCAD, local software, 3D printing",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Why I wrote ScottiCAD",
+        "item": "https://scotticad.com/corner/why-i-wrote-scotticad/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Why I wrote ScottiCAD</h1>
+      <p class="post__lede">My designs lived in somebody else&#x27;s cloud, until an update broke half a dozen of them. So I built a CAD program that runs on my own computer.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-24">24 October 2026</time> · 3 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I've been a 3D maker for about ten years. Most of what I print is simple, functional stuff: brackets, boxes, jigs, cases, tools. There are plenty of CAD programs out there, but for parts like these you usually don't need much. Nearly all of them can be built from a few basic shapes, added together or cut out of each other.</p>
+<p>Take a project box. It's a rectangular block with a slightly smaller rectangular block subtracted from it. That's the whole design.</p>
+<p>Want a lid you can screw down? Same trick. A cylinder in each corner makes a post for a screw, a thinner hole cylinder in each post makes a pilot hole, and the lid is a thin box with four countersunk holes over the posts. M3 screws go straight into the plastic. It's still nothing but boxes, cylinders and holes. (I walk through it step by step in <a href="../build-a-project-box/">How I build a project box</a>.)</p>
+<div class="fig-pair">
+  <figure class="post-fig">
+    <div class="compare window" style="--pos: 50%">
+      <img src="box-after.webp" alt="After grouping, the hole is cut away, leaving an open box with 3 mm walls." loading="lazy">
+      <img class="compare__top" src="box-before.webp" alt="A solid box with a slightly smaller, see-through hole box sitting in it." loading="lazy">
+      <span class="compare__label compare__label--l">Before</span>
+      <span class="compare__label compare__label--r">After</span>
+      <span class="compare__line" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+    </div>
+    <figcaption>A 60 × 40 × 30 mm block minus a 54 × 34 mm hole box. Drag the slider.</figcaption>
+  </figure>
+  <figure class="post-fig">
+    <img src="box-lid.webp" width="840" height="588" alt="The same box with a screw post in each corner, each with a pilot hole, and a flat lid beside it with four countersunk holes." loading="lazy">
+    <figcaption>Add four posts with pilot holes, and a lid with countersunk holes for M3 screws.</figcaption>
+  </figure>
+</div>
+<h2 id="my-designs-lived-in-somebody-else-s-cloud">My designs lived in somebody else's cloud</h2>
+<p>The program I'd been using kept everything in the cloud. I could download an STL, sure. But the design itself, all the shapes and holes I'd built that STL from, only existed in their web portal. That came with strings attached:</p>
+<div class="pcards"><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.8M19 13a10 10 0 0 0-2.3-1.6M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 10.7 5M12 20h.01"/></svg><div><h4>No internet, no designs</h4><p>If my connection was down, I couldn't get to my own work.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2l20 20M5.8 5.8A6 6 0 0 0 7 18h10M21 15.5A4 4 0 0 0 17.5 10h-.9A7 7 0 0 0 9.3 4.4"/></svg><div><h4>Their outage, my problem</h4><p>If their service was down, same deal.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 3v6h-6"/></svg><div><h4>Updates I didn't ask for</h4><p>When they changed the software, I got the new version, like it or not. One update broke half a dozen of my designs.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM7.5 12h9"/></svg><div><h4>Features come and go</h4><p>If they took away something I used, or added something I didn't want, I had to live with it.</p></div></div></div>
+<h2 id="scotticad-runs-on-your-computer">ScottiCAD runs on your computer</h2>
+<p>ScottiCAD isn't like that. It runs on your Windows or Linux computer. Locally. Your designs are saved on your computer. Locally. You don't upgrade unless you want to.</p>
+<p>It's free, and it's open source. You can install it today and keep it forever.</p>
+<div class="pcards"><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg><div><h4>Runs locally</h4><p>No server, no sign-in, no internet connection needed.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><div><h4>Your files</h4><p>Designs are ordinary files, in folders you choose.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg><div><h4>Upgrade when you want</h4><p>Keep the version that works for you for as long as you like.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><div><h4>Free and open source</h4><p>Apache-2.0 licensed. Use it for anything.</p></div></div></div>
+<h2 id="scripting-because-i-m-a-programmer">Scripting, because I'm a programmer</h2>
+<p>I'm also a programmer, so I built ScottiCAD with scripting in mind from the start. It has a built-in language called Starlark, a dialect of Python. If you can write Python, you can write Starlark: loops, functions, lists and dicts all work the way you'd expect. (There are no classes or imports, but you won't miss them when you're building a bracket.)</p>
+<p>Why not just use Python? Two reasons. Python is big, and I wanted ScottiCAD to stay small. And Starlark is locked down by design. A script can't break out of ScottiCAD and mess with the rest of your computer, so a buggy script, or one you found online, can't do any damage.</p>
+<figure class="post-fig"><img src="../../assets/img/scripting.webp" width="1354" height="800" alt="The Scripting console in ScottiCAD: a three-line loop typed at the prompt has placed a ring of eight orange pegs on the build plate." loading="lazy"><figcaption>Three lines at the console prompt, and eight pegs appear.</figcaption></figure>
+<p>That means I can build a design with code whenever it's easier than the mouse: a row of holes, a ring of pegs, or a part whose sizes I know I'll want to tweak later.</p>
+<h2 id="tools-for-people-who-actually-print">Tools for people who actually print</h2>
+<p>Last, ScottiCAD has tools aimed at people who print what they design.</p>
+<div class="pfeature"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 3v6M12 15v6"/></svg><div><h3>Filament estimate</h3><p>How much filament a design will use, and roughly what it'll cost, before you ever open your slicer.</p></div></div>
+<figure class="post-fig"><img src="filament.webp" width="1054" height="630" alt="Three knobs on the build plate, with the Filament estimate panel open: about 11.4 g, 3.83 m, in three colours." loading="lazy"><figcaption>Three knobs: about 11.4 g of PLA, broken down by colour.</figcaption></figure>
+<div class="pfeature"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM3 21L21 3"/></svg><div><h3>Section view</h3><p>Slice through a model, the way a slicer does, so you can see inside it and check your walls.</p></div></div>
+<figure class="post-fig"><img src="section.webp" width="1100" height="766" alt="Section view in ScottiCAD cutting through a twisted plant pot and its saucer, showing the wall thickness and drainage holes." loading="lazy"><figcaption>Section view through a plant pot and its saucer.</figcaption></figure>
+<div class="pfeature"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M7 17h10l-2-6H9zM12 3v5M9.5 5.5L12 8l2.5-2.5"/></svg><div><h3>Lay flat</h3><p>Click any face of a part, and ScottiCAD turns it so that face sits flat on the build plate, ready to print.</p></div></div>
+<p>Built by a maker, for makers.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
