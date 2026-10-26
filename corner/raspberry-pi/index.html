@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raspberry Pi mounts that line up the first time — Scotti&#x27;s Corner</title>
+  <meta name="description" content="How I model Raspberry Pi 4, Pi 5 and Zero mounts in ScottiCAD, and use the board&#x27;s outline to cut port openings in a 3D-printed case. Free design file.">
+  <link rel="canonical" href="https://scotticad.com/corner/raspberry-pi/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/raspberry-pi/">
+  <meta property="og:title" content="Raspberry Pi mounts that line up the first time — Scotti&#x27;s Corner">
+  <meta property="og:description" content="How I model Raspberry Pi 4, Pi 5 and Zero mounts in ScottiCAD, and use the board&#x27;s outline to cut port openings in a 3D-printed case. Free design file.">
+  <meta property="og:image" content="https://scotticad.com/corner/raspberry-pi/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-25">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=53aa5a12">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Raspberry Pi mounts that line up the first time",
+    "description": "How I model Raspberry Pi 4, Pi 5 and Zero mounts in ScottiCAD, and use the board's outline to cut port openings in a 3D-printed case. Free design file.",
+    "datePublished": "2026-10-25",
+    "dateModified": "2026-10-25",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/raspberry-pi/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/raspberry-pi/",
+    "wordCount": 1137,
+    "keywords": "Raspberry Pi case, Raspberry Pi 5, Pi Zero, standoffs, 3D printing, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Raspberry Pi mounts that line up the first time",
+        "item": "https://scotticad.com/corner/raspberry-pi/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Raspberry Pi mounts that line up the first time</h1>
+      <p class="post__lede">Standoffs, a plate, and a see-through Pi on top that shows exactly where every port goes. Then I drop it in a case and let it cut the openings for me.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-25">25 October 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I use Raspberry Pi boards in a lot of my projects, and more often than not the Pi ends up inside a case I've built for that project. That means two things have to come out right.</p>
+<p>The mounting holes in the Pi have to line up with the posts in the case. And the case has to leave room for the board itself, including all the ports: Ethernet, USB, power, HDMI. Usually you want some of those reachable from outside, so the case needs openings in exactly the right places.</p>
+<p>Get either one wrong and you're printing the case again. So one of the first things I did with ScottiCAD was model the Pi.</p>
+<figure class="post-fig"><img src="trio.webp" width="1300" height="910" alt="Three mounting plates on the build plate: a Pi Zero 2 W mount at the back, and Pi 4 and Pi 5 mounts in front, each with a see-through outline of the board and its ports sitting on its standoffs." loading="lazy"><figcaption>Mounts for a Pi Zero 2 W, a Pi 4 and a Pi 5, each with its board's outline.</figcaption></figure>
+<h2 id="a-mount-with-the-board-built-in">A mount with the board built in</h2>
+<p>Each mount is three simple things.</p>
+<div class="pcards"><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM3 21L21 3"/></svg><div><h4>Standoffs</h4><p>One cylinder under each of the board's mounting holes, with a pilot hole down the middle for the screw.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M7 17h10l-2-6H9zM12 3v5M9.5 5.5L12 8l2.5-2.5"/></svg><div><h4>A plate</h4><p>Ties the standoffs together, so the mount is one part you can print or drop into a case.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg><div><h4>The board, as a hole</h4><p>The Pi itself, with its ports, as a see-through ghost sitting on the standoffs, exactly where the real one will sit.</p></div></div></div>
+<p>That last one is the trick. The board is modelled as a <strong>hole</strong>. Since your case shouldn't have anything in the space where the Pi goes anyway, a hole there costs nothing. But it gives you a handy reference for where every port sits, and as you'll see in a minute, it can do real work.</p>
+<p>I keep the mount and the board outline in a <strong>bundle group</strong> (Ctrl+B). A bundle moves as one piece but doesn't combine its parts, so the outline just rides along as a ghost and isn't included when you export the mount for printing.</p>
+<h2 id="dropping-it-into-a-case">Dropping it into a case</h2>
+<p>Here's what that looks like in practice. This is one of my project boxes with the Pi 5 mount dropped in. The box is built just like the one in <a href="../build-a-project-box/">How I build a project box</a>, sized to fit the mount with a little room to spare.</p>
+<figure class="post-fig"><img src="case-before.webp" width="1050" height="735" alt="A blue open-topped box with the Pi 5 mount sitting on its floor. The see-through ports of the board outline poke into the right-hand and left-hand walls." loading="lazy"><figcaption>The Pi 5 mount sitting in the box. The ghost ports show where the openings need to go.</figcaption></figure>
+<p>You can see straight away where the ports meet the walls. In the picture, the Ethernet and USB jacks run into the wall on the right, and the USB-C and two HDMI connectors sit against the wall on the left.</p>
+<p>For each port I want to reach from outside, I make an opening: a hole box the size of the port, a little bigger all round, pushed out through the wall. The ghost tells me exactly where it goes, so there's no measuring. I make the openings for the USB-C and HDMI ports a good deal bigger than the jacks, because the plugs that go into them have chunky bodies that need room too. I also cut a slot in the end wall, under the board, for the microSD card.</p>
+<figure class="post-fig"><img src="case-cuts.webp" width="1050" height="735" alt="The same box with seven hole boxes selected: one for each port opening, pushed out through the right-hand and left-hand walls, and one for the microSD slot." loading="lazy"><figcaption>The openings: one hole box per port, pushed out through the wall.</figcaption></figure>
+<p>Then select everything, the box, the mount and the openings, and press <strong>Ctrl+G</strong>. ScottiCAD cuts the openings through the walls, merges the plate and standoffs into the floor, and the board's outline carves out the space the Pi needs, ports and all.</p>
+<figure class="post-fig"><img src="case-after.webp" width="1050" height="735" alt="The finished blue case: large openings for the Ethernet and USB ports on the right, smaller ones for USB-C and HDMI on the left, and screw posts inside." loading="lazy"><figcaption>The finished case, with every opening where it belongs.</figcaption></figure>
+<figure class="post-fig"><img src="case-after-back.webp" width="1050" height="735" alt="The same case turned around, showing the microSD slot low in the end wall." loading="lazy"><figcaption>Turned around: the microSD slot in the end wall.</figcaption></figure>
+<p>Add a lid the same way as in the <a href="../build-a-project-box/">project box tutorial</a> and it's ready to print. If you want to start from mine, here's the design: <a href="pi5-case.scotticad">pi5-case.scotticad</a>.</p>
+<h2 id="how-i-built-the-mounts">How I built the mounts</h2>
+<h3>Start with the drawing</h3>
+<p>Raspberry Pi publishes a mechanical drawing for each board: the <a href="https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-mechanical-drawing.pdf">Pi 5</a>, the <a href="https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-mechanical-drawing.pdf">Pi 4</a> and the <a href="https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-mechanical-drawing.pdf">Pi Zero 2 W</a>. They give the size of the board, where the mounting holes are, and where the main ports sit along the edges. Everything I needed is on one page.</p>
+<figure class="post-fig"><img src="hole-patterns.svg" alt="A dimensioned diagram of the Raspberry Pi 5 and Pi Zero 2 W. The Pi 5 is 85 by 56 mm with mounting holes 58 by 49 mm apart; the Zero is 65 by 30 mm with holes 58 by 23 mm apart. Both have holes 3.5 mm in from the edges." loading="lazy"><figcaption>The numbers that matter, from Raspberry Pi's drawings.</figcaption></figure>
+<p>A couple of things worth knowing. The Pi 5, Pi 4 and Pi 3B all share the same hole pattern, 58 × 49 mm, so one mount works for all three (only the ports move around). The Zero uses the same 58 mm spacing, just with the holes 23 mm apart the other way. The holes are 2.7 mm across, for M2.5 screws.</p>
+<h3>Turn it into holes</h3>
+<p>I drew the board as a 1.4 mm box, then added a box for each port and for the tall parts on top: USB, Ethernet, power, HDMI, the GPIO header. Then I grouped them all and turned the group into a hole.</p>
+<p>The ports stick out past the edge of the board, the way the real ones do. That's what lets them reach into the case walls later.</p>
+<figure class="post-fig"><img src="stage1-outline.webp" width="1120" height="784" alt="The Pi 5&#x27;s outline on its own: a thin see-through board with boxes for the USB and Ethernet jacks, the power and HDMI connectors, and the GPIO header." loading="lazy"><figcaption>The Pi 5 as a hole: the board, its ports, and its GPIO header.</figcaption></figure>
+<h3>Add the standoffs</h3>
+<p>Next, a cylinder under each mounting hole. Mine are 6 mm tall, which leaves room for the microSD card and the parts on the underside, and 6.2 mm across. Each has a 2.2 mm pilot hole, so an M2.5 screw cuts its own thread into the plastic. If you'd rather use brass heat-set inserts, make the hole 3.6 mm instead.</p>
+<figure class="post-fig"><img src="stage2-standoffs.webp" width="1120" height="784" alt="The same outline with four dark standoffs underneath it, one at each mounting hole." loading="lazy"><figcaption>A standoff under each of the four mounting holes.</figcaption></figure>
+<h3>Add the plate</h3>
+<p>Last, a 3 mm plate under the standoffs, big enough to cover them with a 5 mm margin, and the mount is done. I bundle it with the outline so they always move together.</p>
+<figure class="post-fig"><img src="stage3-plate.webp" width="1120" height="784" alt="The finished Pi 5 mount: a dark plate with four standoffs, and the see-through board sitting on top of them." loading="lazy"><figcaption>The plate, and the mount is done.</figcaption></figure>
+<h2 id="make-your-own">Make your own</h2>
+<p>All of this is a script, so you don't have to build it by hand. <a href="https://github.com/scotticad/scotticad/blob/master/examples/star/board-mount.star">board-mount.star</a> is in ScottiCAD's examples, and it makes mounts for the <strong>Pi 4, Pi 5, Pi Zero 2 W, Pico</strong> and <strong>Arduino Uno</strong>, or for your own board if you add its size, holes and ports. The settings at the top let you choose:</p>
+<ul><li>which boards to make, laid out side by side on the build plate;</li><li>how tall the standoffs are;</li><li>self-tapping screws or heat-set inserts;</li><li>countersunk screw holes to fix the plate down, a VESA 75 or VESA 100 pattern to hang it on the back of a monitor, or no fixing holes at all.</li></ul>
+<p>Run it from the Scripting console, or open the ready-made design, <a href="https://github.com/scotticad/scotticad/blob/master/examples/scotticad/board-mount.scotticad">board-mount.scotticad</a>.</p>
+<p>One word of warning: the mounting holes and port positions come straight from the drawings, but the heights of the ports are my own approximations, and Raspberry Pi says their dimensions are for reference too. Before you print a whole case, check the openings against a real board, or print a quick test of just the wall with the openings in it.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li><li><a href="../why-i-wrote-scotticad/">Why I wrote ScottiCAD</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

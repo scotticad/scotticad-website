@@ -277,6 +277,7 @@ kbd {
 .gallery p { font-size: .92rem; color: var(--muted); margin: 0 0 12px; flex: 1; }
 .gallery a { font-size: .88rem; font-weight: 600; text-decoration: none; }
 .gallery a::after { content: " →"; }
+.gallery__links { display: flex; gap: 18px; }
 .note { margin: 28px auto 0; max-width: 760px; text-align: center; font-size: .92rem; color: var(--muted); }
 
 /* ---------- FAQ ---------- */
@@ -405,6 +406,7 @@ details p { padding: 0 22px 18px; margin: 0; color: #4f4539; }
 .post__body p { color: #3f362c; }
 .post__body h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin: 2.2em 0 .6em; }
 .post__body h3 { font-size: 1.2rem; margin: 0 0 .3em; }
+.post__body > h3 { margin: 1.8em 0 .4em; }
 .post__body ul { padding-left: 1.2em; }
 .post__body blockquote { margin: 1.6em 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--accent-light); color: var(--muted); }
 .post-fig { margin: 30px 0 34px; }
@@ -419,6 +421,10 @@ details p { padding: 0 22px 18px; margin: 0; color: #4f4539; }
 @media (max-width: 760px) { .fig-pair { grid-template-columns: 1fr; width: 100%; left: 0; transform: none; } }
 
 .pcards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 26px 0 34px; }
+@media (min-width: 701px) {
+  .pcards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, 1fr); }
+  .pcards:has(> :nth-child(3):last-child) .pcard { flex-direction: column; }
+}
 .pcard { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: var(--tint); border: 1px solid var(--line); border-radius: 12px; }
 .pcard .ico { width: 40px; height: 40px; padding: 8px; border-radius: 10px; background: #fff; color: var(--accent-dark); border: 1px solid var(--line); }
 .pcard h4 { font-size: 1rem; margin: 2px 0 4px; }
