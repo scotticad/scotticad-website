@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Putting text on your 3D prints — Scotti&#x27;s Corner</title>
+  <meta name="description" content="How I add raised and engraved text to 3D prints in ScottiCAD: fonts, letter sizes that print, text on the bottom, and multicolour lettering.">
+  <link rel="canonical" href="https://scotticad.com/corner/text-on-prints/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/text-on-prints/">
+  <meta property="og:title" content="Putting text on your 3D prints — Scotti&#x27;s Corner">
+  <meta property="og:description" content="How I add raised and engraved text to 3D prints in ScottiCAD: fonts, letter sizes that print, text on the bottom, and multicolour lettering.">
+  <meta property="og:image" content="https://scotticad.com/corner/text-on-prints/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2017ea68">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Putting text on your 3D prints",
+    "description": "How I add raised and engraved text to 3D prints in ScottiCAD: fonts, letter sizes that print, text on the bottom, and multicolour lettering.",
+    "datePublished": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/text-on-prints/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/text-on-prints/",
+    "wordCount": 1084,
+    "keywords": "3D printing text, engraved text, embossed text, labels, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Putting text on your 3D prints",
+        "item": "https://scotticad.com/corner/text-on-prints/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Putting text on your 3D prints</h1>
+      <p class="post__lede">Sometimes you want to add labels, part numbers or a version indicator to a 3D print. This post shows how to do it, raised or engraved, helps you pick a font, and gives you some guidelines on font size.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-30">30 October 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I often need to add text to my prints. Sometimes it's lettering for a control panel. Other times it's just an identifier or a version number for a print so I can keep track of how it differs from similar prints. This is one of those things that feels like it should be easy, but often there are a few hidden gotchas. ScottiCAD tries to simplify the workflow, and I'll include some handy tips to keep you on track in this post.</p>
+<p>There are two ways to do it. Raised text stands up off the surface. Engraved text is cut into it.</p>
+<figure class="post-fig"><img src="hero.webp" width="1030" height="721" alt="Two blue plates: on one, the word RAISED stands up in cream letters; on the other, the word ENGRAVED is cut into the surface." loading="lazy"><figcaption>Raised on top, engraved below.</figcaption></figure>
+<h2 id="adding-text">Adding text</h2>
+<p>Text is just another shape. Drag a <strong>Text</strong> shape onto the build plate from Basic Shapes (or search for "text"), then type your words in the panel on the right and pick a font.</p>
+<figure class="post-fig"><img src="panel.webp" width="924" height="647" alt="A Text shape reading Workshop, selected, with its properties panel showing the text, the font (Sans Bold) and a height of 3." loading="lazy"><figcaption>The Text shape and its settings.</figcaption></figure>
+<p>The <strong>Height</strong> setting is how thick the letters are, how far they stand up from whatever they sit on, not how tall they are. To make the letters bigger or smaller, use the handles like any other shape, or type a size. You can change the words or the font later, too. If the text is already grouped into a part, ungroup it first (<strong>Ctrl+Shift+G</strong>), change it, and group it again.</p>
+<h2 id="raised-or-engraved">Raised or engraved?</h2>
+<p>For raised text, sit the letters on top of the part, sink them in a little so they overlap it, and group the two together with <strong>Ctrl+G</strong>. For lettering that just needs to be read, I make it stand up 0.6 to 1 mm. That's three to five layers at 0.2 mm, which is plenty.</p>
+<p>For engraved text, press <strong>H</strong> to make the text a hole, sink it into the part, and group. Here's a label for a bin of M3 screws before and after:</p>
+<figure class="post-fig">
+  <div class="compare window" style="--pos: 50%">
+    <img src="engrave-after.webp" alt="After grouping, the text is cut into the plate." loading="lazy">
+    <img class="compare__top" src="engrave-before.webp" alt="An orange plate with the text M3 x 12 as a see-through hole shape sitting in its top." loading="lazy">
+    <span class="compare__label compare__label--l">Before</span>
+    <span class="compare__label compare__label--r">After</span>
+    <span class="compare__line" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+  </div><figcaption>The text as a hole, then grouped. Drag the slider.</figcaption>
+</figure>
+<p>Which one should you use? Engraved text is my default for labels. Nothing sticks up to snag or break off, and it prints cleanly on a top surface. Raised text is easier to read from a distance. If you want the letters in a second colour, there's a third way, which I'll get to below.</p>
+<h2 id="how-small-can-you-go">How small can you go?</h2>
+<p>This is where most text goes wrong. Your printer lays down plastic in lines about as wide as the nozzle, 0.4 mm on most printers. A letter stroke thinner than about two of those lines doesn't print well. Make the text too small and the detail is lost: you get blobs instead of letters.</p>
+<p>Here's a real print, the screwdriver bit holder from the examples. The labels are engraved 0.6 mm deep and they're 3.2 mm tall, in ScottiCAD's built-in font, which is a bold sans. They came out fine. I wouldn't go much smaller than that.</p>
+<figure class="post-fig"><img src="printed-labels.webp" width="1100" height="770" alt="A photo of the printed green bit holder: rows of hex pockets, each with a small engraved label such as PH2, T20, H2.5 and SL6." loading="lazy"><figcaption>The real thing: 3.2 mm letters, engraved 0.6 mm deep.</figcaption></figure>
+<p>If you need the text smaller than that, use a bold font, keep it short, and try a finer nozzle or a smaller layer height.</p>
+<h2 id="fonts">Fonts</h2>
+<p>The font menu has seven names at the top.</p>
+<figure class="post-fig"><img src="fonts.webp" width="1050" height="735" alt="A dark plate with the font names written in their own fonts: Multilanguage, Sans, Sans Bold, Sans Mono, Serif, Serif Bold and Script." loading="lazy"><figcaption>The seven font names at the top of the font menu.</figcaption></figure>
+<p><strong>Multilanguage</strong> is built into ScottiCAD, so a design that uses it looks the same on any computer. The other six use fonts that are already on your computer, a regular sans, serif and so on, and below them in the menu is every other font you have installed. That's handy, but if you send a design to a friend, they might not have the same fonts, and the text could come out looking different. For anything I share, I stick with Multilanguage.</p>
+<p>For small text, use a bold font: Multilanguage, Sans Bold or Serif Bold. The thin parts of Serif and Script look great at large sizes and vanish at small ones.</p>
+<h2 id="text-on-the-bottom">Text on the bottom</h2>
+<p>The bottom of a part is a good place for a version number or a date. It's out of sight, and the first layer against the build plate comes out crisp.</p>
+<p>The catch is that you're looking at it from the top while you design it, so you have to <strong>mirror</strong> it. Select the text, press <strong>M</strong>, and click the arrow that flips it left to right. From the top it reads backwards. Flip the printed part over and it reads correctly.</p>
+<figure class="post-fig"><img src="bottom.webp" width="1000" height="700" alt="A see-through green plate seen from above, with the text v2 2026-10 engraved in its bottom face, reading backwards." loading="lazy"><figcaption>From the top it reads backwards. That's what you want.</figcaption></figure>
+<p>Engraving works better than raised text here. Raised letters on the bottom would be the only thing touching the build plate.</p>
+<p>Text on a side wall works too, raised or engraved. For a slanted face, use the <strong>construction plane</strong> tool (<strong>W</strong>) to put a working plane on that face first, then add the text on it.</p>
+<h2 id="two-colours">Two colours</h2>
+<p>Many people have multicolour printers these days. While there are techniques you can use for printing multiple colours on a single-material printer, such as pausing the print and swapping spools, I'm going to concentrate on the workflow that I use for multicolour prints.</p>
+<p>I usually create the text as a separate object. I do not group it with the main object in the print. This allows a slicer to detect multiple objects and gives you the option to colour each of them separately.</p>
+<p>If the text is inset into the surface (that is, if it is to appear flush), then I usually duplicate the text and use one copy to cut a matching hole in the primary object. The other copy fills the hole. This ensures the slicer will not try to print both objects in the same place.</p>
+<figure class="post-fig"><img src="multi-flush.webp" width="1000" height="700" alt="A blue plate with the word CONTROL in cream letters, flush with its surface." loading="lazy"><figcaption>Flush lettering, ready for two colours.</figcaption></figure>
+<p>Lift the letters up and you can see how it's built: a plate with the word cut into it, and a separate copy of the word that drops into the hole.</p>
+<figure class="post-fig"><img src="multi-lifted.webp" width="1000" height="700" alt="The cream letters lifted above the blue plate, showing the word-shaped hole cut into the plate underneath." loading="lazy"><figcaption>Two objects: the plate with its hole, and the letters that fill it.</figcaption></figure>
+<p>Give the plate and the letters different colours, then export with <em>File → Export</em>. Don't use STL for a multicolour print: STL has no colours, so the slicer can't tell them apart. OBJ and 3MF both keep them. ScottiCAD's 3MF puts each colour in its own part, and Bambu Studio and PrusaSlicer load those as separate parts you can assign a filament to.</p>
+<figure class="post-fig post-fig--small"><img src="export-dialog.webp" width="560" height="480" alt="The Export dialog in ScottiCAD, listing 3MF (one file with the colours, read by PrusaSlicer, Bambu Studio and Cura), STL (no colours), OBJ (the colours in a .mtl file beside it), glTF and SVG." loading="lazy"><figcaption>3MF keeps the colours. STL doesn't.</figcaption></figure>
+<h2 id="try-it">Try it</h2>
+<p>The coasters, the bit holder and the cable clips in ScottiCAD's <a href="https://github.com/scotticad/scotticad/tree/master/examples">examples</a> all use text. They're good ones to open up and poke at.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li><li><a href="../why-i-wrote-scotticad/">Why I wrote ScottiCAD</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

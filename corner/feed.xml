@@ -7,6 +7,27 @@
     <description>Notes from Scotti, who builds ScottiCAD.</description>
     <language>en</language>
     <item>
+      <title>Your first ScottiCAD script</title>
+      <link>https://scotticad.com/corner/first-script/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/first-script/</guid>
+      <pubDate>Fri, 30 Oct 2026 20:00:00 +0000</pubDate>
+      <description>Get started by writing your very first script in ScottiCAD. Its scripting language is a variant of Python with a gentle learning curve that even novices can use to make parametric models.</description>
+    </item>
+    <item>
+      <title>Putting text on your 3D prints</title>
+      <link>https://scotticad.com/corner/text-on-prints/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/text-on-prints/</guid>
+      <pubDate>Fri, 30 Oct 2026 19:00:00 +0000</pubDate>
+      <description>Sometimes you want to add labels, part numbers or a version indicator to a 3D print. This post shows how to do it, raised or engraved, helps you pick a font, and gives you some guidelines on font size.</description>
+    </item>
+    <item>
+      <title>Three tools for people who actually print</title>
+      <link>https://scotticad.com/corner/tools-for-3d-makers/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/tools-for-3d-makers/</guid>
+      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
+      <description>Look inside a part, lay it flat for printing, and see what it&#x27;ll cost in filament, all without leaving the CAD program.</description>
+    </item>
+    <item>
       <title>Raspberry Pi mounts that line up the first time</title>
       <link>https://scotticad.com/corner/raspberry-pi/</link>
       <guid isPermaLink="true">https://scotticad.com/corner/raspberry-pi/</guid>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three tools for people who actually print — Scotti&#x27;s Corner</title>
+  <meta name="description" content="Section view, lay flat and a filament estimate, built into a CAD program: how I check, orient and cost a 3D-printed part in ScottiCAD before slicing.">
+  <link rel="canonical" href="https://scotticad.com/corner/tools-for-3d-makers/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/tools-for-3d-makers/">
+  <meta property="og:title" content="Three tools for people who actually print — Scotti&#x27;s Corner">
+  <meta property="og:description" content="Section view, lay flat and a filament estimate, built into a CAD program: how I check, orient and cost a 3D-printed part in ScottiCAD before slicing.">
+  <meta property="og:image" content="https://scotticad.com/corner/tools-for-3d-makers/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2017ea68">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Three tools for people who actually print",
+    "description": "Section view, lay flat and a filament estimate, built into a CAD program: how I check, orient and cost a 3D-printed part in ScottiCAD before slicing.",
+    "datePublished": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/tools-for-3d-makers/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/tools-for-3d-makers/",
+    "wordCount": 808,
+    "keywords": "3D printing, section view, lay flat, filament estimate, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Three tools for people who actually print",
+        "item": "https://scotticad.com/corner/tools-for-3d-makers/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Three tools for people who actually print</h1>
+      <p class="post__lede">Look inside a part, lay it flat for printing, and see what it&#x27;ll cost in filament, all without leaving the CAD program.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-30">30 October 2026</time> · 4 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I'm a 3D printing enthusiast, and I built ScottiCAD for the parts I print. So it has a few tools that most CAD programs don't, or that hide behind a steep learning curve. Here are the three I use most.</p>
+<div class="pcards"><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM3 21L21 3"/></svg><div><h4>Section view</h4><p>Cut through a design with a movable plane and see what's inside.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M7 17h10l-2-6H9zM12 3v5M9.5 5.5L12 8l2.5-2.5"/></svg><div><h4>Lay flat</h4><p>Click any face and it turns the part to sit on that face, ready to print.</p></div></div><div class="pcard"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 3v6M12 15v6"/></svg><div><h4>Filament estimate</h4><p>Grams, metres and cost, right in the CAD program.</p></div></div></div>
+<h2 id="section-view-look-inside">Section view: look inside</h2>
+<p>As makers, we often need to see inside our models: the pockets, the mounting holes, the flexures in a print-in-place joint. Before ScottiCAD, I'd export the design and open it in my slicer just to have a look.</p>
+<p>Now I use section view. Press <strong>Shift+K</strong>, or click its button in the toolbar, and ScottiCAD cuts the design open with a plane I can move. Drag the dot on the plane to slide it through the part. The bar at the top switches the cut between the <strong>X</strong>, <strong>Y</strong> and <strong>Z</strong> axes, <strong>Flip</strong> shows the other side, and <strong>Pin</strong> keeps the cut in place while I select and change things. It only changes the view: the design itself isn't touched.</p>
+<p>Here's the project box from <a href="../build-a-project-box/">How I build a project box</a>, closed up with its lid on. From the outside, there's no way to tell whether the screws will line up.</p>
+<figure class="post-fig"><img src="closed.webp" width="1100" height="770" alt="The closed project box in ScottiCAD, with the four countersunk holes visible in its lid." loading="lazy"><figcaption>The project box with its lid on. Do the screws line up?</figcaption></figure>
+<p>Cut along <strong>X</strong>, through the two posts at one end, and you can see the whole path of each screw: the countersink in the lid, the hole through it, and the pilot hole running down the middle of the post below.</p>
+<figure class="post-fig"><img src="section-x.webp" width="1100" height="770" alt="The box cut open along X: two screw posts inside the walls, each with a pilot hole, and a countersink in the lid directly above each one." loading="lazy"><figcaption>Cut along X: each countersink sits right over its pilot hole.</figcaption></figure>
+<p>Along <strong>Y</strong>, through the posts on one side, I can check the other direction and see how deep the pilot holes go.</p>
+<figure class="post-fig"><img src="section-y.webp" width="1100" height="770" alt="The box cut along Y, showing two posts with their pilot holes and the countersinks in the lid above them." loading="lazy"><figcaption>Cut along Y: the same check from the side.</figcaption></figure>
+<p>And along <strong>Z</strong>, a slice part way up, seen from above, shows the walls, the four posts and the pilot holes in their middles. It's a quick way to check wall thickness.</p>
+<figure class="post-fig"><img src="section-z.webp" width="1100" height="770" alt="The box sliced across at 20 mm and seen from above: the four walls, a post in each corner, and a pilot hole in each post." loading="lazy"><figcaption>Cut along Z: the walls and posts from above.</figcaption></figure>
+<h2 id="lay-flat-design-one-way-print-another">Lay flat: design one way, print another</h2>
+<p>Every slicer has this one. CAD programs often don't. We need our parts sitting on the build plate the right way up for printing, but that isn't always the best way to design them. Sometimes I design a part on its side, or upside down, or the way it'll sit when it's in use.</p>
+<p>Take this wall hook and shelf bracket. I think about them standing up, the way they hang on the wall.</p>
+<figure class="post-fig"><img src="lay-before.webp" width="1100" height="770" alt="A blue wall hook and a yellow shelf bracket standing upright on the build plate, the way they hang on a wall." loading="lazy"><figcaption>Designed standing up, the way they hang on the wall.</figcaption></figure>
+<p>But that's the worst way to print them. A printed part is weakest between its layers, so a hook printed standing up tends to snap right where the arm leaves the back plate. With the part on its side, the load runs along the layers instead of across them, and no supports are needed.</p>
+<p>So I press <strong>Shift+D</strong> and point at the face I want on the build plate. ScottiCAD highlights it.</p>
+<figure class="post-fig"><img src="lay-hover.webp" width="1100" height="770" alt="Lay flat mode: the side of the shelf bracket highlighted in orange under the mouse, and a banner at the top reading &quot;Click a face to lay it flat&quot;." loading="lazy"><figcaption>Point at a face. ScottiCAD highlights it.</figcaption></figure>
+<p>Click, and the part turns so that face sits flat on the build plate.</p>
+<figure class="post-fig"><img src="lay-after.webp" width="1100" height="770" alt="The hook and the bracket both lying on their sides on the build plate, ready to print." loading="lazy"><figcaption>Laid flat on their sides, ready to print.</figcaption></figure>
+<h2 id="filament-estimate-what-will-it-cost">Filament estimate: what will it cost?</h2>
+<p>The last one is the filament estimate. I didn't build a whole slicer into ScottiCAD, so this is an approximation, but how cool is it to see how much filament a part needs, and what it'll cost, right in the CAD program, while you're still deciding how big to make it?</p>
+<p>Click the spool button in the toolbar and the estimate appears in the corner. Here's the screwdriver bit holder from the examples: about 40 g of PLA, 13.4 m of filament, 80 cents at $20 a kilo. Select some shapes and it estimates just those; for a multicolour design, it breaks the total down by colour too.</p>
+<figure class="post-fig"><img src="filament.webp" width="1040" height="728" alt="The screwdriver bit holder on the build plate, with the Filament estimate panel open in the corner: about 40.0 g, 13.43 m, cost 0.80." loading="lazy"><figcaption>The bit holder: about 40 g of PLA.</figcaption></figure>
+<p>Open <strong>Settings</strong> in the panel and you can tune the estimate to the way you print: the material (PLA, PETG, ABS, ASA, TPU, PC or nylon, each with its density), the filament diameter, layer height, line width, the number of walls and top and bottom layers, the infill, and the price per kilo.</p>
+<figure class="post-fig post-fig--small"><img src="filament-settings.webp" width="500" height="500" alt="The Filament estimate panel with its settings open: material, density, filament diameter, layer height, line width, walls, top layers, bottom layers, infill, price per kg and calibration." loading="lazy"><figcaption>The settings, matched to how I print.</figcaption></figure>
+<p>There's also a <strong>calibration</strong> setting, a percentage added to every estimate. Slice a couple of your own parts, compare the slicer's numbers with ScottiCAD's, and set the difference. After that, the estimate tracks your printer pretty closely. Supports, brims and purge aren't included, so for parts that need a lot of support, add a bit on top.</p>
+<h2 id="less-back-and-forth">Less back and forth</h2>
+<p>Each of these saves me a trip out of the design and into the slicer, and that adds up. I can check the inside of a part, set it up for printing, and see what it costs while I'm still designing it, instead of finding out afterwards.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li><li><a href="../why-i-wrote-scotticad/">Why I wrote ScottiCAD</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

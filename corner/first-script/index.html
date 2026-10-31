@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your first ScottiCAD script — Scotti&#x27;s Corner</title>
+  <meta name="description" content="Write your very first script in ScottiCAD, in a variant of Python with a gentle learning curve: a drill bit stand you resize by changing a few numbers.">
+  <link rel="canonical" href="https://scotticad.com/corner/first-script/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/first-script/">
+  <meta property="og:title" content="Your first ScottiCAD script — Scotti&#x27;s Corner">
+  <meta property="og:description" content="Write your very first script in ScottiCAD, in a variant of Python with a gentle learning curve: a drill bit stand you resize by changing a few numbers.">
+  <meta property="og:image" content="https://scotticad.com/corner/first-script/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2017ea68">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your first ScottiCAD script",
+    "description": "Write your very first script in ScottiCAD, in a variant of Python with a gentle learning curve: a drill bit stand you resize by changing a few numbers.",
+    "datePublished": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/first-script/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/first-script/",
+    "wordCount": 1196,
+    "keywords": "ScottiCAD scripting, Starlark, Python, parametric design, 3D printing",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Your first ScottiCAD script",
+        "item": "https://scotticad.com/corner/first-script/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Your first ScottiCAD script</h1>
+      <p class="post__lede">Get started by writing your very first script in ScottiCAD. Its scripting language is a variant of Python with a gentle learning curve that even novices can use to make parametric models.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-30">30 October 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I'm a programmer, so when I built ScottiCAD I wanted to be able to write code to make a part. You don't have to be a programmer to use it, though. The script automates away the boring repetitive stuff. For example, let's say we want to make a drill bit stand. We need to put a bunch of holes in a row. The size needs to increase from one hole to the next. Now, we can do that manually in ScottiCAD with enough pointing and clicking, but why not just write a script that executes a loop?</p>
+<p>This post starts from nothing. If you've never written a line of code, that's fine.</p>
+<h2 id="open-the-console">Open the console</h2>
+<p>Click <strong>Scripting</strong> at the top right. A panel opens under the 3D view, with two tabs: <strong>Console</strong> and <strong>Editor</strong>. The console is where you type one line at a time, at the <code>&gt;&gt;&gt;</code> prompt.</p>
+<h2 id="one-line">One line</h2>
+<p>Type this and press Enter:</p>
+<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-1">Copy</button></div><pre id="code-1"><code>cad.add_shape(&quot;cylinder&quot;)</code></pre></div>
+<p>A cylinder appears on the build plate, the same as if you'd dragged one in from the shape panel. The console prints a number underneath, <code>1</code> if the design was empty. That's the cylinder's id, a number ScottiCAD uses to tell shapes apart. Scripts use it to say which shape to change, as you'll see in the drill bit stand below.</p>
+<figure class="post-fig"><img src="console-one.webp" width="1354" height="906" alt="ScottiCAD with the Scripting console open: the line cad.add_shape(&quot;cylinder&quot;) at the prompt, the result 1 below it, and an orange cylinder on the build plate." loading="lazy"><figcaption>One line, one cylinder.</figcaption></figure>
+<p>Everything in ScottiCAD's scripting goes through <code>cad</code>. Type <code>help()</code> to see the whole list, or <code>help(cad.add_shape)</code> for just one.</p>
+<h2 id="a-ring-of-pegs">A ring of pegs</h2>
+<p>Now let's make eight of them in a circle. Type these three lines:</p>
+<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-2">Copy</button></div><pre id="code-2"><code>for i in range(8):
+    a = 2 * math.pi * i / 8
+    cad.add_shape(&quot;cylinder&quot;, x=40 * math.cos(a), y=40 * math.sin(a))</code></pre></div>
+<p>After the first line, the console indents the next ones for you, because they're inside the loop. So don't type the spaces yourself, or you'll get an indent error. Just type each line and press Enter, then press Enter on an empty line to run it.</p>
+<figure class="post-fig"><img src="console-ring.webp" width="1354" height="906" alt="Eight orange cylinders in a ring on the build plate, with the three-line loop in the console below." loading="lazy"><figcaption>Three lines, eight pegs.</figcaption></figure>
+<p>The loop runs eight times, with <code>i</code> counting from 0 to 7. Each time it works out an angle, <code>a</code>, an eighth of the way further round the circle, and puts a cylinder 40 mm out from the middle at that angle. <code>math</code> is there ready to use, no import needed.</p>
+<p>Change the 8s to 12 and you get twelve pegs. Change the 40 and the ring gets bigger or smaller. That's the whole idea.</p>
+<h2 id="a-real-part-a-drill-bit-stand">A real part: a drill bit stand</h2>
+<p>The console is good for trying things. For anything longer, use the <strong>Editor</strong> tab. Here's a stand for drill bits, with a hole for each size in a list:</p>
+<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-3">Copy</button></div><pre id="code-3"><code># A stand for drill bits: one hole for each size in the list.
+SIZES = [1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6]   # bit sizes in mm
+SPACING = 10                                # mm between holes
+HEIGHT = 20                                 # how tall the stand is
+
+width = len(SIZES) * SPACING
+stand = cad.add_shape(&quot;box&quot;)
+cad.set_bounds(min=[0, 0, 0], max=[width, 20, HEIGHT], ids=[stand])
+
+parts = [stand]
+for i, size in enumerate(SIZES):
+    x = SPACING / 2 + i * SPACING
+    d = size + 0.4                          # a little bigger, so the bit drops in
+    hole = cad.add_shape(&quot;cylinder&quot;, hole=True)
+    cad.set_bounds(min=[x - d/2, 10 - d/2, 4], max=[x + d/2, 10 + d/2, HEIGHT + 1], ids=[hole])
+    parts.append(hole)
+
+cad.group(&quot;union&quot;, ids=parts)
+print(&quot;made a stand for&quot;, len(SIZES), &quot;bits,&quot;, width, &quot;mm wide&quot;)</code></pre></div>
+<p>Paste it into the Editor and press <strong>Run</strong> (or <strong>F5</strong>).</p>
+<figure class="post-fig"><img src="editor-stand.webp" width="1354" height="906" alt="The finished drill bit stand: a red block with nine holes, getting bigger from left to right, and the script in the Editor below." loading="lazy"><figcaption>The drill bit stand, and the script that made it.</figcaption></figure>
+<p>Here's what it does, a piece at a time:</p>
+<ul><li>The names in capitals at the top are what we call constants, and they are the settings. I always put the numbers I might want to change up there, where I can find them.</li><li><code>add_shape("box")</code> makes the block. <code>set_bounds</code> says where its corners go: <code>min</code> is one corner and <code>max</code> is the opposite one. It's long enough for all the holes.</li><li>The <code>for</code> loop goes through the list. <code>enumerate</code> gives you each size and its position, <code>i</code>, which says how far along to put the hole.</li><li>Each hole is a cylinder made with <code>hole=True</code>, 0.4 mm bigger than the bit so it drops in without forcing. It starts 4 mm up, which leaves a floor, and goes right out through the top.</li><li><code>group</code> cuts all the holes out of the block, the same as pressing <strong>Ctrl+G</strong>.</li><li><code>print</code> writes a line in the console, so you can see what it made.</li></ul>
+<h2 id="change-it-and-run-it-again">Change it and run it again</h2>
+<p>Here's where a script earns its keep. Say I've got 8 mm and 10 mm bits as well, and I want a taller stand. I don't redraw anything. I add two numbers to the list, change the spacing and the height, and run it again.</p>
+<p>One thing first, though. Running a script again adds another stand in the same place, on top of the first one; it doesn't replace it. So undo the last run before you run the new one. The whole run comes off in one go. Use the <strong>Undo</strong> button in the toolbar, or click in the 3D view and press <strong>Ctrl+Z</strong>. While you're typing in the Editor, Ctrl+Z undoes your typing instead. Alternatively, you can click the drill bit stand and hit the <strong>Delete</strong> key to delete it.</p>
+<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-4">Copy</button></div><pre id="code-4"><code>SIZES = [1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10]
+SPACING = 12
+HEIGHT = 30</code></pre></div>
+<figure class="post-fig"><img src="editor-stand-edited.webp" width="1354" height="906" alt="A longer, taller red stand with eleven holes, and the edited settings in the Editor below." loading="lazy"><figcaption>Two more sizes and a taller stand: three numbers changed.</figcaption></figure>
+<p><strong>Save</strong> in the Editor keeps the script as a <code>.star</code> file. Next time, open it, change the list and run it. <em>File → Run script</em> runs a saved script without opening it in the Editor at all.</p>
+<h2 id="a-few-things-worth-knowing">A few things worth knowing</h2>
+<p>ScottiCAD's scripting language is Starlark, a dialect of Python. If you know Python, you already know most of it. There are no classes, no <code>try</code>, and no <code>import</code>, and a script that makes a part rarely needs them.</p>
+<p>Scripts can't touch your files, the network or other programs, except the files you name in a <code>cad</code> call, like <code>cad.save</code> or <code>cad.export</code>. So a script you find online can't do anything nasty to your computer.</p>
+<p>If a script has a mistake in it, the error shows up in the console. Click it and the Editor jumps to the line. A script that runs too long can be stopped with <strong>Stop</strong> or <strong>Ctrl+C</strong>.</p>
+<h2 id="where-to-go-next">Where to go next</h2>
+<p>The scripts in ScottiCAD's <a href="https://github.com/scotticad/scotticad/tree/master/examples">examples</a> are commented so you can follow along. <a href="https://github.com/scotticad/scotticad/blob/master/examples/star/bit-holder.star">bit-holder.star</a> is the drill stand's big brother: hex pockets for screwdriver bits, each with its label engraved, all from a list. The <a href="https://github.com/scotticad/scotticad/blob/master/examples/star/plant-pot.star">plant pot</a> makes a twisted pot from outlines you couldn't easily draw with the mouse. Open one up, change a number, and run it again.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li><li><a href="../why-i-wrote-scotticad/">Why I wrote ScottiCAD</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
