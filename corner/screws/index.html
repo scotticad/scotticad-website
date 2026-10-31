@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screws in 3D prints: inserts and nut traps — Scotti&#x27;s Corner</title>
+  <meta name="description" content="How to hold 3D-printed parts together with metric screws: self-tapping pilot holes, heat-set inserts, nut traps, countersinks and counterbores.">
+  <link rel="canonical" href="https://scotticad.com/corner/screws/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/screws/">
+  <meta property="og:title" content="Screws in 3D prints: inserts and nut traps — Scotti&#x27;s Corner">
+  <meta property="og:description" content="How to hold 3D-printed parts together with metric screws: self-tapping pilot holes, heat-set inserts, nut traps, countersinks and counterbores.">
+  <meta property="og:image" content="https://scotticad.com/corner/screws/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-10-31">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=d202be9b">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Screws in 3D prints: inserts and nut traps",
+    "description": "How to hold 3D-printed parts together with metric screws: self-tapping pilot holes, heat-set inserts, nut traps, countersinks and counterbores.",
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/screws/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/screws/",
+    "wordCount": 1115,
+    "keywords": "3D printing screws, heat-set inserts, nut trap, countersink, M3, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Screws in 3D prints: inserts and nut traps",
+        "item": "https://scotticad.com/corner/screws/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Screws in 3D prints: inserts and nut traps</h1>
+      <p class="post__lede">Functional 3D prints often use hardware to secure the pieces together. It&#x27;s common for makers to use self-tapping screws, but there are other techniques such as heat-set thread inserts and nut traps. This post outlines the techniques I use in my functional prints.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-10-31">31 October 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>I'm a functional maker: I make a lot of project boxes. This usually leads me to screw a PC board down to a box or to screw down the lid to the box itself. Sometimes for printability I will subdivide my projects into several pieces and screw them together. Doing so can make for a stronger print, allow you to build something that wouldn't fit your print volume, or allow you to minimise overhangs and supports. In this post I'm going to describe several techniques for using screws and other hardware with your 3D prints.</p>
+<p>Here are the five I use, all in one test block so you can see them side by side. Everything here is for metric machine screws, and the sizes are for M3, the one I use most.</p>
+<figure class="post-fig"><img src="block.webp" width="1000" height="700" alt="An orange test block with five M3 holes in a row, each labelled: TAP, INSERT, CSK, CBORE and NUT." loading="lazy"><figcaption>Five ways to fix an M3 screw, side by side.</figcaption></figure>
+<p>Here's the same block cut open with section view (<strong>Shift+K</strong>), so you can see the shape of each hole.</p>
+<figure class="post-fig post-fig--small"><img src="block-section.webp" width="1400" height="460" alt="The test block cut open along the row of holes: a narrow pilot hole, a short wide insert pocket, a countersunk hole with its cone at the top, a counterbored hole with its step, and a hex nut pocket at the top of a through hole." loading="lazy"><figcaption>Cut open: tap, insert, countersink, counterbore and nut trap.</figcaption></figure>
+<h2 id="1-let-the-screw-cut-its-own-thread">1. Let the screw cut its own thread</h2>
+<p>The simplest way. Make a hole a bit smaller than the screw, and the screw cuts its own thread into the plastic as you drive it in. No extra parts. One disadvantage here is that you have to get the hole size right. Too small and the screw is hard to drive in and can split the plastic. Too big and it will strip and pull out easily.</p>
+<p>For M3 I use a 2.5 mm hole. It's a hole cylinder, nothing fancier. This is what the <a href="../build-a-project-box/">project box</a> uses for its lid screws.</p>
+<p>It's good for things you put together once, or only now and then. Each time you take the screw out and put it back, the thread in the plastic wears a little, so it isn't the right choice for a lid you open every week.</p>
+<h2 id="2-heat-set-inserts">2. Heat-set inserts</h2>
+<p>A heat-set insert is a small brass sleeve with a thread inside and knurls outside. You print a hole a little smaller than the insert, then press it in with a soldering iron. The brass melts its way in, the plastic flows round the knurls, and you've got a proper metal thread that you can screw into again and again.</p>
+<p>For M3 inserts the hole is usually around 4 to 4.2 mm, and a bit deeper than the insert. This is what I'd use for anything I'll open a lot, and it's an option in the <a href="../raspberry-pi/">Raspberry Pi mounts</a>.</p>
+<p>You'll need to measure your inserts yourself, though, because sizes vary a lot between makers. I quote the common 4 to 4.2 mm here, but I have some M3 inserts I got on eBay that need a 5.2 mm hole. That's the downside of inserts: they need a bigger hole, and more plastic round it, than a plain screw. Sometimes you just don't have room.</p>
+<p>To set the inserts I use my temperature-controlled soldering iron, set to 270 °C for PETG, the material I use most often for functional prints. I don't use any kind of special tip. A conical tip that's small enough to fit inside the insert is good enough. Rest the insert on the hole, put the tip in it, and press gently. The iron's weight on its own often isn't quite enough, but don't force it. Let the brass heat up and sink in straight until it's flush with the surface.</p>
+<h2 id="3-countersunk-holes">3. Countersunk holes</h2>
+<p>That's the screw side. On the part the screw goes through, you want a clearance hole, a little bigger than the screw so it slides through without threading. For a flat-head screw you also want a cone at the top so the head sits flush.</p>
+<p>ScottiCAD has a <strong>Countersunk Hole</strong> shape that does both. Search for "countersink", drop it in, and set <strong>Size (M)</strong> to your screw. For M3 it makes a 3.4 mm hole with a 90° cone up to 6.4 mm.</p>
+<h2 id="4-counterbored-holes">4. Counterbored holes</h2>
+<p>A counterbore is the same idea for a socket-head cap screw: a flat-bottomed pocket so the round head sits below the surface. The <strong>Counterbored Hole</strong> shape makes it. For M3 that's a 3.4 mm hole with a 6.1 mm pocket, 3.3 mm deep.</p>
+<h2 id="5-nut-traps">5. Nut traps</h2>
+<p>When the screw goes all the way through, you need a nut on the other side. A nut trap is a hex-shaped pocket that holds the nut so it can't spin, and you can tighten the screw from one side.</p>
+<p>The <strong>Nut Trap</strong> shape is a hex pocket on top of a clearance hole. For M3 the pocket is 6.1 mm across the flats and 2.7 mm deep, just bigger than the nut. Put the pocket on a top surface, open side up, and the nut drops in.</p>
+<figure class="post-fig post-fig--small"><img src="nuttrap-panel.webp" width="720" height="540" alt="The Nut Trap shape selected, with its properties panel: Size (M) set to 3 and Depth." loading="lazy"><figcaption>The Nut Trap shape. Size picks the screw, Depth how deep it goes.</figcaption></figure>
+<p>These three shapes are holes, but they're easier to understand as solids:</p>
+<figure class="post-fig"><img src="hole-shapes.webp" width="1060" height="700" alt="The Countersunk Hole, Counterbored Hole and Nut Trap shapes shown as solid grey shapes: a cone-headed pin, a round-headed pin and a hex-headed pin." loading="lazy"><figcaption>Countersink, counterbore and nut trap, shown as solids.</figcaption></figure>
+<h2 id="the-sizes-i-start-from">The sizes I start from</h2>
+<div class="post-table"><table><thead><tr><th></th><th>M2.5</th><th>M3</th><th>M4</th></tr></thead><tbody><tr><td>Pilot hole, self-tapping</td><td>2.2</td><td>2.5</td><td>3.4</td></tr><tr><td>Clearance hole (ScottiCAD's shapes)</td><td>2.9</td><td>3.4</td><td>4.4</td></tr><tr><td>Heat-set insert hole, typical</td><td>about 3.6</td><td>about 4.2</td><td>about 5.6</td></tr><tr><td>Heat-set insert hole, my eBay ones</td><td>about 4.0</td><td>about 5.2</td><td>about 5.9</td></tr><tr><td>Nut trap, across the flats</td><td>5.6</td><td>6.1</td><td>7.6</td></tr><tr><td>Nut trap, depth</td><td>2.3</td><td>2.7</td><td>3.5</td></tr></tbody></table></div>
+<p>All in mm. These are starting points, not guarantees. Measure your inserts, and remember that every printer prints holes a little differently, usually a touch small.</p>
+<h2 id="print-a-test-block-first">Print a test block first</h2>
+<p>That's why I'd print a little test block before committing to a big part. It takes a few minutes and a few grams of filament, and it tells you whether your printer's holes come out the size you asked for. If a screw won't go in or spins freely, change the size and print another.</p>
+<p>Here's mine, the one in the pictures: <a href="m3-test-block.scotticad">m3-test-block.scotticad</a>. Open it, check it against your screws, and change the holes to suit.</p>
+<p>A few more things I've learned:</p>
+<ul><li><strong>Leave enough plastic round the screw.</strong> For a self-tapping screw, I make the post around three times the screw's size across, so a 9 mm post for M3. Too thin and it splits.</li><li><strong>Print holes upright where you can.</strong> A hole printed standing up comes out round. A hole printed lying on its side sags at the top.</li><li><strong>Don't over-tighten.</strong> Plastic isn't steel. Snug is enough.</li></ul>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
