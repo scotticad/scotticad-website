@@ -126,13 +126,13 @@
 <p>Click <strong>Scripting</strong> at the top right. A panel opens under the 3D view, with two tabs: <strong>Console</strong> and <strong>Editor</strong>. The console is where you type one line at a time, at the <code>&gt;&gt;&gt;</code> prompt.</p>
 <h2 id="one-line">One line</h2>
 <p>Type this and press Enter:</p>
-<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-1">Copy</button></div><pre id="code-1"><code>cad.add_shape(&quot;cylinder&quot;)</code></pre></div>
+<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-2">Copy</button></div><pre id="code-2"><code>cad.add_shape(&quot;cylinder&quot;)</code></pre></div>
 <p>A cylinder appears on the build plate, the same as if you'd dragged one in from the shape panel. The console prints a number underneath, <code>1</code> if the design was empty. That's the cylinder's id, a number ScottiCAD uses to tell shapes apart. Scripts use it to say which shape to change, as you'll see in the drill bit stand below.</p>
 <figure class="post-fig"><img src="console-one.webp" width="1354" height="906" alt="ScottiCAD with the Scripting console open: the line cad.add_shape(&quot;cylinder&quot;) at the prompt, the result 1 below it, and an orange cylinder on the build plate." loading="lazy"><figcaption>One line, one cylinder.</figcaption></figure>
 <p>Everything in ScottiCAD's scripting goes through <code>cad</code>. Type <code>help()</code> to see the whole list, or <code>help(cad.add_shape)</code> for just one.</p>
 <h2 id="a-ring-of-pegs">A ring of pegs</h2>
 <p>Now let's make eight of them in a circle. Type these three lines:</p>
-<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-2">Copy</button></div><pre id="code-2"><code>for i in range(8):
+<div class="code post-code"><div class="code__bar"><span>Console</span><button class="copy" type="button" data-copy="#code-3">Copy</button></div><pre id="code-3"><code>for i in range(8):
     a = 2 * math.pi * i / 8
     cad.add_shape(&quot;cylinder&quot;, x=40 * math.cos(a), y=40 * math.sin(a))</code></pre></div>
 <p>After the first line, the console indents the next ones for you, because they're inside the loop. So don't type the spaces yourself, or you'll get an indent error. Just type each line and press Enter, then press Enter on an empty line to run it.</p>
@@ -141,7 +141,7 @@
 <p>Change the 8s to 12 and you get twelve pegs. Change the 40 and the ring gets bigger or smaller. That's the whole idea.</p>
 <h2 id="a-real-part-a-drill-bit-stand">A real part: a drill bit stand</h2>
 <p>The console is good for trying things. For anything longer, use the <strong>Editor</strong> tab. Here's a stand for drill bits, with a hole for each size in a list:</p>
-<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-3">Copy</button></div><pre id="code-3"><code># A stand for drill bits: one hole for each size in the list.
+<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-4">Copy</button></div><pre id="code-4"><code># A stand for drill bits: one hole for each size in the list.
 SIZES = [1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6]   # bit sizes in mm
 SPACING = 10                                # mm between holes
 HEIGHT = 20                                 # how tall the stand is
@@ -167,7 +167,7 @@ print(&quot;made a stand for&quot;, len(SIZES), &quot;bits,&quot;, width, &quot;
 <h2 id="change-it-and-run-it-again">Change it and run it again</h2>
 <p>Here's where a script earns its keep. Say I've got 8 mm and 10 mm bits as well, and I want a taller stand. I don't redraw anything. I add two numbers to the list, change the spacing and the height, and run it again.</p>
 <p>One thing first, though. Running a script again adds another stand in the same place, on top of the first one; it doesn't replace it. So undo the last run before you run the new one. The whole run comes off in one go. Use the <strong>Undo</strong> button in the toolbar, or click in the 3D view and press <strong>Ctrl+Z</strong>. While you're typing in the Editor, Ctrl+Z undoes your typing instead. Alternatively, you can click the drill bit stand and hit the <strong>Delete</strong> key to delete it.</p>
-<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-4">Copy</button></div><pre id="code-4"><code>SIZES = [1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10]
+<div class="code post-code"><div class="code__bar"><span>drill-stand.star</span><button class="copy" type="button" data-copy="#code-5">Copy</button></div><pre id="code-5"><code>SIZES = [1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10]
 SPACING = 12
 HEIGHT = 30</code></pre></div>
 <figure class="post-fig"><img src="editor-stand-edited.webp" width="1354" height="906" alt="A longer, taller red stand with eleven holes, and the edited settings in the Editor below." loading="lazy"><figcaption>Two more sizes and a taller stand: three numbers changed.</figcaption></figure>
@@ -188,7 +188,7 @@ HEIGHT = 30</code></pre></div>
         <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
       </div>
     </aside>
-    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li><li><a href="../build-a-project-box/">How I build a project box</a> <span>24 October 2026</span></li></ul>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../clearance/">Getting 3D-printed parts to fit together</a> <span>1 November 2026</span></li><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li></ul>
   </div>
 </article>
 </main>

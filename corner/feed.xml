@@ -7,6 +7,13 @@
     <description>Notes from Scotti, who builds ScottiCAD.</description>
     <language>en</language>
     <item>
+      <title>Getting 3D-printed parts to fit together</title>
+      <link>https://scotticad.com/corner/clearance/</link>
+      <guid isPermaLink="true">https://scotticad.com/corner/clearance/</guid>
+      <pubDate>Sun, 01 Nov 2026 18:00:00 +0000</pubDate>
+      <description>When you design two parts that are exactly the same size, they usually won&#x27;t fit together. You need to leave a gap. How big a gap depends on how loose a fit you want, and on your printer. Here is the process I follow, together with a test print to evaluate it.</description>
+    </item>
+    <item>
       <title>Screws in 3D prints: inserts and nut traps</title>
       <link>https://scotticad.com/corner/screws/</link>
       <guid isPermaLink="true">https://scotticad.com/corner/screws/</guid>

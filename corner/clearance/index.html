@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting 3D-printed parts to fit together — Scotti&#x27;s Corner</title>
+  <meta name="description" content="How much gap to leave when 3D-printed parts fit together: press fits, sliding fits, drop-on lids and pegs, plus a fit gauge you can print to check your printer.">
+  <link rel="canonical" href="https://scotticad.com/corner/clearance/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/clearance/">
+  <meta property="og:title" content="Getting 3D-printed parts to fit together — Scotti&#x27;s Corner">
+  <meta property="og:description" content="How much gap to leave when 3D-printed parts fit together: press fits, sliding fits, drop-on lids and pegs, plus a fit gauge you can print to check your printer.">
+  <meta property="og:image" content="https://scotticad.com/corner/clearance/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=d202be9b">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Getting 3D-printed parts to fit together",
+    "description": "How much gap to leave when 3D-printed parts fit together: press fits, sliding fits, drop-on lids and pegs, plus a fit gauge you can print to check your printer.",
+    "datePublished": "2026-11-01",
+    "dateModified": "2026-11-01",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/clearance/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/clearance/",
+    "wordCount": 1180,
+    "keywords": "3D printing tolerances, clearance, press fit, fit gauge, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Getting 3D-printed parts to fit together",
+        "item": "https://scotticad.com/corner/clearance/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Getting 3D-printed parts to fit together</h1>
+      <p class="post__lede">When you design two parts that are exactly the same size, they usually won&#x27;t fit together. You need to leave a gap. How big a gap depends on how loose a fit you want, and on your printer. Here is the process I follow, together with a test print to evaluate it.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-11-01">1 November 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>Sooner or later you have to design a couple of parts that go together. Sometimes it's a lid for a box. Sometimes it's a peg that must fit in a hole. If you make the peg 10 mm and the hole 10 mm and you print them, you may find the peg won't fit. Sometimes it's not even close.</p>
+<p>This is because a printer doesn't print exactly what you drew. Plastic squishes out a little as it's laid down, so the outside of a part comes out a touch big and the inside of a hole comes out a touch small. On their own they're tiny errors, but they add up, and two parts of the same size end up fighting each other.</p>
+<p>The fix is to leave a gap, which is called clearance. This post is about how much to leave.</p>
+<h2 id="the-gap-goes-on-both-sides">The gap goes on both sides</h2>
+<p>The thing that catches people out first: when I say a 0.2 mm gap, I mean 0.2 mm all the way round. A 10 mm peg with a 0.2 mm gap needs a hole of 10.4 mm, because the gap is on the left and on the right. If you only add 0.2 to the hole, you've only given it 0.1 a side.</p>
+<h2 id="how-much-gap">How much gap</h2>
+<p>It depends on the fit you want. These are the gaps I start from, all the way round:</p>
+<div class="post-table"><table><thead><tr><th>Fit</th><th>Gap</th><th>What it's for</th></tr></thead><tbody><tr><td>Press fit</td><td>0.1 mm</td><td>Parts you push together once, and that stay put.</td></tr><tr><td>Snug fit</td><td>0.2 mm</td><td>Goes together by hand, doesn't rattle. Lids, covers.</td></tr><tr><td>Sliding fit</td><td>0.3 mm</td><td>Moves freely. Drawers, pegs you take in and out.</td></tr><tr><td>Loose fit</td><td>0.4–0.5 mm</td><td>Spins or falls in. Hinges, axles.</td></tr></tbody></table></div>
+<p>These are starting points. Your printer, your filament and your slicer settings will have an effect, which is why I wrote the next section.</p>
+<h2 id="print-a-fit-gauge">Print a fit gauge</h2>
+<p>Rather than guess, I usually print a gauge. The gauge is a plate with a row of holes, each hole a little bigger than the last, and a peg to try in them. Push the peg into each hole and you'll find out what 0.1, 0.2 and 0.3 mm feel like on your printer.</p>
+<figure class="post-fig"><img src="gauge.webp" width="1040" height="560" alt="A green plate with five round holes labelled 0.1, 0.2, 0.3, 0.4 and 0.5, and a yellow cylinder standing beside it." loading="lazy"><figcaption>The fit gauge: one peg, five holes, each 0.1 mm looser than the last.</figcaption></figure>
+<p>It's a script, so it's easy to change. Open <strong>Scripting</strong>, click the <strong>Editor</strong> tab, paste this in and press <strong>Run</strong> (or <strong>F5</strong>). If you've never run a script, <a href="../first-script/">Your first ScottiCAD script</a> walks through it.</p>
+<div class="code post-code"><div class="code__bar"><span>fit-gauge.star</span><button class="copy" type="button" data-copy="#code-1">Copy</button></div><pre id="code-1"><code># A fit gauge: a 10 mm peg, and a row of holes that get a little bigger.
+PEG = 10                              # peg size across, in mm
+GAPS = [0.1, 0.2, 0.3, 0.4, 0.5]      # the gap all the way round the peg, in mm
+SPACING = 16                          # mm between holes
+
+width = len(GAPS) * SPACING
+plate = cad.add_shape(&quot;box&quot;)
+cad.set_bounds(min=[0, 0, 0], max=[width, 26, 5], ids=[plate])
+
+parts = [plate]
+for i, gap in enumerate(GAPS):
+    x = SPACING / 2 + i * SPACING
+    r = PEG / 2 + gap                 # the gap is on both sides
+    hole = cad.add_shape(&quot;cylinder&quot;, hole=True)
+    cad.set_param(hole, &quot;sides&quot;, 64)
+    cad.set_bounds(min=[x - r, 16 - r, -1], max=[x + r, 16 + r, 6], ids=[hole])
+    parts.append(hole)
+    label = cad.add_shape(&quot;text&quot;, hole=True)
+    cad.set_text(label, str(gap))
+    cad.set_bounds(min=[x - 5, 2.5, 4.4], max=[x + 5, 7.5, 6], ids=[label])
+    parts.append(label)
+cad.group(&quot;union&quot;, ids=parts)
+
+peg = cad.add_shape(&quot;cylinder&quot;)
+cad.set_param(peg, &quot;sides&quot;, 64)
+px = width / 2
+cad.set_bounds(min=[px - PEG/2, 34, 0], max=[px + PEG/2, 34 + PEG, 15], ids=[peg])
+print(&quot;made a gauge with&quot;, len(GAPS), &quot;holes&quot;)</code></pre></div>
+<p>If your fits all land at one end, change the <code>GAPS</code> list. For example, <code>[0.05, 0.1, 0.15, 0.2, 0.25]</code> for finer steps at the tight end. I set the holes to 64 sides so they come out properly round. With only a few sides, a hole is a polygon, and it fits like a smaller hole.</p>
+<p>Here's what the gaps look like from above, with a peg in each hole. 0.1 mm is barely a hairline. 0.5 mm is a ring you can see.</p>
+<figure class="post-fig"><img src="gauge-top.webp" width="940" height="360" alt="Five yellow pegs in the green plate, seen from straight above. The ring of gap round each peg gets wider from left to right." loading="lazy"><figcaption>From above: the gap round each peg, from 0.1 to 0.5 mm.</figcaption></figure>
+<p>Print the gauge in the same filament and with the same settings as the real part. If you change either, the fits change. You can also <a href="fit-gauge.scotticad">download the gauge</a> ready-made, or the <a href="fit-gauge.star">script</a> to run yourself.</p>
+<h2 id="a-lid-that-drops-on">A lid that drops on</h2>
+<p>Here's where I use it most. A lid with a lip that reaches down inside the box keeps the lid from sliding about. Make the lip the box's inside size, less the gap on each side. For a snug lid on a box with 2 mm walls, that's the outside size minus 2 × (2 + 0.2), so 4.4 mm smaller each way.</p>
+<figure class="post-fig"><img src="lid-open.webp" width="870" height="620" alt="An orange open box with a blue lid lifted above it. A lip on the underside of the lid fits inside the box&#x27;s walls." loading="lazy"><figcaption>A lid with a lip underneath, lifted off its box.</figcaption></figure>
+<p>The best way to check a fit before printing is to cut it open. Put the lid on the box and turn on section view (<strong>Shift+K</strong>). You get a slice through both parts, and the gap is right there.</p>
+<figure class="post-fig post-fig--small"><img src="lid-section.webp" width="920" height="800" alt="A close-up of the box and lid cut open at one corner. The box wall and the lid&#x27;s lip are hatched where the cut goes through them, with a thin strip of gap between them, labelled 0.2 mm gap." loading="lazy"><figcaption>Cut open at the corner: 0.2 mm between the box wall and the lid's lip.</figcaption></figure>
+<p>There's more on section view in <a href="../tools-for-3d-makers/">three tools for people who actually print</a>.</p>
+<h2 id="pegs-for-splitting-a-big-print">Pegs for splitting a big print</h2>
+<p>When a part is too big for the bed, I split it and glue or screw the halves together. A couple of pegs on one half and matching holes in the other line them up. I use the snug fit, 0.2 mm, so the halves go together by hand but line up properly. I also make the holes 0.5 mm deeper than the pegs, so the faces meet before the pegs bottom out.</p>
+<p>Instead of pegs, sometimes I will use screws, and sometimes even heat-set threaded inserts. That makes a more durable joint. There's a whole post on both in <a href="../screws/">screws in 3D prints</a>.</p>
+<h2 id="a-few-more-things-i-ve-learned">A few more things I've learned</h2>
+<ul><li><strong>Holes and pegs fit differently depending on which way they're printed.</strong> A hole printed upright, with its axis straight up, comes out round. A hole printed on its side comes out a bit squashed at the top. The gauge only tells you about holes printed upright.</li><li><strong>Watch the first layer.</strong> The first layer is squashed onto the bed, so it spreads out a little, and the bottom of a peg comes out wider than the rest. It's called elephant's foot. A small bevel round the bottom edge, or your slicer's elephant's foot setting, sorts it out.</li><li><strong>Bigger parts need a bit more.</strong> The gaps above are for small parts. A long lid on a big box warps and drifts a little more, so I go up a step.</li><li><strong>Write your numbers down.</strong> Once you've found the fits that work on your printer, you won't need to print the gauge again until you change filament.</li></ul>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li><li><a href="../raspberry-pi/">Raspberry Pi mounts that line up the first time</a> <span>25 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
