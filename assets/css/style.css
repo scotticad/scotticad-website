@@ -388,7 +388,8 @@ details p { padding: 0 22px 18px; margin: 0; color: #4f4539; }
 .pcard-link:hover { box-shadow: var(--shadow); transform: translateY(-2px); color: inherit; }
 .pcard-link img { width: 100%; aspect-ratio: 10 / 7; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
 .pcard-link h2, .pcard-link h3 { font-size: 1.3rem; margin: 2px 0 6px; }
-.post-fig img { height: auto; }
+.post-fig img, .post-fig video { height: auto; }
+.post-fig > video { display: block; background: #fbf8f2; }
 .pcard-link p { margin: 0 0 8px; color: var(--muted); font-size: .97rem; }
 .pcard-link .pcard-link__meta { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
 .pcard-link__more { font-weight: 600; font-size: .92rem; color: var(--accent); }
@@ -410,7 +411,7 @@ details p { padding: 0 22px 18px; margin: 0; color: #4f4539; }
 .post__body ul { padding-left: 1.2em; }
 .post__body blockquote { margin: 1.6em 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--accent-light); color: var(--muted); }
 .post-fig { margin: 30px 0 34px; }
-.post-fig > img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.post-fig > img, .post-fig > video { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .post-table { margin: 24px 0 30px; overflow-x: auto; }
 .post-table table { width: 100%; border-collapse: collapse; font-size: .95rem; background: #fff;
   border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using an AI agent to drive ScottiCAD — Scotti&#x27;s Corner</title>
+  <meta name="description" content="ScottiCAD can now be driven by an AI agent over MCP. In this tutorial, an AI agent builds a pipe bracket from a few plain-language requests, checks its own work, and exports it for printing.">
+  <link rel="canonical" href="https://scotticad.com/corner/ai-assistant/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/ai-assistant/">
+  <meta property="og:title" content="Using an AI agent to drive ScottiCAD — Scotti&#x27;s Corner">
+  <meta property="og:description" content="ScottiCAD can now be driven by an AI agent over MCP. In this tutorial, an AI agent builds a pipe bracket from a few plain-language requests, checks its own work, and exports it for printing.">
+  <meta property="og:image" content="https://scotticad.com/corner/ai-assistant/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-11-07">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=ce277d79">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Using an AI agent to drive ScottiCAD",
+    "description": "ScottiCAD can now be driven by an AI agent over MCP. In this tutorial, an AI agent builds a pipe bracket from a few plain-language requests, checks its own work, and exports it for printing.",
+    "datePublished": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/ai-assistant/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/ai-assistant/",
+    "wordCount": 1133,
+    "keywords": "ScottiCAD MCP, AI agent, Claude Code, 3D printing, pipe bracket",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Using an AI agent to drive ScottiCAD",
+        "item": "https://scotticad.com/corner/ai-assistant/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Using an AI agent to drive ScottiCAD</h1>
+      <p class="post__lede">ScottiCAD now speaks MCP, the protocol AI agents use to work with other programs. Type a simple request in plain language, and your favourite AI agent can work directly with ScottiCAD, building your model in the ScottiCAD window while you watch. Here is a complete, end-to-end demo.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-11-07">7 November 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>ScottiCAD now has an MCP server. MCP, the Model Context Protocol, is a protocol that AI agents such as Claude Code use to interact with other programs. With MCP, you can ask your agent for a part in plain words and watch it build the part in an ordinary ScottiCAD window, one shape at a time.</p>
+<figure class="post-fig"><video src="demo-loop.mp4" poster="demo-loop.webp" width="1280" height="686" autoplay muted loop playsinline aria-label="On the left, Claude Code in a terminal is asked for a wall bracket for a 25 mm pipe. On the right, ScottiCAD builds the bracket, cuts it open to show the screw holes, and the view is turned with the mouse."></video><figcaption>A whole session in under 20 seconds, sped up.</figcaption></figure>
+<h2 id="ai-and-functional-models">AI and functional models</h2>
+<p>Agentic AI is fast becoming a tool for everyone from graphic designers to software engineers. However, there's a right way and a wrong way to use AI. When people first started using agentic AI to create 3D models, the designs might have looked pretty, but they did not print well. The AI agents focused on appearance, using 3D modelling tools and approaches that work great for game assets but, when printed, give you excessive overhangs, meshes with holes, and so on.</p>
+<p>ScottiCAD is designed for functional printing, and ScottiCAD's MCP server lets the agent build up the model by combining a series of shape primitives. It doesn't wave a magic wand and construct a model from thin air: it builds it up a shape at a time, just like you would. This helps to yield models that print well and function well.</p>
+<h2 id="the-prompts">The prompts</h2>
+<p>A prompt is the text that you give an AI to ask it to perform a task. While designing and refining this part, I typed four requests, one after the other, and nothing else:</p>
+<ul><li>"Make me a wall bracket for a 25 mm pipe, with two countersunk M4 screw holes."</li><li>"Make the pipe hole 0.2 mm looser, please."</li><li>"Show me a cut-away so I can check the screw holes go all the way through."</li><li>"Export it as bracket.3mf."</li></ul>
+<p>Here's the whole session. I have sped up the video because it takes the AI agent a while to think. The speed is shown in the corner, but nothing is cut out.</p>
+<figure class="post-fig"><video src="demo-long.mp4" poster="demo-long.webp" width="1920" height="1028" controls preload="none" aria-label="The full session: Claude Code&#x27;s terminal on the left and ScottiCAD on the right, from the first request to the export."></video><figcaption>The full session, just over a minute long. Sped-up parts are labelled.</figcaption></figure>
+<h2 id="what-the-agent-did">What the agent did</h2>
+<p>It didn't write a script. Left to itself, an agent often writes and runs a ScottiCAD script, but I wanted to see it work the way you would, so I denied the <code>run_script</code> tool in Claude Code's permissions. That left it ScottiCAD's ordinary editing tools: add a shape, size it, make it a hole, group. Every one of those calls shows up in the window as it happens.</p>
+<ul><li><strong>It planned first.</strong> It decided on a snap-in clip: a flat flange against the wall, a C-shaped clamp round the pipe with an opening narrower than the pipe, so the pipe snaps in, and a countersunk hole in the flange on each side.</li><li><strong>It built it from shapes.</strong> A <strong>Rounded Plate</strong> for the flange, a cylinder for the clamp, a cylinder hole for the pipe, an outline hole to cut the opening, outlines for small gussets where the clamp meets the flange, two thin cylinders to round off the tips, and ScottiCAD's <strong>Countersunk Hole</strong> shape for the screws.</li><li><strong>It checked its own work.</strong> It took screenshots from several angles and cut it open with section view. When resizing had squashed the rounded tips, it saw that in a screenshot and resized each tip again.</li><li><strong>It answered the follow-ups in place.</strong> "0.2 mm looser" meant ungrouping, widening the pipe hole from 25.4 to 25.6 mm and regrouping. It said which way it had read the request (0.2 mm on the diameter, not each side) and what else that changed: the clamp wall is 0.1 mm thinner, and the opening 0.2 mm wider, so the snap is a little easier.</li><li><strong>It saved its work.</strong> It saved the design and an STL when it had finished, and saved the looser version under a new name, so the first one was still there.</li></ul>
+<figure class="post-fig"><img src="built.webp" width="720" height="610" alt="The finished bracket, seen at an angle: a C-shaped clip on a flat flange, with a countersunk screw hole in the flange on each side." loading="lazy"><figcaption>The bracket as the agent first built it.</figcaption></figure>
+<p>For the cut-away it used the section view tool, sliced through the bracket at the height of the screw holes, and looked straight down:</p>
+<figure class="post-fig post-fig--small"><img src="cutaway.webp" width="600" height="780" alt="The bracket cut open at mid-height and seen from above: the hatched cut faces show the flange and the C-shaped clip, and both screw holes run right through the flange, each widening into its countersink." loading="lazy"><figcaption>The cut-away: the hatching is solid material, and both holes go right through.</figcaption></figure>
+<h2 id="you-stay-in-charge">You stay in charge</h2>
+<p>The agent works in the same window you do. Part way through I turned the view with the mouse, selected everything and deleted it, then pressed <strong>Ctrl+Z</strong> to bring it back. The agent carried on as if nothing had happened, because from its perspective nothing had.</p>
+<ul><li><strong>You see everything.</strong> There's no hidden model somewhere else. What the agent changes, you see change.</li><li><strong>Undo works as usual.</strong> Each change the agent makes is an ordinary undo step.</li><li><strong>It asks first.</strong> Claude Code asks your permission before each tool call unless you tell it not to. For the recording I'd allowed ScottiCAD's tools in advance, so it didn't stop to ask.</li><li><strong><code>--root</code> fences in your files.</strong> Start ScottiCAD with <code>--root</code> and the agent can only open, save, import and export inside the folder you give it.</li></ul>
+<h2 id="setting-it-up">Setting it up</h2>
+<p>You need ScottiCAD v0.2.0 or later. For Claude Code, one command is sufficient to add it:</p>
+<div class="code post-code"><div class="code__bar"><span>Claude Code</span><button class="copy" type="button" data-copy="#code-1">Copy</button></div><pre id="code-1"><code>claude mcp add scotticad -- C:\ScottiCAD\scotticad.exe --mcp --root C:\AI-designs</code></pre></div>
+<p>Use the path where you unpacked ScottiCAD, and a folder of your own for the designs (make the folder first). Then start Claude Code: ScottiCAD opens in its own window as the session starts, ready for you to ask for a part. It closes when you end the session, asking first if you want to save.</p>
+<p>If you'd rather keep one ScottiCAD open between sessions, start it with the automation API and connect to that instead:</p>
+<div class="code post-code"><div class="code__bar"><span>Claude Code, connecting to a running ScottiCAD</span><button class="copy" type="button" data-copy="#code-2">Copy</button></div><pre id="code-2"><code>C:\ScottiCAD\scotticad.exe --api 127.0.0.1:47800 --root C:\AI-designs
+claude mcp add scotticad-live -- C:\ScottiCAD\scotticad.exe --mcp-connect 127.0.0.1:47800</code></pre></div>
+<p>Claude Desktop and other agents that speak MCP work too. The details, including the Claude Desktop settings, are in <a href="https://github.com/scotticad/scotticad/blob/master/docs/mcp.md">the MCP guide</a>.</p>
+<h2 id="things-to-know">Things to know</h2>
+<ul><li><strong>Every session is different.</strong> The agent doesn't do the same thing twice. I used Claude Code with Claude Opus 5.5, recorded several takes of this request and picked one. They all built a working bracket, but not the same bracket.</li><li><strong>Check what it makes.</strong> It's good at following a plan and checking its own screenshots, but it's still guessing at things like how tight a snap fit should be. Print a test piece before you print ten.</li><li><strong>Be specific.</strong> "25 mm pipe" could mean the outside or the bore. The agent said which it assumed. Saying it up front saves a round trip.</li><li><strong>It's slower than a script.</strong> Building shape by shape took the agent a little over two minutes. For a part you'll make in many sizes, ask it to write a <a href="../first-script/">script</a> instead.</li></ul>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../clearance/">Getting 3D-printed parts to fit together</a> <span>1 November 2026</span></li><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li><li><a href="../tools-for-3d-makers/">Three tools for people who actually print</a> <span>30 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
