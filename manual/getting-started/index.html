@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting started — ScottiCAD user manual</title>
+  <meta name="description" content="This chapter shows you round the window, then builds a small part, a key tag, from an empty build plate to a file ready for your slicer. It takes about…">
+  <link rel="canonical" href="https://scotticad.com/manual/getting-started/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/getting-started/">
+  <meta property="og:title" content="Getting started — ScottiCAD user manual">
+  <meta property="og:description" content="This chapter shows you round the window, then builds a small part, a key tag, from an empty build plate to a file ready for your slicer. It takes about…">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Getting started",
+    "description": "This chapter shows you round the window, then builds a small part, a key tag, from an empty build plate to a file ready for your slicer. It takes about…",
+    "dateModified": "2026-11-12",
+    "mainEntityOfPage": "https://scotticad.com/manual/getting-started/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Getting started",
+        "item": "https://scotticad.com/manual/getting-started/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Getting started</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 1</p>
+      <h1>Getting started</h1>
+    </header>
+    <div class="post__body">
+<p>This chapter shows you round the window, then builds a small part, a key tag, from an empty build plate to a file ready for your slicer. It takes about ten minutes.</p>
+<h2 id="installing">Installing</h2>
+<p>ScottiCAD has no installer. Download the release for Windows or Linux from the <a href="https://github.com/scotticad/scotticad/releases/latest">releases page</a>, unpack it anywhere, and run <code>scotticad.exe</code> (Windows) or <code>./scotticad</code> (Linux). The <a href="https://github.com/scotticad/scotticad/blob/master/README.md#download">README</a> has the details for each system.</p>
+<p>Nothing you make leaves your computer. There is no account, and designs are ordinary files that you save where you like.</p>
+<h2 id="the-window">The window</h2>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tour-window.png" width="1280" height="800" alt="The ScottiCAD window with its parts numbered" loading="lazy"></figure>
+<ol><li><strong>File menu and design name.</strong> New, Open, Save, Import, Export and the list of keyboard shortcuts. The name beside it is the design's file name.</li><li><strong>Editing buttons.</strong> Copy, Paste, Duplicate, Delete, Undo and Redo.</li><li><strong>Tools.</strong> Hide and show, group and ungroup, split, section view, align, mirror, place on surface, measure, construction plane, drop, lay flat and the filament estimate. Each has a tooltip with its name and key.</li><li><strong>Import, Export and Scripting.</strong></li><li><strong>View buttons.</strong> The view cube, then Home, Fit, Zoom in, Zoom out, flat or perspective view, and the center of rotation. See <a href="../../manual/looking-around/">Looking around</a>.</li><li><strong>The build plate.</strong> The grid you build on. It stands for your printer's bed: 200 × 200 mm unless you change it in <a href="../../manual/settings/">Settings</a>. The small squares are 1 mm and the heavier lines are 10 mm apart.</li><li><strong>Properties.</strong> Appears when something is selected: its name, whether it is a solid or a hole, its colour and its own settings.</li><li><strong>The shape panel.</strong> Shapes to drag onto the plate, a list of libraries to choose from, and a search. The three buttons above it are the construction plane, the ruler and notes.</li><li><strong>Settings and Snap Grid.</strong> The snap grid is the step that shapes move and resize by.</li></ol>
+<h2 id="moving-the-view">Moving the view</h2>
+<p>You will want to look at the part from different sides as you build it.</p>
+<div class="post-table"><table><thead><tr><th>To</th><th>Do this</th></tr></thead><tbody><tr><td>Turn the view (orbit)</td><td>Drag with the <strong>right</strong> mouse button</td></tr><tr><td>Slide the view (pan)</td><td>Drag with the <strong>middle</strong> button, or hold <strong>Shift</strong> and drag with the right button</td></tr><tr><td>Zoom</td><td>Turn the mouse <strong>wheel</strong>, or press <strong>+</strong> and <strong>-</strong></td></tr><tr><td>See everything</td><td>Press <strong>F</strong></td></tr></tbody></table></div>
+<p>The next chapter covers the view in full.</p>
+<h2 id="a-first-part-a-key-tag">A first part: a key tag</h2>
+<p>The tag is a flat plate with rounded corners, a hole for the key ring and raised lettering.</p>
+<h3 id="1-add-a-box">1. Add a box</h3>
+<p>Drag the red <strong>Box</strong> from the shape panel onto the build plate. A see-through copy follows the pointer until you let go.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-1-drag.png" width="1280" height="800" alt="Dragging a box from the shape panel onto the build plate" loading="lazy"></figure>
+<p>The box is now selected: it has a blue outline and small square handles, and the Properties panel has opened beside it.</p>
+<h3 id="2-make-it-the-size-of-a-tag">2. Make it the size of a tag</h3>
+<p>In <strong>Properties</strong>, click each number, type a new one and press <strong>Enter</strong>:</p>
+<ul><li><strong>Length</strong> 60, <strong>Width</strong> 25, <strong>Height</strong> 3 (callout 1)</li><li>Drag the <strong>Radius</strong> slider to 2 to round the edges (callout 2). To set a slider exactly, click the number on it and type.</li></ul>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-2-size.png" width="1280" height="800" alt="The box sized as a key tag, with its Properties" loading="lazy"></figure>
+<p>Sizes are in millimetres. To work in inches, see <a href="../../manual/settings/">Settings</a>.</p>
+<h3 id="3-add-a-hole-for-the-key-ring">3. Add a hole for the key ring</h3>
+<p>In ScottiCAD a hole is a shape that cuts away whatever it overlaps. The striped grey shapes at the top of the panel are holes.</p>
+<ol><li>Drag the striped <strong>Cylinder</strong> onto an empty part of the plate, in front of the tag.</li><li>Click one of its black corner handles. Its size appears as two numbers on the plate.</li><li>Click each number, type <strong>5</strong> and press <strong>Enter</strong>.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-3-hole.png" width="700" height="500" alt="The hole cylinder, with its width being typed" loading="lazy"></figure>
+<p>Now put the hole in the tag. Drag it onto the left end of the tag, about 6 mm from the edge. Shapes move in 1 mm steps, so it is easy to place. The hole is taller than the tag is thick, so it goes right through.</p>
+<h3 id="4-center-the-hole-across-the-tag">4. Center the hole across the tag</h3>
+<ol><li>Click the tag, then hold <strong>Shift</strong> and click the hole, so both are selected.</li><li>Press <strong>L</strong> for the align tool. Dots appear round the two shapes.</li><li>Move the pointer over the middle dot on the short side. An orange preview shows where the shapes would go.</li><li>Click the dot. The two shapes line up across their middles, so the hole is centered in the tag's width.</li><li>Press <strong>Esc</strong> to put the tool away.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-4-align.png" width="700" height="480" alt="The align tool previewing the hole centered across the tag" loading="lazy"></figure>
+<p>Both shapes moved a little to meet in the middle. To keep the tag where it is, click the tag itself before clicking the dot: a shape you click while aligning stays put and the others come to it.</p>
+<h3 id="5-add-the-lettering">5. Add the lettering</h3>
+<ol><li>Drag <strong>Text</strong> (the red word in the panel) onto the top of the tag. New shapes land on whatever is under the pointer, so it sits on the tag's top face.</li><li>In Properties, click the <strong>Text</strong> box and type <strong>KEYS</strong>.</li><li>Drag the <strong>Height</strong> slider down to 1.5. This is how far the letters stand up.</li><li>Hold <strong>Shift</strong> and drag a black corner handle to shrink the word until it fits. Shift keeps its proportions.</li><li>Drag the word into place.</li><li>Click the coloured <strong>Solid</strong> disc in Properties and pick a colour.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-5-text.png" width="1280" height="800" alt="The lettering on the tag, with its Properties" loading="lazy"></figure>
+<h3 id="6-group-the-parts">6. Group the parts</h3>
+<p>Until now the tag, the hole and the lettering are three separate shapes. Grouping joins them into one part and cuts the hole.</p>
+<ol><li>Press <strong>Ctrl+A</strong> to select everything.</li><li>Press <strong>Ctrl+G</strong>.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-6-group.png" width="760" height="500" alt="The finished key tag: one part, with the hole cut through" loading="lazy"></figure>
+<p>A group takes one colour. To keep the lettering's own colour, click the <strong>Solid</strong> disc and turn <strong>Multicolor</strong> on.</p>
+<p>Nothing is lost by grouping. <strong>Ctrl+Shift+G</strong> ungroups the tag back into its three shapes whenever you want to change one.</p>
+<h3 id="7-check-it">7. Check it</h3>
+<p>Click the spool button at the right end of the toolbar. The panel estimates the filament the part needs, and its <strong>Print check</strong> says whether the part is ready to print.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-7-check.png" width="660" height="420" alt="The filament estimate and print check for the key tag" loading="lazy"></figure>
+<p><a href="../../manual/printing/">Getting ready to print</a> explains what the check looks for.</p>
+<h3 id="8-save-and-export">8. Save and export</h3>
+<ul><li><strong>Ctrl+S</strong> saves the design as a <code>.scotticad</code> file, which you can open and change later.</li><li><strong>Export</strong> (top right) writes a file for your slicer. Choose <strong>STL</strong>, which every slicer reads, or <strong>3MF</strong> to keep the colours.</li></ul>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/tutorial-8-export.png" width="560" height="518" alt="The Export dialog" loading="lazy"></figure>
+<p>Open the exported file in your slicer and print it.</p>
+<h2 id="what-to-read-next">What to read next</h2>
+<ul><li><a href="../../manual/shapes/">Shapes</a> shows everything in the shape panel.</li><li><a href="../../manual/moving-and-sizing/">Moving, sizing and turning</a> covers the handles and exact sizes.</li><li><a href="../../manual/holes-and-groups/">Holes and groups</a> explains the idea the whole program is built on.</li></ul>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/"><span>Previous</span>Contents</a><a class="manual-pager__next" href="../../manual/looking-around/"><span>Next</span>Looking around</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moving, sizing and turning — ScottiCAD user manual</title>
+  <meta name="description" content="This chapter covers selecting shapes and changing where they are, how big they are and which way they face, by dragging or by typing exact numbers.">
+  <link rel="canonical" href="https://scotticad.com/manual/moving-and-sizing/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/moving-and-sizing/">
+  <meta property="og:title" content="Moving, sizing and turning — ScottiCAD user manual">
+  <meta property="og:description" content="This chapter covers selecting shapes and changing where they are, how big they are and which way they face, by dragging or by typing exact numbers.">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Moving, sizing and turning",
+    "description": "This chapter covers selecting shapes and changing where they are, how big they are and which way they face, by dragging or by typing exact numbers.",
+    "dateModified": "2026-11-14",
+    "mainEntityOfPage": "https://scotticad.com/manual/moving-and-sizing/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Moving, sizing and turning",
+        "item": "https://scotticad.com/manual/moving-and-sizing/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Moving, sizing and turning</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 4</p>
+      <h1>Moving, sizing and turning</h1>
+    </header>
+    <div class="post__body">
+<p>This chapter covers selecting shapes and changing where they are, how big they are and which way they face, by dragging or by typing exact numbers.</p>
+<h2 id="selecting">Selecting</h2>
+<div class="post-table"><table><thead><tr><th>To</th><th>Do this</th></tr></thead><tbody><tr><td>Select a shape</td><td>Click it</td></tr><tr><td>Add a shape to the selection, or take it out</td><td>Hold <strong>Shift</strong> and click it</td></tr><tr><td>Select several shapes at once</td><td>Drag a box round them, starting on an empty part of the view</td></tr><tr><td>Select everything</td><td><strong>Ctrl+A</strong></td></tr><tr><td>Select nothing</td><td>Click an empty part of the view, or press <strong>Esc</strong></td></tr></tbody></table></div>
+<p>Selected shapes have a blue outline. A shape under the pointer gets a thinner outline, to show what a click would pick.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-marquee.png" width="1052" height="386" alt="Selecting three shapes by dragging a box round them" loading="lazy"></figure>
+<p>With several shapes selected, the handles go round all of them, and moving, sizing and turning act on them together.</p>
+<h2 id="the-handles">The handles</h2>
+<p>A selected shape has handles for everything you can do to it with the mouse.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-handles.png" width="620" height="520" alt="The handles on a selected box" loading="lazy"></figure>
+<ol><li><strong>Corner handles</strong> (black squares, one at each corner of the base). Drag to change the length and the width together.</li><li><strong>Edge handles</strong> (white squares, in the middle of each side of the base). Drag to change the length or the width alone.</li><li><strong>Top handle</strong> (white square on top). Drag to change the height.</li><li><strong>Lift handle</strong> (the black cone above the top). Drag to raise the shape off the plate or lower it.</li><li><strong>Turn handles</strong> (the three curved arrows). Drag one to turn the shape about one axis.</li></ol>
+<p>Keys that change a drag:</p>
+<div class="post-table"><table><thead><tr><th>While</th><th>Hold</th><th>To</th></tr></thead><tbody><tr><td>Sizing</td><td><strong>Shift</strong></td><td>Keep the shape's proportions</td></tr><tr><td>Sizing</td><td><strong>Alt</strong></td><td>Size about the middle, so opposite sides move together</td></tr><tr><td>Moving</td><td><strong>Shift</strong></td><td>Move in a straight line along one axis</td></tr><tr><td>Moving</td><td><strong>Alt</strong></td><td>Leave the shape where it is and drag a copy</td></tr><tr><td>Turning</td><td><strong>Shift</strong></td><td>Turn in steps of 45°</td></tr></tbody></table></div>
+<p>A hint at the top of the view reminds you of the key for what you are doing. <strong>Esc</strong> cancels a drag and puts the shape back.</p>
+<h2 id="moving">Moving</h2>
+<p>Drag a shape to slide it across the build plate. Two numbers show how far it has moved along each direction.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-drag.png" width="720" height="560" alt="Dragging a box: the numbers show how far it has moved" loading="lazy"></figure>
+<p>To move a shape up or down, drag its <strong>lift handle</strong>. The number is its height above the plate.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-lift.png" width="640" height="560" alt="Raising a box with the lift handle" loading="lazy"></figure>
+<p>From the keyboard:</p>
+<div class="post-table"><table><thead><tr><th>Keys</th><th>Move</th></tr></thead><tbody><tr><td><strong>Arrow keys</strong></td><td>One step of the snap grid across the plate</td></tr><tr><td><strong>Shift + arrow keys</strong></td><td>Ten steps</td></tr><tr><td><strong>Ctrl+Up</strong>, <strong>Ctrl+Down</strong></td><td>One step up or down (with <strong>Shift</strong>, ten)</td></tr><tr><td><strong>D</strong></td><td>Drop the shape straight down onto the plate</td></tr></tbody></table></div>
+<p>The arrow keys follow the view: the up arrow moves the shape away from you, whichever way you are looking.</p>
+<h2 id="sizing-with-exact-numbers">Sizing with exact numbers</h2>
+<p>Dragging a handle is quick. Typing is exact.</p>
+<ol><li>Click a handle (don't drag it). The sizes it controls appear as numbers beside the shape.</li><li>Click a number. It becomes a box you can type in.</li><li>Type the size and press <strong>Enter</strong>. <strong>Esc</strong> leaves it as it was. <strong>Tab</strong> keeps what you typed and moves on to the next number (<strong>Shift+Tab</strong> to the one before).</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-type-size.png" width="620" height="520" alt="Typing a new length for a box" loading="lazy"></figure>
+<p>The top handle shows the height, and the lift handle shows how far the shape is above the plate. Both can be typed the same way.</p>
+<p>What you can type:</p>
+<ul><li>A plain number, in the design's units: <code>42.5</code></li><li>A fraction, handy in inches: <code>1/8</code>, <code>1 1/2</code></li><li>A number with its unit, whatever the design's units are: <code>25mm</code>, <code>2.5cm</code>, <code>1in</code>, <code>3/4"</code></li></ul>
+<p>Many shapes also have their sizes in the Properties panel (a box has Length, Width and Height), which is often the quickest place to type them.</p>
+<h2 id="turning">Turning</h2>
+<p>Drag one of the three turn handles. A protractor appears, and the angle is shown as you drag.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-rotate.png" width="540" height="600" alt="Turning a box: the protractor shows the angle" loading="lazy"></figure>
+<ul><li>Keep the pointer <strong>inside</strong> the protractor to turn in steps of 22.5°.</li><li>Move it <strong>outside</strong> the protractor to turn in steps of 1°.</li><li>Hold <strong>Shift</strong> for steps of 45°.</li></ul>
+<p>For an exact angle, let go and then click the angle shown beside the protractor, type the angle you want and press <strong>Enter</strong>. The protractor stays up, with its angle ready to type, until you select something else or make another change.</p>
+<p>Each handle turns the shape about a different axis: one spins it flat on the plate, the other two tip it over forwards or sideways. After tipping a shape, press <strong>D</strong> to drop it back onto the plate.</p>
+<p>To put a particular face down on the plate, use <strong>Lay flat</strong> (<a href="../../manual/aligning-and-measuring/#lay-flat">Lining up and measuring</a>).</p>
+<h2 id="the-snap-grid">The snap grid</h2>
+<p>Shapes move and resize in steps. The step is the <strong>Snap Grid</strong>, at the bottom right of the view. Click it to choose another.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-snap.png" width="234" height="260" alt="The snap grid menu" loading="lazy"></figure>
+<ul><li>In millimetres: Off, 0.1, 0.25, 0.5, 1, 2, 5 or 10 mm.</li><li>In inches: Off, or a fraction from 1/64 to 1 inch.</li></ul>
+<p>A coarse step such as 1 mm keeps parts on round numbers. Choose a finer one, or <strong>Off</strong>, for fine adjustments. Numbers you type are never rounded to the grid.</p>
+<h2 id="copying">Copying</h2>
+<div class="post-table"><table><thead><tr><th>Keys</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Ctrl+D</strong></td><td>Duplicate: makes a copy exactly on top of the original and selects it, ready to resize, change or move</td></tr><tr><td><strong>Ctrl+C</strong>, <strong>Ctrl+V</strong></td><td>Copy and paste. The copy appears a little to one side</td></tr><tr><td><strong>Ctrl+Shift+V</strong></td><td>Paste in place: the copy appears exactly where the original is</td></tr><tr><td><strong>Ctrl+X</strong></td><td>Cut</td></tr><tr><td><strong>Alt + drag</strong></td><td>Drag a copy out of a shape</td></tr><tr><td><strong>Delete</strong></td><td>Delete the selection</td></tr></tbody></table></div>
+<p>Duplicate leaves the copy in place on purpose, so the two shapes stay lined up while you change one of them. To make a standoff, for example, duplicate a cylinder, make the copy narrower, and turn it into a <a href="../../manual/holes-and-groups/">hole</a>: the hole is already centered in the post.</p>
+<p>To make a row of copies, duplicate a shape, move the copy, then press <strong>Ctrl+D</strong> again: each new copy repeats the move you gave the one before.</p>
+<p>Copy and paste also work between two ScottiCAD windows.</p>
+<h2 id="undo">Undo</h2>
+<p><strong>Ctrl+Z</strong> undoes the last change and <strong>Ctrl+Y</strong> redoes it. ScottiCAD remembers the last 500 changes, so you can try things freely.</p>
+<h2 id="hiding-shapes">Hiding shapes</h2>
+<p>When a shape is in the way, hide it. A hidden shape is still part of the design; you just can't see or select it.</p>
+<ul><li><strong>Ctrl+H</strong> hides the selected shapes.</li><li><strong>Ctrl+Shift+H</strong> shows everything again. So does the eye button in the toolbar, which is highlighted while anything is hidden.</li></ul>
+<p>The small arrow beside the eye button opens a menu: <strong>Hide selected shapes</strong>, <strong>Toggle shape visibility</strong> and <strong>Hide notes</strong>.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-visibility-menu.png" width="420" height="210" alt="The visibility menu" loading="lazy"></figure>
+<p><strong>Toggle shape visibility</strong> (key: <strong>V</strong>) is for hiding and showing several shapes. While it is on, hidden shapes appear as pale ghosts. Click any shape to hide it, or a ghost to show it again. Press <strong>Esc</strong> when you are done.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/move-visibility-mode.png" width="760" height="520" alt="Visibility mode: the hidden cylinder shows as a ghost" loading="lazy"></figure>
+<h2 id="locking-shapes">Locking shapes</h2>
+<p><strong>Ctrl+L</strong>, or the padlock in Properties, locks the selected shapes. A locked shape can't be moved or changed by accident. Select it and press <strong>Ctrl+L</strong> again to unlock it.</p>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/shapes/"><span>Previous</span>Shapes</a><a class="manual-pager__next" href="../../manual/holes-and-groups/"><span>Next</span>Holes and groups</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

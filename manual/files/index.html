@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opening, saving, importing and exporting — ScottiCAD user manual</title>
+  <meta name="description" content="ScottiCAD works with three kinds of file:">
+  <link rel="canonical" href="https://scotticad.com/manual/files/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/files/">
+  <meta property="og:title" content="Opening, saving, importing and exporting — ScottiCAD user manual">
+  <meta property="og:description" content="ScottiCAD works with three kinds of file:">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Opening, saving, importing and exporting",
+    "description": "ScottiCAD works with three kinds of file:",
+    "dateModified": "2026-11-13",
+    "mainEntityOfPage": "https://scotticad.com/manual/files/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Opening, saving, importing and exporting",
+        "item": "https://scotticad.com/manual/files/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Opening, saving, importing and exporting</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 8</p>
+      <h1>Opening, saving, importing and exporting</h1>
+    </header>
+    <div class="post__body">
+<p>ScottiCAD works with three kinds of file:</p>
+<ul><li><strong>Designs</strong> (<code>.scotticad</code>) are what you save and open. A design keeps every shape, group and setting, so you can go on changing it.</li><li><strong>Imports</strong> bring other people's 3D models and drawings into a design.</li><li><strong>Exports</strong> are what you give to a slicer or another program. An export holds only the finished geometry.</li></ul>
+<p>Keep the design. An exported STL can't be turned back into shapes and groups.</p>
+<h2 id="the-file-menu">The File menu</h2>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/files-menu.png" width="340" height="420" alt="The File menu" loading="lazy"></figure>
+<div class="post-table"><table><thead><tr><th>Command</th><th>Keys</th><th>What it does</th></tr></thead><tbody><tr><td><strong>New design</strong></td><td>Ctrl+N</td><td>Starts an empty design</td></tr><tr><td><strong>Open…</strong></td><td>Ctrl+O</td><td>Opens a <code>.scotticad</code> design</td></tr><tr><td><strong>Save</strong></td><td>Ctrl+S</td><td>Saves the design. The first time, it asks for a name and a folder</td></tr><tr><td><strong>Save as…</strong></td><td>Ctrl+Shift+S</td><td>Saves a copy under another name and carries on in the copy</td></tr><tr><td><strong>Import…</strong></td><td>Ctrl+I</td><td>Brings a model or drawing into this design</td></tr><tr><td><strong>Export…</strong></td><td>Ctrl+E</td><td>Writes a file for a slicer or another program</td></tr><tr><td><strong>Run script…</strong></td><td></td><td>Opens a script and runs it (<a href="../../manual/scripting/">Scripting</a>)</td></tr><tr><td><strong>Keyboard shortcuts</strong></td><td>?</td><td>Shows the list of keys</td></tr><tr><td><strong>Start screen</strong></td><td></td><td>Shows the start screen again</td></tr><tr><td><strong>About ScottiCAD</strong></td><td></td><td>The version you are running</td></tr><tr><td><strong>Exit</strong></td><td>Alt+F4</td><td>Closes ScottiCAD</td></tr></tbody></table></div>
+<p>The design's name is shown beside the File menu. If you close a design with changes you haven't saved, ScottiCAD asks whether to save them first.</p>
+<h2 id="the-start-screen">The start screen</h2>
+<p>ScottiCAD opens on its start screen. <strong>New design</strong> starts with an empty build plate, <strong>Open…</strong> opens a design, and the <strong>Recent designs</strong> list has the last eight you opened or saved: click one to open it.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/files-start.png" width="1280" height="800" alt="The start screen" loading="lazy"></figure>
+<p>You can also open a design by double-clicking its file, if ScottiCAD is set up to open <code>.scotticad</code> files (on Linux, <code>install.sh</code> does this), or by naming it when you start ScottiCAD from a command line:</p>
+<div class="code post-code"><div class="code__bar"><span></span><button class="copy" type="button" data-copy="#code-1">Copy</button></div><pre id="code-1"><code>scotticad my-part.scotticad</code></pre></div>
+<h2 id="importing">Importing</h2>
+<p><strong>Import</strong> adds a file's contents to the design as a new shape, in the middle of the view. Click <strong>Import</strong> at the top right, or press <strong>Ctrl+I</strong>.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/files-import.png" width="520" height="440" alt="The Import dialog" loading="lazy"></figure>
+<div class="post-table"><table><thead><tr><th>File</th><th>What you get</th></tr></thead><tbody><tr><td><strong>STL</strong>, <strong>OBJ</strong></td><td>The 3D model as one shape. You can move, resize and turn it, make it a hole, and group it with other shapes</td></tr><tr><td><strong>SVG</strong></td><td>The drawing's outlines, raised into a solid of the height you give</td></tr></tbody></table></div>
+<p>The options:</p>
+<ul><li><strong>Scale</strong> makes the import bigger or smaller. 100% leaves it as it is.</li><li><strong>Units (STL/OBJ).</strong> These files hold numbers without units. Most are in millimetres. If a model comes in 25 times too small, it was made in inches: import it again with <strong>Inches</strong> chosen.</li><li><strong>SVG height</strong> is how thick the solid made from a drawing is, in millimetres.</li></ul>
+<p>On Windows you can also drag files from a folder onto the ScottiCAD window to import them.</p>
+<p>Models with small flaws, such as gaps in their surface, are repaired as they are read, so that they can be grouped and cut like any other shape.</p>
+<h3 id="things-to-do-with-an-import">Things to do with an import</h3>
+<ul><li><strong>Cut it.</strong> Add holes and group them with the model, to drill a mounting hole in a downloaded part.</li><li><strong>Add to it.</strong> Group it with new solids: a base, a label, a hook.</li><li><strong>Use it as a hole.</strong> Make the model a hole and group it with a block to get a cavity in its shape.</li><li><strong>Engrave a logo.</strong> Import an SVG, make it a hole, sink it slightly into a surface and group.</li></ul>
+<h2 id="exporting">Exporting</h2>
+<p>Click <strong>Export</strong> at the top right, or press <strong>Ctrl+E</strong>.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/files-export.png" width="560" height="518" alt="The Export dialog" loading="lazy"></figure>
+<p>First choose what to <strong>include</strong>: everything in the design, or only the selected shapes. Hidden shapes are left out of "everything", and holes that aren't in a group are never exported.</p>
+<p>Then click a format. ScottiCAD asks where to save the file.</p>
+<div class="post-table"><table><thead><tr><th>Format</th><th>Use it for</th><th>Colours</th></tr></thead><tbody><tr><td><strong>3MF</strong></td><td>3D printing. Read by PrusaSlicer, Bambu Studio and Cura</td><td>Yes: one part per colour</td></tr><tr><td><strong>STL</strong></td><td>3D printing. Read by every slicer</td><td>No</td></tr><tr><td><strong>OBJ</strong></td><td>3D printing and other 3D programs</td><td>Yes, in a <code>.mtl</code> file saved beside it</td></tr><tr><td><strong>glTF</strong> (<code>.glb</code>)</td><td>Viewing in 3D apps and on the web</td><td>Yes</td></tr><tr><td><strong>SVG</strong></td><td>Laser cutting: the outline of the design where it meets the plate</td><td>No</td></tr></tbody></table></div>
+<p>Exported parts are closed solids, with every group joined and every hole cut.</p>
+<p>In a 3MF file, pieces laid out apart are separate objects, so a slicer can move and arrange them one by one. Each object's colours are its parts, locked together: a two-colour lid stays one object. Pieces that touch or overlap stay together as one object.</p>
+<p>A big design can take a few seconds to export. ScottiCAD does it in the background and shows the file's name at the top of the view while it works; you can carry on editing.</p>
+<p>If the <a href="../../manual/printing/">print check</a> has warnings for what you are about to export, the dialog says so at the bottom. Click <strong>Show</strong> to see them. The warning never stops you exporting.</p>
+<h2 id="if-something-goes-wrong">If something goes wrong</h2>
+<p>If ScottiCAD ever has to close because of an internal error, it first saves your design to a recovery file and tells you where: in the design's own folder, or in your Documents folder for a design you hadn't saved yet. The file is named after the design, with "(recovered)" and the time. Open it like any other design.</p>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/split-and-section/"><span>Previous</span>Split and section view</a><a class="manual-pager__next" href="../../manual/printing/"><span>Next</span>Getting ready to print</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

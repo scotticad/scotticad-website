@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holes and groups — ScottiCAD user manual</title>
+  <meta name="description" content="Shapes on their own only go so far. Real parts are made by grouping: joining shapes together, and cutting holes out of them. This is the one idea the…">
+  <link rel="canonical" href="https://scotticad.com/manual/holes-and-groups/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/holes-and-groups/">
+  <meta property="og:title" content="Holes and groups — ScottiCAD user manual">
+  <meta property="og:description" content="Shapes on their own only go so far. Real parts are made by grouping: joining shapes together, and cutting holes out of them. This is the one idea the…">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Holes and groups",
+    "description": "Shapes on their own only go so far. Real parts are made by grouping: joining shapes together, and cutting holes out of them. This is the one idea the…",
+    "dateModified": "2026-11-14",
+    "mainEntityOfPage": "https://scotticad.com/manual/holes-and-groups/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Holes and groups",
+        "item": "https://scotticad.com/manual/holes-and-groups/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Holes and groups</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 5</p>
+      <h1>Holes and groups</h1>
+    </header>
+    <div class="post__body">
+<p>Shapes on their own only go so far. Real parts are made by <strong>grouping</strong>: joining shapes together, and cutting holes out of them. This is the one idea the rest of ScottiCAD is built round.</p>
+<h2 id="cutting-a-hole">Cutting a hole</h2>
+<ol><li>Put a solid shape on the plate.</li><li>Add a <strong>hole</strong> shape and move it so it overlaps the solid where you want material removed. (Any shape becomes a hole when you select it and press <strong>H</strong>.)</li><li>Select both and press <strong>Ctrl+G</strong>, or click the <strong>Union Group</strong> button in the toolbar.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/groups-hole.png" width="892" height="366" alt="A box and a hole cylinder, before and after grouping" loading="lazy"></figure>
+<p>The result is one part. The hole only removes material where it overlaps a solid, so make it at least as deep as the cut you want. A hole that sticks out of the top or bottom of the solid does no harm.</p>
+<p>A group can hold as many solids and holes as you like. Every solid is joined, and every hole is cut from the result.</p>
+<h2 id="nothing-is-lost">Nothing is lost</h2>
+<p>A group keeps its shapes inside it. <strong>Ctrl+Shift+G</strong> (or the <strong>Ungroup</strong> button) takes it apart again, giving back every shape as it was, with its own size, colour and settings. So when a hole turns out to be in the wrong place, ungroup, move it, and group again.</p>
+<p>Combining big or detailed shapes can take a moment. ScottiCAD does it in the background and shows "Combining shapes…" at the top of the view; you can keep working meanwhile.</p>
+<h2 id="the-three-kinds-of-group">The three kinds of group</h2>
+<p>A group can combine its shapes in three ways. Select a group and choose in Properties:</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/groups-type-buttons.png" width="258" height="270" alt="The group type buttons in Properties" loading="lazy"></figure>
+<ol><li><strong>Bundle</strong> keeps the shapes separate. They move, turn and resize as one, but nothing is joined or cut, and each keeps its own colour. Use it to keep related parts together. Key: <strong>Ctrl+B</strong>.</li><li><strong>Union</strong> joins the solids into one part and cuts the holes out of it. This is the usual kind. Key: <strong>Ctrl+G</strong>.</li><li><strong>Intersect</strong> keeps only the material that every shape shares: the place where they all overlap.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/groups-types.png" width="1044" height="326" alt="The same box and sphere as a bundle, a union and an intersection" loading="lazy"></figure>
+<p>You can switch a group between the three at any time.</p>
+<h2 id="groups-inside-groups">Groups inside groups</h2>
+<p>A group is a shape like any other, so it can go in another group. This is how more complicated parts are built up:</p>
+<ul><li>Make a detail, such as a mounting boss with its screw hole, as one group. Then copy it to each corner and group the copies with the plate.</li><li>Holes inside a group only cut that group. They don't reach out and cut the shapes around it.</li><li>A whole group can be a hole. Select it and press <strong>H</strong>. This is how to cut a shape that itself needed grouping to make, such as a cross made of two boxes.</li></ul>
+<h2 id="colour-in-a-group">Colour in a group</h2>
+<p>A union is a single part, so by default it takes a single colour. Click the <strong>Solid</strong> disc to choose it.</p>
+<p>To keep each shape's own colour on the surfaces it contributed, turn <strong>Multicolor</strong> on in the colour picker.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/groups-multicolor.png" width="692" height="326" alt="A union in one colour, and with Multicolor on" loading="lazy"></figure>
+<p>A multicolour group exports to 3MF as one part per colour, ready for a multi-material printer, or for a filament change part way up. A bundle always keeps its shapes' colours, since nothing in it is joined.</p>
+<h2 id="tips">Tips</h2>
+<ul><li><strong>Overlap, don't just touch.</strong> Let solids that should join overlap a little. Shapes that only touch along a face or an edge may print as separate pieces.</li><li><strong>Make holes longer than they need to be.</strong> A hole exactly as deep as the wall can leave a paper-thin skin. Let it poke through.</li><li><strong>Group in stages.</strong> Build each detail as its own small group, check it, then group the details together. A mistake is easier to find, and ungrouping takes you back one stage at a time.</li></ul>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/moving-and-sizing/"><span>Previous</span>Moving, sizing and turning</a><a class="manual-pager__next" href="../../manual/aligning-and-measuring/"><span>Next</span>Lining up and measuring</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

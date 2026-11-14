@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=ce277d79">
+  <link rel="stylesheet" href="assets/css/style.css?v=476fc211">
 
   <script type="application/ld+json">
   {
@@ -29,7 +29,7 @@
     "name": "ScottiCAD",
     "operatingSystem": "Windows 10, Windows 11, Linux",
     "applicationCategory": "DesignApplication",
-    "softwareVersion": "0.1.1",
+    "softwareVersion": "0.3.0",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "url": "https://scotticad.com/",
@@ -54,6 +54,7 @@
       <a href="#features">Features</a>
       <a href="#automation">Scripting</a>
       <a href="#examples">Examples</a>
+      <a href="manual/">Manual</a>
       <a href="corner/">Scotti's Corner</a>
       <a href="#faq">FAQ</a>
       <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
@@ -67,7 +68,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero__copy">
-    <p class="eyebrow"><span class="dot"></span> Free &amp; open source · Version 0.1.1 for Windows and Linux</p>
+    <p class="eyebrow"><span class="dot"></span> Free &amp; open source · Version 0.3.0 for Windows and Linux</p>
     <h1>Design 3D-printable parts<br><span class="grad">on your own computer.</span></h1>
     <p class="lede">
       ScottiCAD is a friendly, hands-on 3D modeller for makers. Drag shapes onto the build plate,
@@ -110,7 +111,7 @@
 <!-- ============ VALUE STRIP ============ -->
 <section class="strip" aria-label="Highlights">
   <div class="wrap strip__grid">
-    <div class="stat"><b>60+</b><span>built-in shapes and parametric parts</span></div>
+    <div class="stat"><b>80+</b><span>built-in shapes and parametric parts</span></div>
     <div class="stat"><b>2</b><span>platforms: Windows and Linux, from the same code</span></div>
     <div class="stat"><b>0</b><span>accounts, logins, uploads or subscriptions</span></div>
     <div class="stat"><b>5</b><span>export formats: 3MF, STL, OBJ, GLB and SVG</span></div>
@@ -183,7 +184,8 @@
         </p>
         <p>
           The basics are all here: box, cylinder, sphere, cone, pyramid, roof, round roof, wedge, trapezoid, tapered
-          box, half sphere, torus, tube, ring, polygon, paraboloid, icosahedron, star, heart, diamond and more. Every
+          box, half sphere, torus, tube, ring, slot, arc, fillet, teardrop, polygon, paraboloid, icosahedron, star,
+          heart, diamond, crystal and more. Every
           shape has sensible defaults and its own parameters: rounded corners on a box, sides on a cylinder, points on
           a star, wall thickness on a tube.
         </p>
@@ -322,12 +324,13 @@
           <li><b>Project box</b> with lid, and <b>extruded box</b> with end panels</li>
           <li><b>PCB standoffs</b>, <b>rounded plates</b> and <b>vent grilles</b></li>
           <li><b>ISO metric threads</b>, <b>hex bolts</b> and <b>hex nuts</b></li>
-          <li><b>Nut traps</b>, <b>countersunk</b> and <b>counterbored</b> holes</li>
-          <li><b>Spur gears</b> and matching <b>gear racks</b></li>
+          <li><b>Nut traps</b>, <b>countersunk</b> and <b>counterbored</b> holes, <b>keyhole slots</b> and <b>bearing seats</b></li>
+          <li><b>Spur, helical, herringbone and bevel gears</b>, <b>ring gears</b>, <b>gear racks</b> and a print-in-place <b>planetary set</b></li>
+          <li><b>GT2 pulleys</b>, <b>dovetail joints</b> and <b>alignment pins</b></li>
           <li><b>Print-in-place hinges</b> with clearance control</li>
           <li><b>Knurled knobs</b> with round or D-shaft bores</li>
-          <li><b>Springs</b>, <b>pipe elbows</b>, <b>tube joints</b> and <b>fluted rods</b></li>
-          <li><b>Square, diamond and honeycomb grids</b> and <b>diamond mesh</b></li>
+          <li><b>Springs</b>, <b>pipe elbows</b>, <b>bent tubes</b>, <b>tube joints</b> and <b>fluted rods</b></li>
+          <li><b>Square, diamond and honeycomb grids</b>, <b>diamond mesh</b> and two-colour <b>QR codes</b></li>
         </ul>
         <p>
           And for diagrams and dioramas, a set of tech icons: laptop, monitor, keyboard, server, rack, router, switch,
@@ -400,6 +403,22 @@
         <h4>Built-in scripting</h4>
         <p>A console and editor inside the app run Python-style scripts: rings of pegs, rows of holes, shapes from
           a list of points. A whole script comes off with a single Undo.</p>
+      </article>
+      <article class="card">
+        <h4>Print check</h4>
+        <p>Before you export, ScottiCAD says whether each part is ready to print: holes in its surface, faces inside
+          out, parts floating or off the plate, and overhangs that may need support, with what to do about each.</p>
+      </article>
+      <article class="card">
+        <h4>Work with an AI assistant</h4>
+        <p>ScottiCAD can act as an MCP server, so an assistant such as Claude can build and change a design in the
+          window while you watch, and you can take over with the mouse at any time.
+          <a href="corner/ai-assistant/">How it works</a>.</p>
+      </article>
+      <article class="card">
+        <h4>A full user manual</h4>
+        <p>Fourteen illustrated chapters, from a ten-minute first part to every shape, tool and shortcut.
+          <a href="manual/">Read the manual</a>.</p>
       </article>
     </div>
   </div>
@@ -757,15 +776,15 @@
       <div class="download__main">
         <img src="assets/img/logo.svg" alt="" width="72" height="72">
         <h2>Get ScottiCAD</h2>
-        <p>Free and open source under the Apache 2.0 licence. Version 0.1.1, for Windows and Linux.</p>
+        <p>Free and open source under the Apache 2.0 licence. Version 0.3.0, for Windows and Linux.</p>
         <a class="btn btn--primary btn--lg" href="https://github.com/scotticad/scotticad/releases/latest">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>Download the latest release</span>
         </a>
         <ul class="pkgs">
-          <li><b>Windows</b>, 64-bit: a zip file, 3.3&nbsp;MB</li>
-          <li><b>Linux</b>, x86-64 (<code>amd64</code>): a tarball, 3.5&nbsp;MB</li>
-          <li><b>Linux</b>, 64-bit ARM (<code>arm64</code>): a tarball, 3.2&nbsp;MB</li>
+          <li><b>Windows</b>, 64-bit: a zip file, 3.5&nbsp;MB</li>
+          <li><b>Linux</b>, x86-64 (<code>amd64</code>): a tarball, 3.7&nbsp;MB</li>
+          <li><b>Linux</b>, 64-bit ARM (<code>arm64</code>): a tarball, 3.4&nbsp;MB</li>
         </ul>
         <p class="small">All from GitHub Releases, under <em>Assets</em>.</p>
       </div>
@@ -857,7 +876,8 @@
       <summary>Will the exported files work with my slicer?</summary>
       <p>They should. ScottiCAD's boolean engine checks and repairs its output so that exported meshes are closed and
         watertight, which is what slicers such as PrusaSlicer, Cura, OrcaSlicer and Bambu Studio expect. Export 3MF to
-        keep your colours, or STL for anything. If you find a design that doesn't export cleanly, please open an issue
+        keep your colours, or STL for anything. The print check in the filament panel flags anything a slicer might
+        trip over before you export. If you find a design that doesn't export cleanly, please open an issue
         on GitHub with the file attached.</p>
     </details>
     <details>
@@ -873,7 +893,7 @@
     </details>
     <details>
       <summary>Is this a mature product?</summary>
-      <p>ScottiCAD is young: version 0.1.1 is its first public release, and it's under active development.
+      <p>ScottiCAD is young: version 0.3.0 is its third public release, and it's under active development.
         Expect rough edges, and please report the ones you find.</p>
     </details>
     <details>
@@ -922,6 +942,7 @@
       </div>
     </div>
     <nav class="footer__links" aria-label="Footer">
+      <a href="manual/">User manual</a>
       <a href="corner/">Scotti's Corner</a>
       <a href="https://github.com/scotticad/scotticad">Source code</a>
       <a href="https://github.com/scotticad/scotticad/releases">Releases</a>

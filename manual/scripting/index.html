@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scripting — ScottiCAD user manual</title>
+  <meta name="description" content="Anything you can do with the mouse you can also do with a few lines of code. A script is worth writing when a part has many similar features (forty…">
+  <link rel="canonical" href="https://scotticad.com/manual/scripting/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/scripting/">
+  <meta property="og:title" content="Scripting — ScottiCAD user manual">
+  <meta property="og:description" content="Anything you can do with the mouse you can also do with a few lines of code. A script is worth writing when a part has many similar features (forty…">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Scripting",
+    "description": "Anything you can do with the mouse you can also do with a few lines of code. A script is worth writing when a part has many similar features (forty…",
+    "dateModified": "2026-11-12",
+    "mainEntityOfPage": "https://scotticad.com/manual/scripting/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Scripting",
+        "item": "https://scotticad.com/manual/scripting/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Scripting</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 11</p>
+      <h1>Scripting</h1>
+    </header>
+    <div class="post__body">
+<p>Anything you can do with the mouse you can also do with a few lines of code. A script is worth writing when a part has many similar features (forty holes in a grid), when it should come in several sizes, or when its shape follows from a calculation.</p>
+<p>This chapter introduces the scripting console. The full list of commands is in the <a href="https://github.com/scotticad/scotticad/blob/master/docs/api.md">API reference</a>, and the <a href="https://github.com/scotticad/scotticad/tree/master/examples"><code>examples</code></a> folder has over a dozen commented scripts to learn from.</p>
+<h2 id="the-console">The console</h2>
+<p>Click <strong>Scripting</strong>, at the top right, to open the console under the view.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/script-console.png" width="1280" height="800" alt="The scripting console" loading="lazy"></figure>
+<ol><li><strong>Console</strong> tab: type one command at a time.</li><li><strong>Editor</strong> tab: write and run whole scripts.</li><li><strong>The transcript</strong>: what you typed, what it printed, and any errors.</li><li><strong>The prompt.</strong> Type a command after <code>&gt;&gt;&gt;</code> and press <strong>Enter</strong>.</li><li><strong>Clear</strong>, <strong>Copy</strong> and <strong>Save log</strong> act on the transcript.</li></ol>
+<p>Try it. Type each line and press <strong>Enter</strong>:</p>
+<div class="code post-code"><div class="code__bar"><span>python</span><button class="copy" type="button" data-copy="#code-2">Copy</button></div><pre id="code-2"><code>box = cad.add_shape(&quot;box&quot;)
+cad.set_size(x=40, y=30, z=10, ids=[box])</code></pre></div>
+<p>A box appears, then changes size. Type <code>help()</code> for the list of commands.</p>
+<h2 id="the-language">The language</h2>
+<p>Scripts are written in Starlark, a small dialect of Python. If you know some Python, you know it: variables, <code>if</code>, <code>for</code>, functions, lists and dictionaries all work the same way. There are no classes, no <code>try</code>/<code>except</code> and no <code>import</code>. The <code>math</code> functions are built in.</p>
+<p>Everything goes through one object, <code>cad</code>. A few of its commands:</p>
+<div class="post-table"><table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody><tr><td><code>cad.add_shape("box", x=0, y=0)</code></td><td>Adds a shape, centered on that point of the plate, and returns its id</td></tr><tr><td><code>cad.set_size(x=40, ids=[a])</code></td><td>Sets a shape's size</td></tr><tr><td><code>cad.set_position(x=0, y=0, z=0, ids=[a])</code></td><td>Puts a shape's corner at a point</td></tr><tr><td><code>cad.move(dx=10, ids=[a])</code></td><td>Moves a shape</td></tr><tr><td><code>cad.rotate("z", 45, ids=[a])</code></td><td>Turns a shape</td></tr><tr><td><code>cad.set_param(a, "radius", 2)</code></td><td>Changes one of a shape's own settings</td></tr><tr><td><code>cad.set_hole(True, ids=[a])</code></td><td>Makes a shape a hole</td></tr><tr><td><code>cad.group("union", ids=[a, b])</code></td><td>Groups shapes and returns the group's id</td></tr><tr><td><code>cad.set_color("#2a7fd4", ids=[a])</code></td><td>Sets a colour</td></tr><tr><td><code>cad.export("part.stl")</code></td><td>Exports the design</td></tr></tbody></table></div>
+<p>Sizes and positions are in millimetres. Each shape has a short name for scripts, usually its name in <a href="../../manual/shape-library/">the shape library</a> in lower case without spaces: <code>"cylinder"</code>, <code>"roundroof"</code>, <code>"spurgear"</code>. <code>cad.shape_kinds()</code> lists them all, with their settings.</p>
+<h2 id="writing-a-script">Writing a script</h2>
+<p>Click the <strong>Editor</strong> tab. The editor is on the left and the transcript on the right.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/script-editor.png" width="1280" height="800" alt="A script in the editor, and the part it made" loading="lazy"></figure>
+<div class="code post-code"><div class="code__bar"><span>python</span><button class="copy" type="button" data-copy="#code-3">Copy</button></div><pre id="code-3"><code># eight pegs in a ring, on a round base
+base = cad.add_shape(&quot;cylinder&quot;)
+cad.set_size(x=100, y=100, z=4, ids=[base])
+cad.set_position(x=-50, y=-50, z=0, ids=[base])
+for i in range(8):
+    a = 2 * math.pi * i / 8
+    peg = cad.add_shape(&quot;cylinder&quot;, z=4)
+    cad.set_size(x=8, y=8, z=16, ids=[peg])
+    cad.move(dx=38 * math.cos(a), dy=38 * math.sin(a), ids=[peg])
+print(&quot;made&quot;, len(cad.nodes()), &quot;shapes&quot;)</code></pre></div>
+<div class="post-table"><table><thead><tr><th>To</th><th>Do this</th></tr></thead><tbody><tr><td>Run the script</td><td>Click <strong>Run</strong>, or press <strong>F5</strong> or <strong>Ctrl+Enter</strong></td></tr><tr><td>Stop a script that is taking too long</td><td>Click <strong>Stop</strong>, or press <strong>Ctrl+C</strong></td></tr><tr><td>Save the script</td><td><strong>Save</strong>, or <strong>Ctrl+S</strong>. Scripts are <code>.star</code> files</td></tr><tr><td>Open a script</td><td><strong>Open…</strong>, or <strong>Ctrl+O</strong></td></tr><tr><td>Start a new one</td><td><strong>New</strong></td></tr></tbody></table></div>
+<p>Useful to know:</p>
+<ul><li><strong>A whole run is one step to undo.</strong> Press <strong>Ctrl+Z</strong> and everything the script made is gone, so you can change a number and run it again.</li><li><strong>Errors are links.</strong> When a script fails, the transcript shows the error and its line. Click it to jump to that line in the editor.</li><li><strong>Put the sizes at the top.</strong> Give the numbers that matter names (<code>HOLES = 8</code>, <code>RADIUS = 38</code>) at the top of the script. Changing the part is then a matter of changing one line and pressing <strong>F5</strong>.</li><li><strong>File → Run script…</strong> opens a script and runs it in one go.</li></ul>
+<h2 id="what-scripts-can-and-cant-reach">What scripts can and can't reach</h2>
+<p>A script works on the design, and on nothing else. It can't read or write your files, use the network or start other programs. The only files it touches are the ones it names in <code>cad</code> commands that are for files: <code>cad.open</code>, <code>cad.save</code>, <code>cad.export</code>, <code>cad.import_file</code> and <code>cad.screenshot</code>.</p>
+<h2 id="shapes-that-only-scripts-can-make">Shapes that only scripts can make</h2>
+<p>Two shapes are made from lists of points, so they come from scripts rather than from the shape panel:</p>
+<ul><li><strong>An outline</strong> is a flat shape, drawn as a list of corner points, and raised to a height. Outlines drawn inside another are holes in it.</li><li><strong>A loft</strong> joins a stack of outlines at different heights into one solid: a vase, a funnel, a boat's hull.</li></ul>
+<div class="code post-code"><div class="code__bar"><span>python</span><button class="copy" type="button" data-copy="#code-4">Copy</button></div><pre id="code-4"><code># a plate with a rectangular window in it, 3 mm thick
+plate = cad.add_outline([[(0, 0), (40, 0), (40, 25), (0, 25)],
+                         [(15, 8), (25, 8), (25, 17), (15, 17)]], z0=0, z1=3)
+
+# a vase: a hexagon at the base turning into circles higher up
+def ring(r, n):
+    return [(r * math.cos(2 * math.pi * i / n), r * math.sin(2 * math.pi * i / n)) for i in range(n)]
+
+vase = cad.add_loft([(0, ring(20, 6)), (40, ring(28, 48)), (80, ring(12, 48)), (95, ring(16, 48))])</code></pre></div>
+<p>Once made, they behave like any other shape: you can move, resize, group and cut them with the mouse.</p>
+<h2 id="driving-scotticad-from-python">Driving ScottiCAD from Python</h2>
+<p>The same commands are available to ordinary Python programs running outside ScottiCAD, through the automation API. That suits batch jobs: making fifty name tags from a list, or exporting a part in every size.</p>
+<div class="code post-code"><div class="code__bar"><span>python</span><button class="copy" type="button" data-copy="#code-5">Copy</button></div><pre id="code-5"><code>from scotticad import launch
+
+with launch(headless=True) as cad:
+    box = cad.add_shape(&quot;box&quot;)
+    cad.set_size(x=40, y=30, z=10, ids=[box])
+    cad.export(&quot;part.stl&quot;)</code></pre></div>
+<p>The <a href="https://github.com/scotticad/scotticad/blob/master/docs/api.md">API reference</a> describes how to set it up, and every command.</p>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/settings/"><span>Previous</span>Settings</a><a class="manual-pager__next" href="../../manual/ai-assistant/"><span>Next</span>Working with an AI assistant</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

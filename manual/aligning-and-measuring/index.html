@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lining up and measuring — ScottiCAD user manual</title>
+  <meta name="description" content="Dragging gets shapes roughly into place. The tools in this chapter put them exactly where they belong: lined up with each other, a set distance apart,…">
+  <link rel="canonical" href="https://scotticad.com/manual/aligning-and-measuring/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/aligning-and-measuring/">
+  <meta property="og:title" content="Lining up and measuring — ScottiCAD user manual">
+  <meta property="og:description" content="Dragging gets shapes roughly into place. The tools in this chapter put them exactly where they belong: lined up with each other, a set distance apart,…">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Lining up and measuring",
+    "description": "Dragging gets shapes roughly into place. The tools in this chapter put them exactly where they belong: lined up with each other, a set distance apart,…",
+    "dateModified": "2026-11-12",
+    "mainEntityOfPage": "https://scotticad.com/manual/aligning-and-measuring/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Lining up and measuring",
+        "item": "https://scotticad.com/manual/aligning-and-measuring/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Lining up and measuring</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 6</p>
+      <h1>Lining up and measuring</h1>
+    </header>
+    <div class="post__body">
+<p>Dragging gets shapes roughly into place. The tools in this chapter put them exactly where they belong: lined up with each other, a set distance apart, or sitting on a surface.</p>
+<div class="post-table"><table><thead><tr><th>Tool</th><th>Key</th><th>What it is for</th></tr></thead><tbody><tr><td><a href="#align">Align</a></td><td><strong>L</strong></td><td>Lining shapes up by their edges or middles</td></tr><tr><td><a href="#mirror">Mirror</a></td><td><strong>M</strong></td><td>Flipping a shape</td></tr><tr><td><a href="#the-ruler">Ruler</a></td><td><strong>R</strong></td><td>Distances from a fixed point, which you can type</td></tr><tr><td><a href="#measure">Measure</a></td><td></td><td>The distance between any two points</td></tr><tr><td><a href="#the-construction-plane">Construction plane</a></td><td><strong>W</strong></td><td>Building on a tilted part</td></tr><tr><td><a href="#place-on-surface">Place on surface</a></td><td><strong>C</strong></td><td>Setting a shape on another shape's face</td></tr><tr><td><a href="#drop">Drop</a></td><td><strong>D</strong></td><td>Bringing a shape down onto the plate</td></tr><tr><td><a href="#lay-flat">Lay flat</a></td><td><strong>Shift+D</strong></td><td>Putting a chosen face down on the plate</td></tr><tr><td><a href="#notes">Notes</a></td><td><strong>N</strong></td><td>Leaving yourself a reminder on a part</td></tr></tbody></table></div>
+<h2 id="align">Align</h2>
+<p>Select two or more shapes and press <strong>L</strong>, or click the <strong>Align</strong> button. Dots appear round the selection: three along each direction, for the two ends and the middle, and three up the side for bottom, middle and top.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/align-dots.png" width="800" height="540" alt="The align tool: the dots, and the preview of one of them" loading="lazy"></figure>
+<ul><li><strong>Move the pointer over a dot</strong> to preview where the shapes would go.</li><li><strong>Click the dot</strong> to line them up. The dots stay, so you can align in another direction straight away.</li><li><strong>Click a shape</strong> to make it the anchor. It stays where it is and the others line up to it. Click it again to go back to lining up to the whole selection.</li><li>Press <strong>Esc</strong>, or click an empty part of the view, when you are done.</li></ul>
+<p>To center one shape on another in every direction, click the middle dot in each of the three sets.</p>
+<h2 id="mirror">Mirror</h2>
+<p>Select a shape and press <strong>M</strong>. Three double-ended arrows appear, one for each direction. Move the pointer over one to preview the flip, and click to flip the shape.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/mirror-arrows.png" width="560" height="420" alt="The mirror tool previewing a wedge flipped left to right" loading="lazy"></figure>
+<p>The shape flips about its own middle, so it stays where it is. To make a mirrored pair, duplicate the shape first (<strong>Ctrl+D</strong>) and mirror the copy.</p>
+<h2 id="the-ruler">The ruler</h2>
+<p>The ruler measures from a point you choose, and lets you type the distances.</p>
+<ol><li>Press <strong>R</strong>, or click the ruler button above the shape panel.</li><li>Click where you want the ruler's origin: usually a corner of a part.</li><li>Select a shape.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/ruler.png" width="800" height="560" alt="The ruler, with a cylinder selected" loading="lazy"></figure>
+<ol><li><strong>The origin.</strong> Drag it to move the ruler. Click it to turn the ruler a quarter turn.</li><li><strong>Remove the ruler.</strong></li><li><strong>Measure to midpoints</strong> instead of to the nearest edges.</li><li><strong>Distances from the origin</strong> to the selected shape, along each direction (the green bars). The shape's own sizes and its height above the plate are shown too.</li></ol>
+<p>Every number is editable. Click a distance, type a new one and press <strong>Enter</strong>, and the shape moves to exactly that distance from the origin. This is the most direct way to put a hole 12.5 mm from an edge.</p>
+<p>The ruler stays while you work, until you remove it. It is saved with the design, so it is still in place when you open the design again. Moving it doesn't count as a change to the design, so you aren't asked to save just because the ruler moved.</p>
+<h2 id="measure">Measure</h2>
+<p>The measure tool gives the distance between any two points.</p>
+<ol><li>Click the <strong>Measure</strong> button in the toolbar.</li><li>Click the first point, then the second. The points snap to the shapes under the pointer.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/measure.png" width="800" height="560" alt="Measuring between a corner of a box and the top of a cylinder" loading="lazy"></figure>
+<p>To set the distance instead of only reading it, click the number and type a new one. The shape at the second point moves to make it so.</p>
+<p>Press <strong>Esc</strong> to leave the tool.</p>
+<h2 id="the-construction-plane">The construction plane</h2>
+<p>Shapes normally sit on the build plate and stand straight up. A <strong>construction plane</strong> is a temporary plate that you put on a part, lined up with that part. While it is there, new shapes land on it, shapes move along it, and heights are measured from it. It is how you add features square to a part that has been tilted.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/construction-plane.png" width="860" height="620" alt="A construction plane on a tilted panel, with a cylinder standing square to it" loading="lazy"></figure>
+<p>There are two ways to make one:</p>
+<ul><li>Select a shape and click the <strong>Construction plane on shape</strong> button in the toolbar.</li><li>Press <strong>W</strong> (or click the grid button above the shape panel), then click the shape.</li></ul>
+<p>The plane goes on the underside of the shape, in line with the shape's own length and width, however the shape has been turned.</p>
+<p>To go back to the build plate, click the toolbar button again, or press <strong>W</strong> and click the build plate.</p>
+<p>The construction plane is saved with the design, like the ruler, so a design reopens on the plane you were working on.</p>
+<h2 id="place-on-surface">Place on surface</h2>
+<p><strong>Place on surface</strong> sets a shape down on another shape's face rather than on the plate.</p>
+<p>New shapes do this already: drag one from the panel over a part and it sits on the face under the pointer.</p>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/place-on-surface.png" width="720" height="520" alt="Dragging a cone from the panel onto the top of a box" loading="lazy"></figure>
+<p>To do the same with a shape that is already in the design, press <strong>C</strong> (or click the <strong>Place on surface</strong> button) to turn the tool on, then drag the shape onto the other shape's face. Press <strong>C</strong> again to turn it off.</p>
+<p>While dragging a new shape from the panel, holding <strong>C</strong> does the opposite: it ignores the other shapes and puts the new one on the plate.</p>
+<h2 id="drop">Drop</h2>
+<p><strong>D</strong> drops the selected shapes straight down until they rest on the plate. Use it after turning a shape, or after lifting one by mistake. A part that floats above the plate or sinks below it won't print as you see it, and the <a href="../../manual/printing/">print check</a> will say so.</p>
+<h2 id="lay-flat">Lay flat</h2>
+<p><strong>Lay flat</strong> turns a part so that the face you choose rests on the plate. Use it to pick the side a part prints on.</p>
+<ol><li>Press <strong>Shift+D</strong>, or click the <strong>Lay flat</strong> button.</li><li>Move the pointer over the part. The face under it is highlighted.</li><li>Click the face.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/lay-flat.png" width="932" height="546" alt="Lay flat: choosing a face, and the part resting on it" loading="lazy"></figure>
+<p>Press <strong>Esc</strong> to leave the tool without changing anything.</p>
+<h2 id="notes">Notes</h2>
+<p>A note is a short text pinned to a point on a part: a reminder of a screw size, a print setting, or what is left to do.</p>
+<ol><li>Press <strong>N</strong>, or click the speech-bubble button above the shape panel.</li><li>Click the spot on a shape where the note belongs.</li><li>Type the note. Click elsewhere when you are done.</li></ol>
+<figure class="post-fig post-fig--small"><img src="../../manual/images/notes.png" width="932" height="406" alt="A note on a part, closed and open" loading="lazy"></figure>
+<ul><li>Click a note's marker to open it and read or change it. The bin button beside an open note deletes it.</li><li>A note moves with the shape it is pinned to.</li><li><strong>Shift+N</strong> hides all the notes, and shows them again.</li></ul>
+<p>Notes are saved with the design. They aren't part of anything you export.</p>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/holes-and-groups/"><span>Previous</span>Holes and groups</a><a class="manual-pager__next" href="../../manual/split-and-section/"><span>Next</span>Split and section view</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>

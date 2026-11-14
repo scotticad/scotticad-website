@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Working with an AI assistant — ScottiCAD user manual</title>
+  <meta name="description" content="ScottiCAD can take instructions from an AI assistant such as Claude. You describe a part in words, and the assistant builds it in a ScottiCAD window…">
+  <link rel="canonical" href="https://scotticad.com/manual/ai-assistant/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/manual/ai-assistant/">
+  <meta property="og:title" content="Working with an AI assistant — ScottiCAD user manual">
+  <meta property="og:description" content="ScottiCAD can take instructions from an AI assistant such as Claude. You describe a part in words, and the assistant builds it in a ScottiCAD window…">
+  <meta property="og:image" content="https://scotticad.com/manual/images/tour-window.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Working with an AI assistant",
+    "description": "ScottiCAD can take instructions from an AI assistant such as Claude. You describe a part in words, and the assistant builds it in a ScottiCAD window…",
+    "dateModified": "2026-11-12",
+    "mainEntityOfPage": "https://scotticad.com/manual/ai-assistant/",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/manual/images/tour-window.png",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "ScottiCAD user manual",
+      "url": "https://scotticad.com/manual/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "User manual",
+        "item": "https://scotticad.com/manual/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Working with an AI assistant",
+        "item": "https://scotticad.com/manual/ai-assistant/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post manual">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">User manual</a> <span>›</span> <span>Working with an AI assistant</span></nav>
+    <header class="post__head">
+      <p class="kicker">Chapter 12</p>
+      <h1>Working with an AI assistant</h1>
+    </header>
+    <div class="post__body">
+<p>ScottiCAD can take instructions from an AI assistant such as Claude. You describe a part in words, and the assistant builds it in a ScottiCAD window while you watch.</p>
+<p>Ask for "a wall bracket for a 25 mm pipe with two countersunk M4 holes", and the assistant writes a script, runs it, takes a screenshot to check the result, and corrects what it sees. Along the way it can use the <a href="../../manual/printing/">print check</a> to make sure the part will print.</p>
+<h2 id="what-to-expect">What to expect</h2>
+<ul><li><strong>It happens in an ordinary ScottiCAD window.</strong> You see each step, and you can take over with the mouse at any moment: move something, change a size, or carry on by hand.</li><li><strong>Every step can be undone.</strong> Each script the assistant runs is one <strong>Ctrl+Z</strong>.</li><li><strong>Your files stay yours.</strong> You can limit the assistant to one folder, so it can only open and save designs there.</li><li><strong>Nothing else is sent anywhere by ScottiCAD.</strong> The assistant sees the design and the screenshots it asks for, because that is how it works. ScottiCAD itself still has no account and no online service.</li></ul>
+<h2 id="setting-it-up">Setting it up</h2>
+<p>The assistant reaches ScottiCAD through MCP (the Model Context Protocol), which many assistants support. For Claude Code, one command does it. Give the full path to where you unpacked ScottiCAD:</p>
+<div class="code post-code"><div class="code__bar"><span></span><button class="copy" type="button" data-copy="#code-6">Copy</button></div><pre id="code-6"><code>claude mcp add scotticad -- C:\Tools\ScottiCAD\scotticad.exe --mcp</code></pre></div>
+<p>ScottiCAD then opens in its own window whenever the assistant starts a session.</p>
+<p><a href="https://github.com/scotticad/scotticad/blob/master/docs/mcp.md">The MCP guide</a> covers the rest: other assistants, working in a ScottiCAD window you already have open, limiting which files the assistant can reach, and the full list of what it can do.</p>
+<h2 id="getting-good-results">Getting good results</h2>
+<ul><li><strong>Give real numbers.</strong> "A box 80 × 50 × 30 mm with 2 mm walls" gets you further than "a small box".</li><li><strong>Say how it will be printed</strong>, if it matters: which face goes down, whether supports are acceptable, the nozzle size.</li><li><strong>Work in steps.</strong> Ask for the main shape, look at it, then ask for the details. It is easier to correct one thing at a time.</li><li><strong>Point at problems.</strong> "The hole on the left is too close to the edge" is something the assistant can act on. So is fixing it yourself and saying what you changed.</li><li><strong>Keep the script.</strong> The assistant builds with scripts, and a script is a recipe you can run again with different numbers. Ask it to save the script beside the design.</li></ul>
+    </div>
+    <nav class="manual-pager" aria-label="Chapters"><a class="manual-pager__prev" href="../../manual/scripting/"><span>Previous</span>Scripting</a><a class="manual-pager__next" href="../../manual/shape-library/"><span>Next</span>The shape library</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
