@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is it ready to print? The print check — Scotti&#x27;s Corner</title>
+  <meta name="description" content="ScottiCAD 0.3.0&#x27;s print check finds potential problems in a 3D print before you export: parts floating or sunk, off the plate or too big, holes, bad faces, inside-out meshes and overhangs. Here&#x27;s each one, and what to do about it.">
+  <link rel="canonical" href="https://scotticad.com/corner/print-check/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/print-check/">
+  <meta property="og:title" content="Is it ready to print? The print check — Scotti&#x27;s Corner">
+  <meta property="og:description" content="ScottiCAD 0.3.0&#x27;s print check finds potential problems in a 3D print before you export: parts floating or sunk, off the plate or too big, holes, bad faces, inside-out meshes and overhangs. Here&#x27;s each one, and what to do about it.">
+  <meta property="og:image" content="https://scotticad.com/corner/print-check/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-11-22">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Is it ready to print? The print check",
+    "description": "ScottiCAD 0.3.0's print check finds potential problems in a 3D print before you export: parts floating or sunk, off the plate or too big, holes, bad faces, inside-out meshes and overhangs. Here's each one, and what to do about it.",
+    "datePublished": "2026-11-22",
+    "dateModified": "2026-11-22",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/print-check/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/print-check/",
+    "wordCount": 1157,
+    "keywords": "3D printing, print check, STL repair, non-manifold, overhangs, ScottiCAD tutorial",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Is it ready to print? The print check",
+        "item": "https://scotticad.com/corner/print-check/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Is it ready to print? The print check</h1>
+      <p class="post__lede">Some failed prints aren&#x27;t the printer&#x27;s fault. The part was floating a millimetre above the plate, or the STL had a hole in it. ScottiCAD 0.3.0 checks for these before you export. Here are examples of what it will look for.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-11-22">22 November 2026</time> · 5 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>Over the years, I've had a lot of successful prints, but also a few failed ones. Of course, some faults are in the printing process itself: a dirty build plate that the filament won't stick to, or waterlogged filament that turns brittle and snaps off inside the PTFE tube. But there's also a class of problem that isn't with the printer at all, but with the model. Those are the problems you can eliminate from the start. For example, more than once I've exported a model floating above the plate. It was just an accident, but it's a sure way to end up with a blob of doom. Others have been meshes with holes in them.</p>
+<p>These are all things a computer can spot before you export, so ScottiCAD 0.3.0 does. It's called the <strong>print check</strong>, and this post walks through everything it looks for, with an example of each.</p>
+<h2 id="where-to-find-it">Where to find it</h2>
+<p>Click the <strong>spool</strong> button at the right end of the toolbar. That opens the filament panel: the estimate of how much filament the part will use, and under it, the print check. It checks what's selected, or the whole design if nothing is.</p>
+<p>![A red block in ScottiCAD with the filament panel open: about 7 g of filament, and under Print check, a tick and "Ready to print".](ready.webp "All clear: a tick and \"Ready to print\".")</p>
+<p>Each line of the check is one of three things:</p>
+<ul><li>a <strong>tick</strong>: the parts are ready to print;</li><li>a <strong>warning triangle</strong>: something that will probably spoil the print, so fix it before you export;</li><li>an <strong>ⓘ</strong>: something worth knowing that needs nothing done.</li></ul>
+<p>Click a line to select the part it's about, and hold the pointer over it to see what to do. You don't have to remember to look, either. If there's a warning when you export, the Export dialog tells you, and <strong>Show</strong> takes you straight to it.</p>
+<figure class="post-fig"><img src="export.webp" width="560" height="518" alt="The Export dialog, listing the formats, with a red warning triangle at the bottom and &quot;1 warning in the print check&quot; beside a Show link." loading="lazy"><figcaption>The Export dialog mentions any warnings.</figcaption></figure>
+<h2 id="is-it-sitting-on-the-plate">Is it sitting on the plate?</h2>
+<p>One of the commonest mistakes, and the easiest to miss. A part that's moved up a little, even a fraction of a millimetre, looks fine on screen. The check measures how far its lowest point is from the plate.</p>
+<figure class="post-fig"><img src="floating.webp" width="884" height="600" alt="An orange cylinder hovering above the plate, its shadow below it, and the warning &quot;Knob: floating 10.0 mm above the plate&quot;." loading="lazy"><figcaption>Floating: the first layer would go down on nothing.</figcaption></figure>
+<p>A part that's sunk into the plate is the opposite problem. Your slicer will either cut off what's below the plate or lift the part, and either way you don't get what you drew.</p>
+<figure class="post-fig"><img src="below.webp" width="884" height="600" alt="A red block sunk partway into the plate, with the warning &quot;Bracket: 6.0 mm below the plate&quot;." loading="lazy"><figcaption>Sunk: 6 mm of this part is under the plate.</figcaption></figure>
+<p>The fix for both is the same: select the part and press <strong>D</strong> to drop it onto the plate.</p>
+<h2 id="does-it-fit-on-the-plate">Does it fit on the plate?</h2>
+<p>The check knows the size of your printer's plate (set it in <a href="../../manual/settings/#the-build-plate">Settings</a>) and warns about a part that hangs over the edge.</p>
+<figure class="post-fig"><img src="off-plate.webp" width="884" height="600" alt="A red block straddling the edge of the build plate, with the warning &quot;Lid: partly off the plate&quot;." loading="lazy"><figcaption>Partly off the plate.</figcaption></figure>
+<p>Move it back on. Your slicer may move it for you, but it may not. And if the part is simply bigger than the plate, you'll be told that too:</p>
+<figure class="post-fig"><img src="too-big.webp" width="884" height="600" alt="A long red bar lying across the build plate, both ends past its edges, with the warning &quot;Shelf: bigger than the 200 × 200 mm plate&quot;." loading="lazy"><figcaption>Bigger than the plate: scale it down, or split it.</figcaption></figure>
+<p>Scale it down, or <a href="../../manual/split-and-section/">split it</a> into pieces that do fit and join them after printing.</p>
+<h2 id="is-the-surface-whole">Is the surface whole?</h2>
+<p>A 3D print needs a closed solid: a surface with no gaps, so the slicer can tell inside from outside. Shapes you make in ScottiCAD almost always are. Files you import, though, are another matter. STLs from other programs and websites often have faults, and slicers deal with them in different ways. Some repair them silently, some print them with a flaw, and some don't mention it at all.</p>
+<p>ScottiCAD quietly fixes the small faults itself when it imports a file: tiny cracks are closed, and so are holes that lie flat. The check reports what's left, and when you click one of these warnings, the edges at fault are drawn in red on the part, so you can see where the trouble is.</p>
+<p><strong>A hole in the surface.</strong> Here a square is missing from the corner of a block, and the check gives its size:</p>
+<figure class="post-fig"><img src="hole-marked.webp" width="884" height="600" alt="A grey imported block with a square missing from one top corner, the hole&#x27;s edges drawn in red, and the warning &quot;Bracket.stl: a hole in the surface (13.3 mm)&quot;." loading="lazy"><figcaption>A hole, with its edges marked in red.</figcaption></figure>
+<p><strong>Faces that don't join up.</strong> This is the technical "non-manifold" fault: faces in the file twice, or a stray face hanging off an edge. This block looks perfect, but its top face is in the file twice, and the edges where that happens are marked:</p>
+<figure class="post-fig"><img src="fin-marked.webp" width="884" height="600" alt="A grey imported block that looks normal, with red lines along the edges of its top, and the warning &quot;Bracket.stl: faces that don&#x27;t join up (non-manifold edges)&quot;." loading="lazy"><figcaption>It looks fine, but the red edges are where the faces don't join up.</figcaption></figure>
+<p><strong>Inside out.</strong> Every face of a mesh points one way, out from the solid. Some programs get it backwards. ScottiCAD turns a whole file the right way out when it imports it, but if only part of a file is inside out, it can't tell which way you meant, so it warns you. An inside-out piece behaves like a hole: it can cut away what it should add.</p>
+<figure class="post-fig"><img src="inside-out.webp" width="884" height="600" alt="An imported stand, a low grey block with a taller one beside it, that looks normal, with the warning &quot;Stand.stl: inside out&quot;." loading="lazy"><figcaption>The taller block is inside out, though you can't see it.</figcaption></figure>
+<p>For all three, the best fix is at the source: export the file again from the program that made it, or download it again. Failing that, most slicers have a repair tool.</p>
+<p><strong>Hairline cracks.</strong> Not every gap matters. This block has a crack 0.05 mm wide running round it. Test blocks with cracks of different widths, tried in two popular slicers, showed that below about 0.075 mm a crack slices as if it weren't there. So the check mentions them with an ⓘ, and you can ignore them:</p>
+<figure class="post-fig"><img src="hairline-close.webp" width="884" height="600" alt="A grey imported block with a fine line running round its sides, and the note &quot;Bracket.stl: hairline cracks; these slice fine&quot;." loading="lazy"><figcaption>A hairline crack: too narrow to show in a print.</figcaption></figure>
+<h2 id="is-anything-left-hanging">Is anything left hanging?</h2>
+<p>A group made of several pieces can have one resting on nothing. Here, the top of the table doesn't quite reach the post:</p>
+<figure class="post-fig"><img src="mid-air.webp" width="884" height="600" alt="An orange table: a round post with a square top floating a few millimetres above it, with the note &quot;Table: a piece in mid-air (needs support)&quot; and a line about overhangs." loading="lazy"><figcaption>The tabletop is resting on nothing.</figcaption></figure>
+<p>It's only an ⓘ, because sometimes you mean it: the slicer can print it on supports. But usually it's a mistake, and the fix is to lower the piece until it touches, or join it to the rest.</p>
+<h2 id="overhangs">Overhangs</h2>
+<p>The last line of the check is the area of <strong>overhangs</strong>: faces facing downwards, leaning out more than 45° from upright, with nothing under them. These are where your slicer may add supports. Faces resting on the plate or on another piece don't count, and nor does a rounded bottom edge, which prints onto the first layers.</p>
+<p>This is information, not a warning. Short bridges and gentle curves often print fine without support. But a large number is a hint that the part might print better another way up. This shelf bracket, standing up, has 10 cm² of overhang under its arms:</p>
+<figure class="post-fig"><img src="overhang-up.webp" width="884" height="600" alt="A red T-shaped bracket standing upright, with &quot;Ready to print&quot; and &quot;10.0 cm² of overhangs (may need support)&quot;." loading="lazy"><figcaption>Standing up: 10 cm² of overhangs under the arms.</figcaption></figure>
+<p>Laid on its side with <a href="../../manual/aligning-and-measuring/#lay-flat">Lay flat</a>, it has none at all. It's stronger that way too, since every layer holds the whole T, so the joint between the arms and the upright isn't a weak point:</p>
+<figure class="post-fig"><img src="overhang-side.webp" width="884" height="600" alt="The same T-shaped bracket lying on its side, with just &quot;Ready to print&quot;." loading="lazy"><figcaption>On its side: no overhangs.</figcaption></figure>
+<p>That's the way I use it: try a few faces with Lay flat and watch the number.</p>
+<h2 id="before-you-export">Before you export</h2>
+<p>My routine now is short:</p>
+<ol><li>Group everything that should be one part.</li><li>Select it and press <strong>D</strong>, so it sits on the plate.</li><li>Open the filament panel and read the print check.</li><li>Export.</li></ol>
+<p>It takes a few seconds, and it's a lot quicker than a failed print. There's more detail in the manual's <a href="../../manual/printing/">Getting ready to print</a> chapter, including the filament estimate and its settings.</p>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../vault-tec-pi-case/">Designing a Fallout-inspired Vault-Tec Raspberry Pi case</a> <span>15 November 2026</span></li><li><a href="../ai-assistant/">Using an AI agent to drive ScottiCAD</a> <span>7 November 2026</span></li><li><a href="../clearance/">Getting 3D-printed parts to fit together</a> <span>1 November 2026</span></li><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
