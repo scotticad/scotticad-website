@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing a Fallout-inspired Vault-Tec Raspberry Pi case — Scotti&#x27;s Corner</title>
+  <meta name="description" content="How I designed a two-colour, Vault-Tec-themed Raspberry Pi 5, Pi 4 and Zero 2 W case in ScottiCAD: getting the lettering right and leaving room for ventilation. Free files.">
+  <link rel="canonical" href="https://scotticad.com/corner/vault-tec-pi-case/">
+  <link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Scotti&#x27;s Corner" href="https://scotticad.com/corner/feed.xml">
+  <meta name="theme-color" content="#3a2f24">
+  <meta name="author" content="Scotti">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ScottiCAD">
+  <meta property="og:url" content="https://scotticad.com/corner/vault-tec-pi-case/">
+  <meta property="og:title" content="Designing a Fallout-inspired Vault-Tec Raspberry Pi case — Scotti&#x27;s Corner">
+  <meta property="og:description" content="How I designed a two-colour, Vault-Tec-themed Raspberry Pi 5, Pi 4 and Zero 2 W case in ScottiCAD: getting the lettering right and leaving room for ventilation. Free files.">
+  <meta property="og:image" content="https://scotticad.com/corner/vault-tec-pi-case/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:author" content="Scotti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=476fc211">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Designing a Fallout-inspired Vault-Tec Raspberry Pi case",
+    "description": "How I designed a two-colour, Vault-Tec-themed Raspberry Pi 5, Pi 4 and Zero 2 W case in ScottiCAD: getting the lettering right and leaving room for ventilation. Free files.",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Scotti",
+      "url": "https://scotticad.com/corner/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScottiCAD",
+      "url": "https://scotticad.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://scotticad.com/assets/img/social-card.png"
+      }
+    },
+    "image": "https://scotticad.com/corner/vault-tec-pi-case/card.png",
+    "mainEntityOfPage": "https://scotticad.com/corner/vault-tec-pi-case/",
+    "wordCount": 1653,
+    "keywords": "Raspberry Pi case, Raspberry Pi 5, Pi Zero 2 W, two-colour printing, multicolour 3D printing, Fallout, Vault-Tec, ScottiCAD",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Scotti's Corner",
+      "url": "https://scotticad.com/corner/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scotticad.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scotti's Corner",
+        "item": "https://scotticad.com/corner/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Designing a Fallout-inspired Vault-Tec Raspberry Pi case",
+        "item": "https://scotticad.com/corner/vault-tec-pi-case/"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../../" aria-label="ScottiCAD home">
+      <img src="../../assets/img/logo.svg" alt="" width="32" height="32">
+      <span>ScottiCAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="../../#features">Features</a>
+      <a href="../../#automation">Scripting</a>
+      <a href="../../#examples">Examples</a>
+      <a href="../../manual/">Manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a class="nav__gh" href="https://github.com/scotticad/scotticad">GitHub</a>
+      <a class="btn btn--sm btn--primary" href="../../#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+  <div class="wrap post__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> <span>›</span> <a href="../">Scotti's Corner</a></nav>
+    <header class="post__head">
+      <h1>Designing a Fallout-inspired Vault-Tec Raspberry Pi case</h1>
+      <p class="post__lede">A Vault-Tec case for the Pi 5, Pi 4 and Zero 2 W. Two printed parts, four screws, and an inlaid badge, plus what I learned about printing small lettering.</p>
+      <p class="byline"><img src="../../assets/img/logo.svg" alt="" width="36" height="36"><span><b>Scotti</b><br><time datetime="2026-11-15">15 November 2026</time> · 8 min read</span></p>
+    </header>
+    <div class="post__body">
+<p>If you just want to download the case, you can find it <a href="https://makerworld.com/en/models/3613114-vault-tec-raspberry-pi-case-pi-5-pi-4-zero-2-w">on MakerWorld</a>.</p>
+<p>I've printed a lot of Raspberry Pi cases over the years. Most of them were functional, but rather plain-looking, and I always remixed someone else's design. This time I decided to make a Fallout-inspired Vault-Tec case. The colour scheme would be blue and yellow, with a cog-shaped Vault badge set into the lid, and the Vault-Tec logo and text. I wanted something that would look cool. If you're going to do a Pi project, do it in style.</p>
+<p>The Raspberry Pi 5 is the latest model, but it's awfully expensive, so I often use a Pi Zero 2 W, or one of my remaining stock of Pi 4s that I bought years ago. So I made three cases. In this post I explain how they're put together and what I learned along the way. I go into detail about two-colour prints, lettering, and keeping a Pi 5 cool.</p>
+<figure class="post-fig"><img src="all-three.webp" width="1400" height="955" alt="Three blue Raspberry Pi cases with yellow cog badges on their lids and yellow VAULT-TEC nameplates, for a Pi 4, a Pi 5 and a small Pi Zero 2 W, on a wooden table." loading="lazy"><figcaption>Pi 4, Pi 5 and Pi Zero 2 W, all printed.</figcaption></figure>
+<h2 id="two-parts-and-four-screws">Two parts and four screws</h2>
+<p>Each case is two printed parts. The <strong>base</strong> is a plate with a low rim and four standoffs for the board. The <strong>top</strong> is everything above the board: the walls, the lid and the badge. Four M2.5 screws go up through the base, through the Pi's own mounting holes, and into posts inside the top. They hold the board down and close the case at the same time.</p>
+<figure class="post-fig"><img src="exploded.webp" width="960" height="672" alt="The Pi 5 case pulled apart in ScottiCAD: the blue and yellow top at the top, a green outline of the Raspberry Pi 5 in the middle, and the dark base with its four standoffs at the bottom." loading="lazy"><figcaption>Top, board and base. The green Pi is only a guide; it isn't printed.</figcaption></figure>
+<p>The green board in the picture is the same trick I used for my <a href="../raspberry-pi/">Raspberry Pi mounts</a>: an outline of the Pi, with all its ports, sitting where the real one will go. It's only there as a guide, so I can see that every port lines up before I print anything. I don't print the green board; I throw it away when I export and go to slice.</p>
+<p>The ports are where most cases get fiddly. Here, each port is a <strong>notch in the bottom edge of the wall</strong>, with a matching dip in the base's rim. The top doesn't have to be threaded over the USB and Ethernet jacks; it just drops straight down over them.</p>
+<figure class="post-fig"><img src="pi5-ports.webp" width="1400" height="644" alt="The ports end of the printed Pi 5 case: the Ethernet jack and four USB ports through notches in the blue wall, which sits on a green base." loading="lazy"><figcaption>The ports sit in notches, so the top drops straight on.</figcaption></figure>
+<h2 id="printing-the-top-upside-down">Printing the top upside down</h2>
+<p>The top prints upside down, with the lid flat on the bed. That has two big advantages. The lid comes out perfectly flat, with the texture of the build plate, and the badge is in the very first layers, where a two-colour print is at its sharpest. If you've done any 3D printing, you're probably familiar with the slicer tool that lays a face of a model flat on the build plate. ScottiCAD has that same tool built in, so I can design the case right side up, then flip it over before I export it.</p>
+<p>The catch is everything that sticks out from the walls: the nameplate, its lettering, the latches and the ribs on the corners. Upside down, the top of each one is an overhang. So each of them has its top edge sloped at 45°, which prints without support. You can see it on the ribs: each one is a little ramp, not a square step.</p>
+<figure class="post-fig"><img src="pi4-nameplate.webp" width="1400" height="661" alt="The front of the printed Pi 4 case: a raised blue nameplate reading VAULT-TEC in yellow, a yellow latch either side, and ribbed corners." loading="lazy"><figcaption>The nameplate, with raised lettering and a latch either side.</figcaption></figure>
+<p>The lettering on the nameplate is still the hardest part to print well, because the details are so thin. There are two versions of each top: <strong>raised</strong> lettering, as in the photo, and <strong>flush</strong> lettering, sunk level with the plate, which has no overhang at all. The raised version looks better if it comes out clean, and it needs a little help: either supports under the letters, or a few minutes with a craft knife afterwards. I tried them both, and I think I like the flush lettering better because it's cleaner.</p>
+<h2 id="one-solid-per-colour">One solid per colour</h2>
+<p>The badge, the lettering, the logo and the latches are all one part: a single yellow solid.</p>
+<figure class="post-fig"><img src="yellow.webp" width="960" height="672" alt="Just the yellow part, floating on its own: the cog badge with the VAULT-TEC lettering and the winged logo, the nameplate&#x27;s lettering, and the two latches." loading="lazy"><figcaption>Everything yellow is one solid.</figcaption></figure>
+<p>The rule I follow for any multicolour design is <strong>one solid per colour</strong>. The yellow part touches the blue but never overlaps it. Where the badge is inlaid into the lid, the blue has a pocket exactly the shape of the badge, and the yellow fills it.</p>
+<p>This is also how ScottiCAD's 3MF export knows what's what. Each colour becomes its own part, so the slicer gets a blue part and a yellow part and you just assign filaments. Getting this right took a fix in ScottiCAD itself. In an earlier version, an inlay that filled its pocket exactly was joined to the blue around it, and only its triangles were coloured. Bambu Studio ignores triangle colours, so my first lid came out with a blue badge in a blue lid. In 0.3.0, an inlay is a part of its own colour.</p>
+<p>To keep the design easy to work with, the shell and the yellow are bundled together as the <strong>Top</strong>, and the base, the top and the board outline are bundled as the whole case. One ungroup splits the top from the base; a second splits the colours. If you've ever ungrouped a multicolour part and watched every colour fall apart at once, you'll see why.</p>
+<h2 id="how-small-can-lettering-go">How small can lettering go?</h2>
+<p>The Pi Zero 2 W is tiny, and so is its case. My first version had "VAULT-TEC" on the lid and on the nameplate, like the others, but the letters came out 2.6 and 3 mm tall, with strokes about 0.4 mm wide. That's a single line from a 0.4 mm nozzle. It did print, but it was very fragile and sloppy-looking. With a 0.2 mm nozzle I might have had better luck.</p>
+<p>My rule of thumb now is that <strong>lettering under about 4.5 mm tall doesn't print well with a 0.4 mm nozzle</strong>. The script leaves the lettering off anything smaller. The Zero's lid gets a bigger logo instead, as big as its wings will fit, and its nameplate is plain. Although I was sad to drop the text, I think the little case looks fine with just the logo.</p>
+<figure class="post-fig"><img src="zero-top.webp" width="1400" height="826" alt="The printed Pi Zero 2 W case from above: a blue lid with a yellow cog badge and a large winged logo, without lettering." loading="lazy"><figcaption>The Zero's lid: no lettering, a bigger logo.</figcaption></figure>
+<h2 id="keeping-the-pi-5-cool">Keeping the Pi 5 cool</h2>
+<p>The Pi 5 with its Active Cooler runs warm, and a closed lid right over the fan isn't a good idea. The cooler draws air in from above and blows it out sideways through its fins. So the Pi 5's case has three things the others don't:</p>
+<ul><li>three curved slots through the badge, right over the fan, which also look like signal waves coming off the logo;</li><li>a full row of gills along the wall above the USB-C and HDMI sockets, where the fins blow;</li><li>gills up the end wall, over the power button and microSD card.</li></ul>
+<figure class="post-fig"><img src="pi5-top.webp" width="1400" height="1078" alt="The printed Pi 5 case from above: a blue lid with the yellow VAULT-TEC cog badge, three curved slots below the logo, and vents between the cog&#x27;s teeth." loading="lazy"><figcaption>The Pi 5's lid: the curved slots sit right over the fan.</figcaption></figure>
+<p>The gaps between the cog's teeth are vents on every case. I haven't measured temperatures yet, so treat the cooling as a sensible start rather than a tested result.</p>
+<p>I think there's enough room for cooling. Keep in mind that the air doesn't have to come in through the cutouts right above the fan; the fan can pull it in through the other gills as well.</p>
+<h2 id="printing-and-putting-it-together">Printing and putting it together</h2>
+<p>Here's the Pi 5 case laid out the way it prints: the top upside down, with its screw posts pointing up, and the base beside it.</p>
+<figure class="post-fig"><img src="parts.webp" width="1040" height="728" alt="The two parts as they print: the blue top upside down, showing its screw posts and the inside of its walls, and the dark base with its standoffs." loading="lazy"><figcaption>As printed: the top upside down, the base as it stands.</figcaption></figure>
+<ul><li><strong>Layers:</strong> 0.2 mm.</li><li><strong>Supports:</strong> the flush-lettering tops don't need any. The raised lettering is better with supports under it, or some cleanup. The screw pockets under the base can use a little support too.</li><li><strong>Screws:</strong> four M2.5 × 8 mm, socket cap or button head. They cut their own thread in the posts, so they go in tight. Drive them slowly and don't overtighten. If they're too tight for you, widen the holes in the script from 2.2 to 2.4 mm. There's more about this in <a href="../screws/">Screws in 3D prints</a>.</li><li><strong>Feet:</strong> the underside has hollows for stick-on feet up to 8.5 mm wide. They overlap the screw pockets a little, so the feet may need trimming. If you use button-head screws, you won't need to trim them.</li></ul>
+<p>To assemble, set the Pi on the base's standoffs, lower the top over it, turn the whole thing over and drive in the screws.</p>
+<figure class="post-fig"><img src="pi4-bottom.webp" width="1400" height="987" alt="The underside of the printed Pi 4 case: a dark base with four screws, each in a round pocket." loading="lazy"><figcaption>Four screws, up through the base and the board into the top.</figcaption></figure>
+<h2 id="make-your-own">Make your own</h2>
+<p>All three cases come from one script, <a href="https://github.com/scotticad/scotticad/blob/master/examples/star/raspberrypi/vault-case.star">vault-case.star</a>, in ScottiCAD's examples. The settings at the top let you change:</p>
+<ul><li><strong>the board:</strong> Pi 5, Pi 4 or Zero 2 W;</li><li><strong>the lettering:</strong> "VAULT-TEC", your own word, or none at all;</li><li><strong>raised or flush</strong> lettering on the nameplate;</li><li><strong>one colour or two:</strong> in one colour, the badge is engraved instead of inlaid;</li><li><strong>the vents:</strong> the end-wall gills, and the Pi 5's fan slots and front gills, each on or off;</li><li><strong>the feet:</strong> the size of the hollows, or none.</li></ul>
+<figure class="post-fig"><img src="design.webp" width="1020" height="714" alt="The Pi 5 case in ScottiCAD: the blue top with its yellow cog badge and VAULT-TEC nameplate on a dark base, with the green board&#x27;s ports showing through the openings." loading="lazy"><figcaption>The Pi 5 design in ScottiCAD.</figcaption></figure>
+<p>Or open the ready-made designs: <a href="https://github.com/scotticad/scotticad/blob/master/examples/scotticad/raspberrypi/vault-case-pi5.scotticad">Pi 5</a>, <a href="https://github.com/scotticad/scotticad/blob/master/examples/scotticad/raspberrypi/vault-case-pi4.scotticad">Pi 4</a> and <a href="https://github.com/scotticad/scotticad/blob/master/examples/scotticad/raspberrypi/vault-case-zero2w.scotticad">Zero 2 W</a>. They're also <a href="https://makerworld.com/en/models/3613114-vault-tec-raspberry-pi-case-pi-5-pi-4-zero-2-w">on MakerWorld</a>, ready to print, with a print profile for each board.</p>
+<p>Before you export, open the filament panel and look at the <a href="../../manual/printing/">print check</a>. It tells you if anything is floating, inside out or full of holes, which is worth knowing before you start a long two-colour print.</p>
+<figure class="post-fig"><img src="pi5-angle.webp" width="1400" height="970" alt="The printed Pi 5 case at an angle: the blue top with its yellow badge and VAULT-TEC nameplate, on a green base." loading="lazy"><figcaption>Ready for the Vault.</figcaption></figure>
+    </div>
+    <aside class="post__cta">
+      <img src="../../assets/img/logo.svg" alt="" width="56" height="56">
+      <div>
+        <h2>Try ScottiCAD</h2>
+        <p>Free and open source, for Windows and Linux. No account, no cloud: just download it and start building.</p>
+        <a class="btn btn--primary" href="../../#download">Download ScottiCAD</a>
+        <a class="btn btn--ghost" href="../">More from Scotti's Corner</a>
+      </div>
+    </aside>
+    <h2>More from Scotti&#x27;s Corner</h2><ul class="more"><li><a href="../ai-assistant/">Using an AI agent to drive ScottiCAD</a> <span>7 November 2026</span></li><li><a href="../clearance/">Getting 3D-printed parts to fit together</a> <span>1 November 2026</span></li><li><a href="../screws/">Screws in 3D prints: inserts and nut traps</a> <span>31 October 2026</span></li><li><a href="../first-script/">Your first ScottiCAD script</a> <span>30 October 2026</span></li><li><a href="../text-on-prints/">Putting text on your 3D prints</a> <span>30 October 2026</span></li></ul>
+  </div>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="../../assets/img/logo.svg" alt="" width="28" height="28">
+      <div>
+        <b>ScottiCAD</b>
+        <span>3D modelling for makers</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../../manual/">User manual</a>
+      <a href="../../corner/">Scotti's Corner</a>
+      <a href="https://github.com/scotticad/scotticad">Source code</a>
+      <a href="https://github.com/scotticad/scotticad/releases">Releases</a>
+      <a href="https://github.com/scotticad/scotticad/tree/master/examples">Examples</a>
+      <a href="https://github.com/scotticad/scotticad/issues">Report an issue</a>
+      <a href="https://github.com/scotticad/scotticad/blob/master/LICENSE">Licence</a>
+    </nav>
+    <p class="footer__legal">© 2026 scotticad.dev. ScottiCAD is open-source software released under the Apache License 2.0.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=4f46726e" defer></script>
+</body>
+</html>
